@@ -9,7 +9,7 @@ Understanding Analysis 是 Stephen Abbott 编写的数学分析教材。笔者�
 - 第五章 导数（已完成）
 - 第六章 函数序列与函数级数
 - 第七章 黎曼积分
-- 
+ 
 ## 温馨提醒
 
 - 习题块格式使用 VSCode 插件 [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)，在 VSCode 上安装此插件以获得 Markdown 文件良好的阅读体验。

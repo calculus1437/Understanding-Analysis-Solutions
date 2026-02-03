@@ -1,3 +1,5 @@
+@import "style.less"
+
 ## 习题 6.2 函数序列的一致收敛
 
 > [!question] 习题 6.2.1

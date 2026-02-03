@@ -1,17 +1,4 @@
 ﻿
-<style>
-.markdown-preview.markdown-preview .admonition.question {
-    background-color: #e3f2fd; /* 浅天蓝背景 */
-    border-left-color: #2196f3; /* 深天蓝左边框 */
-    color: #000000; /* 深蓝色文字 */
-}
-.markdown-preview.markdown-preview .admonition.question .admonition-title {
-    background-color: #bbdefb; /* 标题栏稍微深一点的天蓝 */
-    color: #0d47a1;
-    border-bottom: 1px solid #90caf9;
-}
-</style>
-
 [1.绝对值不等式的本质](#1)
 [2.德·摩根律在无穷情况下的推广](#2)
 [3.施罗德-伯恩斯坦双射定理](#10)

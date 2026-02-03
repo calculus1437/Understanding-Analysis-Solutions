@@ -1,5 +1,6 @@
 # Understanding Analysis 习题解答
 Understanding Analysis 是 Stephen Abbott 编写的数学分析教材。笔者在自学过程中试着进行习题解答。其中习题 1.2 到 4.3 为第一版的习题，习题 4.4 到第五章的内容为第二版习题，第六章开始改回第一版习题。
+
 ## 目前进度
 - 第一章 实数（已完成）
 - 第二章 数列与级数（已完成）
@@ -8,3 +9,8 @@ Understanding Analysis 是 Stephen Abbott 编写的数学分析教材。笔者�
 - 第五章 导数（已完成）
 - 第六章 函数序列与函数级数
 - 第七章 黎曼积分
+- 
+## 温馨提醒
+
+- 习题块格式使用 VSCode 插件 [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)，在 VSCode 上安装此插件以获得 Markdown 文件良好的阅读体验。
+- 未来可能有将 Markdown 文件转成 Latex 格式以获得更好通用性的计划。

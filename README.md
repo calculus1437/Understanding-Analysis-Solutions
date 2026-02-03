@@ -1,5 +1,5 @@
 # Understanding Analysis 习题解答
-Understanding Analysis 是 Stephen Abbott 编写的数学分析教材。笔者在自学过程中试着进行习题解答。其中习题 1.2 到 4.3 为第一版的习题，从习题 4.4 开始更改为第二版的习题
+Understanding Analysis 是 Stephen Abbott 编写的数学分析教材。笔者在自学过程中试着进行习题解答。其中习题 1.2 到 4.3 为第一版的习题，习题 4.4 到第五章的内容为第二版习题，第六章开始改回第一版习题。
 ## 目前进度
 - 第一章 实数（已完成）
 - 第二章 数列与级数（已完成）

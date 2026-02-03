@@ -1,0 +1,2786 @@
+Chapter 6. Sequences and Series of F unctions
+6.2. Uniform Con v ergence of a Sequence of F unctions
+Exercise 6.2 . 1 .  Let
+𝑓𝑛 ( 𝑥 ) =𝑛 𝑥
+1 + 𝑛 𝑥2.
+(a) Find the p oin t wise limit of ( 𝑓𝑛 )  for all 𝑥 ∈ ( 0 , ∞ ) .
+(b) Is the con v ergence uniform on ( 0 , ∞ ) ?
+(c) Is the con v ergence uniform on ( 0 , 1 ) ?
+(d) Is the con v ergence uniform on ( 1 , ∞ ) ?
+Solution.
+(a) Fix 𝑥 ∈ ( 0 , ∞ )  and observ e that
+lim
+𝑛 → ∞𝑓𝑛 ( 𝑥 ) = lim
+𝑛 → ∞𝑛 𝑥
+1 + 𝑛 𝑥2= lim
+𝑛 → ∞𝑥
+1
+𝑛+ 𝑥2=1
+𝑥.
+Th us, letting 𝑓 : ( 0 , ∞ ) → 𝐑  b e the function giv en b y 𝑓 ( 𝑥 ) =1
+𝑥, w e see that ( 𝑓𝑛 )  con-
+v erges p oin t wise to 𝑓 .
+(b) The con v ergence is not uniform on ( 0 , ∞ ) . T o argue this, let us negate the deﬁnition
+of uniform con v ergence. A sequence of functions ( 𝑓𝑛 : 𝐴 → 𝐑 )  do es not con v erge uni-
+formly to a function 𝑓 : 𝐴 → 𝐑  if there exists an 𝜀 > 0  suc h that for all 𝑁 ∈ 𝐍 , w e can
+ﬁnd an 𝑥 ∈ 𝐴  and an 𝑛 ≥ 𝑁  suc h that | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≥ 𝜀 . In sym b ols:
+( ∃ 𝜀 > 0 ) ( ∀ 𝑁 ∈ 𝐍 ) ( ∃ 𝑥 ∈ 𝐴 ) ( ∃ 𝑛 ≥ 𝑁 ) ( | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≥ 𝜀 ) .
+Let 𝑁 ∈ 𝐍  b e giv en and observ e that
+1
+𝑁 + 1∈ ( 0 , 1 ) ⊆ ( 0 , ∞ ) and | 𝑓𝑁 + 1 (1
+𝑁 + 1) − 𝑓 (1
+𝑁 + 1) | =( 𝑁 + 1 )2
+𝑁 + 2≥4
+3.
+Th us the con v ergence 𝑓𝑛 → 𝑓  is not uniform on ( 0 , ∞ ) .
+(c) The con v ergence is not uniform on ( 0 , 1 ) , as part (a) sho ws.
+(d) The con v ergence is uniform on ( 1 , ∞ ) . Let 𝜀 > 0  b e giv en and let 𝑁 ∈ 𝐍  b e suc h that
+𝑁 >1
+𝜀− 1 . F or all 𝑥 ∈ ( 1 , ∞ )  and all 𝑛 ≥ 𝑁  it follo ws that
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | =1
+𝑥 ( 1 + 𝑛 𝑥2 )≤1
+1 + 𝑛≤1
+1 + 𝑁< 𝜀 .
+232 / 415
+Exercise 6.2 . 2 .
+(a) Deﬁne a sequence of functions on 𝐑  b y
+𝑓𝑛 ( 𝑥 ) = {1 if 𝑥 = 1 ,1
+2,1
+3, … ,1
+𝑛
+0 otherwise
+and let 𝑓  b e the p oin t wise limit of 𝑓𝑛 .
+Is eac h 𝑓𝑛  con tin uous at zero? Do es 𝑓𝑛 → 𝑓  uniformly on 𝐑 ? Is 𝑓  con tin uous at
+zero?
+(b) Rep eat this exercise using the sequence of functions
+𝑔𝑛 ( 𝑥 ) = {𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,1
+𝑛
+0 otherwise .
+(c) Rep eat the exercise once more with the sequence
+ℎ𝑛 ( 𝑥 ) =
+⎩{{⎨{{⎧1 if 𝑥 =1
+𝑛
+𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,1
+𝑛 − 1
+0 otherwise.
+In eac h case, explain ho w the results are consisten t with the con ten t of the Con-
+tin uous Limit Theorem (Theorem 6.2.6).
+Solution.
+(a) Deﬁne 𝑓 : 𝐑 → 𝐑  b y
+𝑓 ( 𝑥 ) = {1 if 𝑥 = 1 ,1
+2,1
+3, … ,
+0 otherwise.
+W e claim that 𝑓𝑛 → 𝑓  p oin t wise. If 𝑥 ∉ { 1 ,1
+2,1
+3, … }  then
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | = | 0 − 0 | = 0 ,
+and if 𝑥 =1
+𝑁 for some 𝑁 ∈ 𝐍  then for all 𝑛 ≥ 𝑁  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | = | 1 − 1 | = 0 .
+Eac h 𝑓𝑛  is con tin uous at zero since eac h 𝑓𝑛  is iden tically zero on the in terv al ( − ∞ ,1
+𝑛) ,
+ho w ev er 𝑓  is not con tin uous at zero since 1
+𝑛→ 0  and 𝑓 (1
+𝑛) → 1 ≠ 0 = 𝑓 ( 0 ) . It follo ws
+that the con v ergence 𝑓𝑛 → 𝑓  cannot b e uniform. otherwise the Con tin uous Limit The-
+orem (Theorem 6.2.6) w ould b e violated.
+(b) Deﬁne 𝑔 : 𝐑 → 𝐑  b y
+𝑓 ( 𝑥 ) = {𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,
+0 otherwise.
+233 / 415
+W e claim that 𝑔𝑛 → 𝑔  p oin t wise. If 𝑥 ∉ { 1 ,1
+2,1
+3, … }  then
+| 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | = | 0 − 0 | = 0 ,
+and if 𝑥 =1
+𝑁 for some 𝑁 ∈ 𝐍  then for all 𝑛 ≥ 𝑁  w e ha v e
+| 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | = | 𝑥 − 𝑥 | = 0 .
+Eac h 𝑔𝑛  is con tin uous at zero since eac h 𝑔𝑛  is iden tically zero on the in terv al ( − ∞ ,1
+𝑛) .
+The con v ergence 𝑔𝑛 → 𝑔  is uniform since for an y 𝑛 ∈ 𝐍  and 𝑥 ∈ 𝐑  w e ha v e
+| 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | ≤1
+𝑛 + 1.
+The Con tin uous Limit Theorem (Theorem 6.2.6) implies that 𝑔  m ust b e con tin uous at
+zero, and this is straigh tforw ard to v erify directly .
+(c) Deﬁne ℎ : 𝐑 → 𝐑  b y
+ℎ ( 𝑥 ) = {𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,
+0 otherwise.
+W e claim that ℎ𝑛 → ℎ  p oin t wise. If 𝑥 ∉ { 1 ,1
+2,1
+3, … }  then
+| ℎ𝑛 ( 𝑥 ) − ℎ ( 𝑥 ) | = | 0 − 0 | = 0 ,
+and if 𝑥 =1
+𝑁 for some 𝑁 ∈ 𝐍  then for all 𝑛 ≥ 𝑁 + 1  w e ha v e
+| ℎ𝑛 ( 𝑥 ) − ℎ ( 𝑥 ) | = | 𝑥 − 𝑥 | = 0 .
+Eac h ℎ𝑛  is con tin uous at zero since eac h ℎ𝑛  is iden tically zero on the in terv al ( − ∞ ,1
+𝑛) .
+The con v ergence here is not uniform: for an y 𝑁 ∈ 𝐍  observ e that
+| ℎ𝑁 + 1 (1
+𝑁 + 1) − ℎ (1
+𝑁 + 1) | = 1 −1
+𝑁 + 1≥1
+2.
+Ho w ev er, ℎ  is con tin uous at zero. This do es not con tradict the Con tin uous Limit The-
+orem (Theorem 6.2.6), but it do es sho w that the con v erse do es not hold.
+Exercise 6.2 . 3 .  F or eac h 𝑛 ∈ 𝐍  and 𝑥 ∈ [ 0 , ∞ ) , let
+𝑔𝑛 ( 𝑥 ) =𝑥
+1 + 𝑥𝑛and ℎ𝑛 ( 𝑥 ) = {1 if 𝑥 ≥ 1 / 𝑛
+𝑛 𝑥 if 0 ≤ 𝑥 < 1 / 𝑛 .
+Answ er the follo wing questions for the sequences ( 𝑔𝑛 )  and ( ℎ𝑛 ) :
+(a) Find the p oin t wise limit on [ 0 , ∞ ) .
+(b) Explain ho w w e kno w the con v ergence cannot b e uniform on [ 0 , ∞ ) .
+(c) Cho ose a smaller set o v er whic h the con v ergence is uniform and supply an argu-
+men t to sho w that this is indeed the case.
+Solution.
+234 / 415
+(a) Let 𝑔 : [ 0 , ∞ ) → 𝐑  b e giv en b y
+𝑔 ( 𝑥 ) =
+⎩{⎨{⎧ 𝑥 if 0 ≤ 𝑥 < 1 ,
+1
+2if 𝑥 = 1 ,
+0 if 𝑥 > 1 .
+W e claim that 𝑔𝑛 → 𝑔  p oin t wise. Observ e that if 0 ≤ 𝑥 < 1  then lim𝑛 → ∞ 𝑥𝑛= 0  and
+th us lim𝑛 → ∞ 𝑔𝑛 ( 𝑥 ) = 𝑥 ; if 𝑥 = 1  then 𝑔𝑛 ( 𝑥 ) =1
+2 for all 𝑛 ∈ 𝐍 ; and if 𝑥 > 1  then 
+lim𝑛 → ∞ 𝑥𝑛= + ∞  and th us lim𝑛 → ∞ 𝑔𝑛 ( 𝑥 ) = 0 . Our claim follo ws.
+Let ℎ : [ 0 , ∞ ) → 𝐑  b e the function giv en b y
+ℎ ( 𝑥 ) = {1 if 𝑥 > 0 ,
+0 if 𝑥 = 0 .
+W e claim that ℎ𝑛 → ℎ  p oin t wise. Indeed, ℎ𝑛 ( 0 ) = ℎ ( 0 ) = 0  for all 𝑛 ∈ 𝐍 , and if 𝑥 > 0
+then c ho ose 𝑁 ∈ 𝐍  suc h that 1
+𝑁≤ 𝑥  and observ e that
+𝑛 ≥ 𝑁 ⇒ | ℎ𝑛 ( 𝑥 ) − ℎ ( 𝑥 ) | = | 1 − 1 | = 0 .
+(b) The con v ergence cannot b e uniform on [ 0 , ∞ )  b y the Con tin uous Limit Theorem (The-
+orem 6.2.6): eac h 𝑓𝑛  and eac h 𝑔𝑛  is con tin uous on [ 0 , ∞ )  but neither 𝑓  nor 𝑔  is con tin-
+uous on [ 0 , ∞ ) .
+(c) Restrict eac h 𝑔𝑛  and 𝑔  to the domain [ 2 , ∞ ) , so that 𝑔  is the constan t function 𝑔 ( 𝑥 ) = 0 .
+W e claim that 𝑔𝑛 → 𝑔  uniformly on [ 2 , ∞ ) . W e will mak e use of the inequalit y
+𝑥𝑛+ 1 > 𝑥𝑛− 1 = ( 1 + 𝑥 + ⋯ + 𝑥𝑛 − 1) ( 𝑥 − 1 ) ≥ 𝑛 ( 𝑥 − 1 ) ,
+whic h holds for all 𝑛 ∈ 𝐍  and 𝑥 ≥ 2 . Observ e that
+| 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | = 𝑔𝑛 ( 𝑥 ) =𝑥
+𝑥𝑛 + 1≤𝑥
+𝑛 ( 𝑥 − 1 )≤2
+𝑛,
+where w e ha v e used that 𝑥
+𝑥 − 1= 1 +1
+𝑥 − 1≤ 2  for all 𝑥 ≥ 2 . The uniform con v ergence
+follo ws since the b ound 2
+𝑛 con v erges to zero and do es not dep end on 𝑥 .
+Restrict eac h ℎ𝑛  and ℎ  to the domain [ 1 , ∞ ) , so that ℎ𝑛 ( 𝑥 ) = ℎ ( 𝑥 ) = 1  for all 𝑛 ∈ 𝐍
+and 𝑥 ≥ 1 ; certainly the con v ergence ℎ𝑛 → ℎ  is uniform.
+Exercise 6.2 . 4 .  Review Exercise 5.2.8  whic h includes the deﬁnition for a uniformly
+diﬀeren tiable function. Use the results discussed in Section 6.2 to sho w that if 𝑓  is uni-
+formly diﬀeren tiable, then 𝑓′ is con tin uous.
+Solution.  Supp ose 𝑓 : 𝐴 → 𝐑  is uniformly diﬀeren tiable, where 𝐴  is some op en in terv al.
+F or eac h 𝑛 ∈ 𝐍  deﬁne 𝑓𝑛 : 𝐴 → 𝐑  b y
+𝑓𝑛 ( 𝑥 ) =𝑓 ( 𝑥 +1
+𝑛) − 𝑓 ( 𝑥 )
+𝑛− 1.
+F or an y 𝑥 ∈ 𝐴  the existence of 𝑓′( 𝑥 )  implies that
+235 / 415
+lim
+𝑛 → ∞𝑓𝑛 ( 𝑥 ) = lim
+𝑛 → ∞𝑓 ( 𝑥 +1
+𝑛) − 𝑓 ( 𝑥 )
+𝑛− 1= lim
+ℎ → 0𝑓 ( 𝑥 + ℎ ) − 𝑓 ( 𝑥 )
+ℎ= 𝑓′( 𝑥 ) .
+Th us 𝑓𝑛 → 𝑓′ p oin t wise on 𝐴 . W e claim that this con v ergence is uniform. Let 𝜀 > 0  b e giv en.
+Because 𝑓  is uniformly diﬀeren tiable there exists a 𝛿 > 0  suc h that
+𝑥 , 𝑦 ∈ 𝐴 and 0 < | 𝑥 − 𝑦 | < 𝛿 ⇒ |𝑓 ( 𝑦 ) − 𝑓 ( 𝑥 )
+𝑦 − 𝑥− 𝑓′( 𝑥 ) | < 𝜀 .
+Let 𝑁 ∈ 𝐍  b e suc h that 1
+𝑁< 𝛿 . F or an y 𝑛 ≥ 𝑁  and 𝑥 ∈ 𝐴  note that | 𝑥 +1
+𝑛− 𝑥 | =1
+𝑛< 𝛿 ; it
+follo ws that
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | = |𝑓 ( 𝑥 +1
+𝑛) − 𝑓 ( 𝑥 )
+𝑛− 1− 𝑓′( 𝑥 ) | < 𝜀 .
+Th us 𝑓𝑛 → 𝑓′ uniformly on 𝐴 . Since eac h 𝑓𝑛  is con tin uous on 𝐴  the Con tin uous Limit The-
+orem (Theorem 6.2.6) allo ws us to conclude that 𝑓′ is con tin uous.
+Exercise 6.2 . 5 .  Using the Cauc h y Criterion for con v ergen t sequences of real n um b ers
+(Theorem 2.6.4), supply a pro of for Theorem 6.2.5. (First, deﬁne a candidate for 𝑓 ( 𝑥 ) ,
+and then argue that 𝑓𝑛 → 𝑓  uniformly .)
+Solution.  Let ( 𝑓𝑛 : 𝐴 → 𝐑 )  b e a sequence of functions. Supp ose that ( 𝑓𝑛 )  con v erges uni-
+formly to a function 𝑓 : 𝐴 → 𝐑  and let 𝜀 > 0  b e giv en. By uniform con v ergence, there is an
+𝑁 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | < 𝜀 .
+It follo ws that for an y 𝑥 ∈ 𝐴  and an y 𝑛 , 𝑚 ≥ 𝑁  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | ≤ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | + | 𝑓𝑚 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+No w supp ose that for an y 𝜀 > 0  there exists an 𝑁 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐴 and 𝑛 , 𝑚 ≥ 𝑁 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | < 𝜀 . ( 1 )
+Note that, for an y giv en 𝑥 ∈ 𝐴 , this implies that the sequence of real n um b ers ( 𝑓𝑛 ( 𝑥 ) )  is
+a Cauc h y sequence. The completeness of 𝐑  then implies that lim𝑛 → ∞ 𝑓𝑛 ( 𝑥 )  exists. Deﬁne
+𝑓 : 𝐴 → 𝐑  b y 𝑓 ( 𝑥 ) = lim𝑛 → ∞ 𝑓𝑛 ( 𝑥 ) , so that 𝑓𝑛 → 𝑓  p oin t wise. Our claim is that this con-
+v ergence is uniform. Let 𝜀 > 0  b e giv en. By assumption there exists an 𝑁 ∈ 𝐍  suc h that ( 1 )
+holds. T emp orarily ﬁx 𝑥 ∈ 𝐴  and 𝑛 ≥ 𝑁  and observ e that for ev ery 𝑚 ≥ 𝑁  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≤ | 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | + | 𝑓𝑚 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+2+ | 𝑓𝑚 ( 𝑥 ) − 𝑓 ( 𝑥 ) | .
+The Order Limit Theorem (Theorem 2.3.4) applied to the inequalit y ab o v e, treating b oth
+sides as sequences of 𝑚 , implies that
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≤𝜀
+2+ lim
+𝑚 → ∞| 𝑓𝑚 ( 𝑥 ) − 𝑓 ( 𝑥 ) | =𝜀
+2< 𝜀 .
+236 / 415
+It follo ws that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | < 𝜀 .
+Th us 𝑓𝑛 → 𝑓  uniformly on 𝐴 , as claimed.
+Exercise 6.2 . 6 .  Assume 𝑓𝑛 → 𝑓  on a set 𝐴 . Theorem 6.2.6 is an example of a t ypical
+t yp e of question whic h asks whether a trait p ossessed b y eac h 𝑓𝑛  is inherited b y the
+limit function. Pro vide an example to sho w that al l  of the follo wing prop ositions are
+false if the con v ergence is only assumed to b e p oin t wise on 𝐴 . Then go bac k and decide
+whic h are true under the stronger h yp othesis of uniform con v ergence.
+(a) If eac h 𝑓𝑛  is uniformly con tin uous, then 𝑓  is uniformly con tin uous.
+(b) If eac h 𝑓𝑛  is b ounded, then 𝑓  is b ounded.
+(c) If eac h 𝑓𝑛  has a ﬁnite n um b er of discon tin uities, then 𝑓  has a ﬁnite n um b er of
+discon tin uities.
+(d) If eac h 𝑓𝑛  has few er than 𝑀  discon tin uities (where 𝑀 ∈ 𝐍  is ﬁxed), then 𝑓  has
+few er than 𝑀  discon tin uities.
+(e) If eac h 𝑓𝑛  has at most a coun table n um b er of discon tin uities, then 𝑓  has at most
+a coun table n um b er of discon tin uities.
+Solution.
+(a) Let ( 𝑓𝑛 : [ 0 , 1 ] → 𝐑 )  b e the sequence of functions deﬁned b y 𝑓𝑛 ( 𝑥 ) = 𝑥𝑛 and let
+𝑓 : [ 0 , 1 ] → 𝐑  b e the function deﬁned b y
+𝑓 ( 𝑥 ) = {0 if 0 ≤ 𝑥 < 1 ,
+1 if 𝑥 = 1 .
+As sho wn in Example 6.2.2 (ii), 𝑓𝑛 → 𝑓  p oin t wise. Eac h 𝑓𝑛  is a con tin uous function
+deﬁned on the compact domain [ 0 , 1 ]  and th us eac h 𝑓𝑛  is uniformly con tin uous b y The-
+orem 4.4.7. Ho w ev er, 𝑓  is not con tin uous and hence not uniformly con tin uous.
+W e claim that uniform con v ergence preserv es uniform con tin uit y . Supp ose that
+( 𝑓𝑛 : 𝐴 → 𝐑 )  is a sequence of uniformly con tin uous functions whic h con v erges uniformly
+to a function 𝑓 : 𝐴 → 𝐑 . Let 𝜀 > 0  b e giv en. By uniform con v ergence, there is an 𝑁 ∈ 𝐍
+suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+3.
+The function 𝑓𝑁  is uniformly con tin uous b y assumption and th us there exists a 𝛿 > 0
+suc h that
+𝑥 , 𝑦 ∈ 𝐴 and | 𝑥 − 𝑦 | < 𝛿 ⇒ | 𝑓𝑁 ( 𝑥 ) − 𝑓𝑁 ( 𝑦 ) | <𝜀
+3.
+No w supp ose that 𝑥 , 𝑦 ∈ 𝐴  are suc h that | 𝑥 − 𝑦 | < 𝛿  and observ e that
+237 / 415
+| 𝑓 ( 𝑥 ) − 𝑓 ( 𝑦 ) | ≤ | 𝑓 ( 𝑥 ) − 𝑓𝑁 ( 𝑥 ) | + | 𝑓𝑁 ( 𝑥 ) − 𝑓𝑁 ( 𝑦 ) | + | 𝑓𝑁 ( 𝑦 ) − 𝑓 ( 𝑦 ) | <𝜀
+3+𝜀
+3+𝜀
+3= 𝜀 .
+Th us 𝑓  is uniformly con tin uous.
+(b) Let ( 𝑓𝑛 : ( 0 , ∞ ) → 𝐑 )  b e the sequence of functions deﬁned b y
+𝑓𝑛 ( 𝑥 ) =𝑛 𝑥
+1 + 𝑛 𝑥2
+and let 𝑓 : ( 0 , ∞ ) → 𝐑  b e the function deﬁned b y 𝑓 ( 𝑥 ) =1
+𝑥. As w e sho w ed in Exercise
+6.2.1 , 𝑓𝑛 → 𝑓  p oin t wise. F or an y giv en 𝑛 ∈ 𝐍  w e ha v e
+𝑓𝑛 ( 𝑥 ) ≤ 𝑛 𝑥 ≤ 𝑛 on ( 0 , 1 ] and 𝑓𝑛 ( 𝑥 ) ≤ 1 on ( 1 , ∞ ) .
+Th us eac h 𝑓𝑛  is b ounded, whereas 𝑓  is un b ounded.
+W e claim that uniform con v ergence preserv es b oundedness. Supp ose that ( 𝑓𝑛 : 𝐴 → 𝐑 )
+is a sequence of b ounded functions (the b ound ma y dep end on 𝑛 ) whic h con v erges uni-
+formly to a function 𝑓 : 𝐴 → 𝐑 . By uniform con v ergence there is an 𝑁 ∈ 𝐍  suc h that
+| 𝑓𝑁 ( 𝑥 ) − 𝑓 ( 𝑥 ) | < 1 for all 𝑥 ∈ 𝐴 .
+By assumption the function 𝑓𝑁  is b ounded, i.e. there is an 𝑀 > 0  suc h that | 𝑓𝑁 ( 𝑥 ) | ≤ 𝑀
+for all 𝑥 ∈ 𝐴 . It follo ws that
+| 𝑓 ( 𝑥 ) | ≤ | 𝑓𝑁 ( 𝑥 ) | + | 𝑓𝑁 ( 𝑥 ) − 𝑓 ( 𝑥 ) | < 𝑀 + 1
+for ev ery 𝑥 ∈ 𝐴 . Th us 𝑓  is b ounded.
+(c) Let ( 𝑓𝑛 : 𝐑 → 𝐑 )  b e the sequence of functions deﬁned b y
+𝑓𝑛 ( 𝑥 ) = {𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,1
+𝑛,
+0 otherwise,
+and let 𝑓 : 𝐑 → 𝐑  b e the function deﬁned b y
+𝑓 ( 𝑥 ) = {𝑥 if 𝑥 = 1 ,1
+2,1
+3, … ,
+0 otherwise.
+As w e sho w ed in Exercise 6.2.2 (b) , 𝑓𝑛 → 𝑓  p oin t wise. F or a giv en 𝑛 ∈ 𝐍  the function
+𝑓𝑛  is discon tin uous precisely on the ﬁnite set { 1 ,1
+2,1
+3, … ,1
+𝑛} , whereas 𝑓  is discon tin uous
+precisely on the inﬁnite set { 1 ,1
+2,1
+3, … } . As sho wn in Exercise 6.2.2 (b) , the con v ergence
+here is uniform, demonstrating that uniform con v ergence need not preserv e the ﬁnite-
+ness of the set of discon tin uities.
+(d) If w e deﬁne ( 𝑓𝑛 )  and 𝑓  as in part (a), then eac h 𝑓𝑛  has zero discon tin uities but 𝑓  has
+a discon tin uit y at 𝑥 = 1 .
+The prop osition is true if w e assume uniform con v ergence. T o see this, let us pro v e the
+follo wing lemma.
+238 / 415
+Lemma L. 14 .  Supp ose ( 𝑓𝑛 : 𝐴 → 𝐑 )  is a sequence of functions con v erging uni-
+formly to a function 𝑓 : 𝐴 → 𝐑 . If 𝑓  is discon tin uous at 𝑐 ∈ 𝐑  then there exists
+an 𝑁 ∈ 𝐍  suc h that 𝑓𝑛  is discon tin uous at 𝑐 ∈ 𝐑  for all 𝑛 ≥ 𝑁 .
+Pr o of.  Since 𝑓  is discon tin uous at 𝑐  there exists an 𝜀 > 0  suc h that for all 𝛿 > 0
+there is an 𝑥𝛿 ∈ 𝐴  satisfying
+| 𝑥𝛿 − 𝑐 | < 𝛿 and | 𝑓 ( 𝑥𝛿 ) − 𝑓 ( 𝑐 ) | ≥ 𝜀 . ( 1 )
+By uniform con v ergence there is an 𝑁 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+4.
+Let 𝛿 > 0  b e giv en, so that there exists an 𝑥𝛿 ∈ 𝐴  suc h that ( 1 )  holds. Supp ose 
+𝑛 ≥ 𝑁  and observ e that
+𝜀 ≤ | 𝑓 ( 𝑥𝛿 ) − 𝑓 ( 𝑐 ) | ≤ | 𝑓𝑛 ( 𝑥𝛿 ) − 𝑓𝑛 ( 𝑐 ) | + | 𝑓𝑛 ( 𝑥𝛿 ) − 𝑓 ( 𝑥𝛿 ) | + | 𝑓𝑛 ( 𝑐 ) − 𝑓 ( 𝑐 ) |
+< | 𝑓𝑛 ( 𝑥𝛿 ) − 𝑓𝑛 ( 𝑐 ) | +𝜀
+4+𝜀
+4= | 𝑓𝑛 ( 𝑥𝛿 ) − 𝑓𝑛 ( 𝑐 ) | +𝜀
+2.
+Th us | 𝑓𝑛 ( 𝑥𝛿 ) − 𝑓𝑛 ( 𝑐 ) | >𝜀
+2. It follo ws that 𝑓𝑛  is discon tin uous at 𝑐  for all 𝑛 ≥ 𝑁 .
+□
+W e can no w pro v e the prop osition, assuming uniform con v ergence, b y pro ving the con-
+trap ositiv e. Supp ose ( 𝑓𝑛 : 𝐴 → 𝐑 )  is a sequence of functions con v erging uniformly to a
+function 𝑓 : 𝐴 → 𝐑  and supp ose that 𝑓  has at least 𝑀  discon tin uities, sa y 𝑥1 , … , 𝑥𝑀 .
+By Lemma  L.14  there exist p ositiv e in tegers 𝑁1 , … , 𝑁𝑀  suc h that
+𝑛 ≥ 𝑁𝑚 ⇒ 𝑓𝑛 is discontinuous at 𝑥𝑚
+for eac h 𝑚 ∈ { 1 , … , 𝑀 } . If w e let 𝑁 = max { 𝑁1 , … , 𝑁𝑀 }  then 𝑓𝑁  is discon tin uous at
+eac h p oin t 𝑥1 , … , 𝑥𝑀  and th us 𝑓𝑁  has at least 𝑀  discon tin uities.
+(e) Let ( 𝑓𝑛 : 𝐑 → 𝐑 )  b e the sequence of functions deﬁned b y
+𝑓𝑛 ( 𝑥 ) = {1 if 𝑥 =𝑎
+𝑏with 𝑏 ≤ 𝑛 ,
+0 otherwise
+(where w e assume 𝑎 ∈ 𝐙 , 𝑏 ∈ 𝐍 , and gcd ( 𝑎 , 𝑏 ) = 1 ), and let 𝑓 : 𝐑 → 𝐑  b e Diric hlet’s
+function, i.e.
+𝑓 ( 𝑥 ) = {1 if 𝑥 ∈ 𝐐 ,
+0 if 𝑥 ∉ 𝐐 .
+Notice that 𝑓𝑛 → 𝑓  p oin t wise: if 𝑥 ∉ 𝐐  then 𝑓𝑛 ( 𝑥 ) = 𝑓 ( 𝑥 ) = 0  for ev ery 𝑛 ∈ 𝐍 , and if
+𝑥 =𝑎
+𝑏∈ 𝐐  then 𝑓𝑛 ( 𝑥 ) = 𝑓 ( 𝑥 ) = 1  for all 𝑛 ≥ 𝑏 . Notice further that for a giv en 𝑛 ∈ 𝐍
+the function 𝑓𝑛  is discon tin uous precisely on the coun table set
+239 / 415
+⋃𝑛
+𝑏 = 1{𝑎
+𝑏: 𝑎 ∈ 𝐙 } ,
+whereas 𝑓  is discon tin uous on the uncoun table set 𝐑 .
+The prop osition is true if w e assume uniform con v ergence. Let
+𝐷𝑓 = { 𝑥 ∈ 𝐑 : 𝑓 is discontinuous at 𝑥 } .
+It follo ws from Lemma  L.14  that
+𝐷𝑓 ⊆ ⋃∞
+𝑛 = 1𝐷 𝑓 𝑛 .
+By assumption eac h 𝐷 𝑓 𝑛  is at most coun table and th us the union ⋃∞
+𝑛 = 1 𝐷 𝑓 𝑛  is at most
+coun table b y Theorem 1.5.8 (ii). It follo ws that 𝐷𝑓  is at most coun table.
+Exercise 6.2 . 7 .  Let 𝑓  b e uniformly con tin uous on all of 𝐑 , and deﬁne a sequence of
+functions b y 𝑓𝑛 ( 𝑥 ) = 𝑓 ( 𝑥 +1
+𝑛) . Sho w that 𝑓𝑛 → 𝑓  uniformly . Giv e an example to sho w
+that this prop osition fails if 𝑓  is only assumed to b e con tin uous and not uniformly con-
+tin uous on 𝐑 .
+Solution.  Let 𝜀 > 0  b e giv en. By the uniform con tin uit y of 𝑓  there exists a 𝛿 > 0  suc h that
+| 𝑥 − 𝑦 | < 𝛿 ⇒ | 𝑓 ( 𝑥 ) − 𝑓 ( 𝑦 ) | < 𝜀 .
+Let 𝑁 ∈ 𝐍  b e suc h that 1
+𝑁< 𝛿 . F or an y 𝑛 ≥ 𝑁  and 𝑥 ∈ 𝐑  w e ha v e | 𝑥 +1
+𝑛− 𝑥 | =1
+𝑛< 𝛿
+and th us
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | = | 𝑓 ( 𝑥 +1
+𝑛) − 𝑓 ( 𝑥 ) | < 𝜀 .
+Hence 𝑓𝑛 → 𝑓  uniformly .
+F or a coun terexample to the prop osition assuming only con tin uit y , consider 𝑓 : 𝐑 → 𝐑  giv en
+b y 𝑓 ( 𝑥 ) = 𝑥2. Theorem 4.4.5 with the sequences 𝑥𝑛 = 𝑛 +1
+𝑛 and 𝑦𝑛 = 𝑛  sho ws that 𝑓  is not
+uniformly con tin uous on 𝐑 . F urthermore, for an y 𝑁 ∈ 𝐍  observ e that
+| 𝑓𝑁 ( 𝑁 ) − 𝑓 ( 𝑁 ) | = 2 +1
+𝑁2> 2 .
+It follo ws that ( 𝑓𝑛 )  do es not con v erge uniformly to 𝑓 .
+Exercise 6.2 . 8 .  Let ( 𝑔𝑛 )  b e a sequence of con tin uous functions that con v erges uniformly
+to 𝑔  on a compact set 𝐾 . If 𝑔 ( 𝑥 ) ≠ 0  on 𝐾 , sho w ( 1 / 𝑔𝑛 )  con v erges uniformly on 𝐾  to
+1 / 𝑔 .
+Solution.  First let us sho w that the sequence ( 𝑔𝑛 )  is ev en tually non-zero, so that the se-
+quence of recipro cals ( 1 / 𝑔𝑛 )  is ev en tually w ell-deﬁned. Note 𝑔  m ust b e con tin uous on 𝐾  b y the
+Con tin uous Limit Theorem (Theorem 6.2.6). It follo ws that | 𝑔 |  is con tin uous on the compact
+240 / 415
+set 𝐾  and hence attains a minim um b y the Extreme V alue Theorem, sa y 0 < 𝑀 ≤ | 𝑔 ( 𝑥 ) |  for
+all 𝑥 ∈ 𝐾 ; note that 𝑀  m ust b e strictly p ositiv e since 𝑔 ≠ 0  on 𝐾 . By uniform con v ergence
+there is an 𝑁1 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐾 and 𝑛 ≥ 𝑁1 ⇒ | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝑀
+2⇒ 0 <𝑀
+2< | 𝑔𝑛 ( 𝑥 ) | ⇒ 𝑔𝑛 ( 𝑥 ) ≠ 0 .
+Th us the sequence ( 1 / 𝑔𝑛 )  is w ell-deﬁned for all 𝑛 ≥ 𝑁1 .
+T o sho w that ( 1 / 𝑔𝑛 )  con v erges uniformly to 1 / 𝑔 , observ e that b y uniform con v ergence there
+is an 𝑁2 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐾 and 𝑛 ≥ 𝑁2 ⇒ | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝑀2
+2𝜀 .
+Let 𝑁 = max { 𝑁1 , 𝑁2 }  and supp ose 𝑥 ∈ 𝐾  and 𝑛 ≥ 𝑁 . It follo ws that
+|1
+𝑔𝑛 ( 𝑥 )−1
+𝑔 ( 𝑥 )| = |𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 )
+𝑔𝑛 ( 𝑥 ) 𝑔 ( 𝑥 )| ≤2 | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) |
+𝑀2< 𝜀 .
+Th us 1 / 𝑔𝑛 → 1 / 𝑔  uniformly .
+Exercise 6.2 . 9 .  Assume ( 𝑓𝑛 )  and ( 𝑔𝑛 )  are uniformly con v ergen t sequences of functions.
+(a) Sho w that ( 𝑓𝑛 + 𝑔𝑛 )  is a uniformly con v ergen t sequence of functions.
+(b) Giv e an example to sho w that the pro duct ( 𝑓𝑛 𝑔𝑛 )  ma y not con v erge uniformly .
+(c) Pro v e that if there exists an 𝑀 > 0  suc h that | 𝑓𝑛 | ≤ 𝑀  and | 𝑔𝑛 | ≤ 𝑀  for all 𝑛 ∈ 𝐍 ,
+then ( 𝑓𝑛 𝑔𝑛 )  do es con v erge uniformly .
+Solution.  Supp ose that eac h 𝑓𝑛  and eac h 𝑔𝑛  is deﬁned on some domain 𝐴 ⊆ 𝐑  and supp ose
+that 𝑓𝑛 → 𝑓  uniformly and 𝑔𝑛 → 𝑔  uniformly for some functions 𝑓 , 𝑔 : 𝐴 → 𝐑 .
+(a) W e claim that ( 𝑓𝑛 + 𝑔𝑛 )  con v erges uniformly to 𝑓 + 𝑔 . Let 𝜀 > 0  b e giv en. By the uni-
+form con v ergence of 𝑓𝑛 → 𝑓  and 𝑔𝑛 → 𝑔 , there exist p ositiv e in tegers 𝑁1 , 𝑁2  suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁1 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+2,
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁2 ⇒ | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝜀
+2.
+It follo ws that for an y 𝑥 ∈ 𝐴  and an y 𝑛 ≥ max { 𝑁1 , 𝑁2 }  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) + 𝑔𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) − 𝑔 ( 𝑥 ) | ≤ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | + | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+Th us 𝑓𝑛 + 𝑔𝑛 → 𝑓 + 𝑔  uniformly .
+(b) Let ( 𝑓𝑛 : 𝐑 → 𝐑 )  b e the sequence deﬁned b y 𝑓𝑛 ( 𝑥 ) = 𝑥 +1
+𝑛 and let 𝑓 : 𝐑 → 𝐑  b e the
+function 𝑓 ( 𝑥 ) = 𝑥 . It is straigh tforw ard to argue that 𝑓𝑛 → 𝑓  uniformly . Observ e that
+𝑓2
+𝑛 : 𝐑 → 𝐑  and 𝑓2: 𝐑 → 𝐑  are giv en b y
+[ 𝑓𝑛 ( 𝑥 ) ]2= 𝑥2+2 𝑥
+𝑛+1
+𝑛2and [ 𝑓 ( 𝑥 ) ]2= 𝑥2.
+241 / 415
+It follo ws that 𝑓2
+𝑛 → 𝑓2 p oin t wise, but the con v ergence is not uniform: for an y 𝑁 ∈ 𝐍
+w e ha v e
+| [ 𝑓𝑁 ( 𝑁 ) ]2− [ 𝑓 ( 𝑁 ) ]2| = 2 +1
+𝑁2> 2 .
+(c) Since eac h 𝑓𝑛  is b ounded, Exercise 6.2.6 (b)  sho ws that 𝑓  is b ounded, sa y | 𝑓 ( 𝑥 ) | ≤ 𝐿  for
+all 𝑥 ∈ 𝐴  and some 𝐿 > 0 . Let 𝜀 > 0  b e giv en. By the uniform con v ergence of 𝑓𝑛 → 𝑓
+and 𝑔𝑛 → 𝑔 , there exist p ositiv e in tegers 𝑁1 , 𝑁2  suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁1 ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | <𝜀
+2 𝑀,
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁2 ⇒ | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝜀
+2 𝐿.
+It follo ws that for an y 𝑥 ∈ 𝐴  and an y 𝑛 ≥ max { 𝑁1 , 𝑁2 }  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) 𝑔𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) 𝑔 ( 𝑥 ) | ≤ | 𝑔𝑛 ( 𝑥 ) | | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | + | 𝑓 ( 𝑥 ) | | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) |
+≤ 𝑀 | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | + 𝐿 | 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+Th us 𝑓𝑛 𝑔𝑛 → 𝑓 𝑔  uniformly .
+Exercise 6.2 . 10 .  This exercise and the next explore partial con v erses of the Con tin uous
+Limit Theorem (Theorem 6.2.6). Assume 𝑓𝑛 → 𝑓  p oin t wise on [ 𝑎 , 𝑏 ]  and the limit func-
+tion 𝑓  is con tin uous on [ 𝑎 , 𝑏 ] . If eac h 𝑓𝑛  is increasing (but not necessarily con tin uous),
+sho w 𝑓𝑛 → 𝑓  uniformly .
+Solution.  First, let us pro v e a couple of useful lemmas.
+Lemma L. 15 .  If ( 𝑓𝑛 : 𝐴 → 𝐑 )  is a sequence of increasing functions con v erging p oin t-
+wise to a function 𝑓 : 𝐴 → 𝐑  then 𝑓  is increasing.
+Pr o of.  Let 𝑥 ≤ 𝑦  in 𝐴  b e giv en. By assumption w e ha v e 𝑓𝑛 ( 𝑥 ) ≤ 𝑓𝑛 ( 𝑦 )  for eac h 𝑛 ∈ 𝐍 .
+The Order Limit Theorem (Theorem 2.3.4) and the p oin t wise con v ergence 𝑓𝑛 → 𝑓  then
+imply that 𝑓 ( 𝑥 ) ≤ 𝑓 ( 𝑦 ) . □
+Lemma L. 16 .  If 𝑓 , 𝑔 : [ 𝑐 , 𝑑 ] → 𝐑  are increasing functions then for all 𝑥 ∈ [ 𝑐 , 𝑑 ]  the
+follo wing inequalit y holds:
+| 𝑓 ( 𝑥 ) − 𝑔 ( 𝑥 ) | ≤ max { | 𝑓 ( 𝑐 ) − 𝑔 ( 𝑑 ) | , | 𝑓 ( 𝑑 ) − 𝑔 ( 𝑐 ) | } .
+Pr o of.  Let 𝑥 ∈ [ 𝑐 , 𝑑 ]  b e giv en. Since 𝑓  and 𝑔  are increasing w e ha v e
+𝑓 ( 𝑐 ) ≤ 𝑓 ( 𝑥 ) ≤ 𝑓 ( 𝑑 ) and 𝑔 ( 𝑐 ) ≤ 𝑔 ( 𝑥 ) ≤ 𝑔 ( 𝑑 ) .
+242 / 415
+T ogether these imply that
+𝑓 ( 𝑥 ) − 𝑔 ( 𝑥 ) ≤ 𝑓 ( 𝑑 ) − 𝑔 ( 𝑐 ) ≤ | 𝑓 ( 𝑑 ) − 𝑔 ( 𝑐 ) | ≤ max { | 𝑓 ( 𝑐 ) − 𝑔 ( 𝑑 ) | , | 𝑓 ( 𝑑 ) − 𝑔 ( 𝑐 ) | } ,
+𝑔 ( 𝑥 ) − 𝑓 ( 𝑥 ) ≤ 𝑔 ( 𝑑 ) − 𝑓 ( 𝑐 ) ≤ | 𝑓 ( 𝑐 ) − 𝑔 ( 𝑑 ) | ≤ max { | 𝑓 ( 𝑐 ) − 𝑔 ( 𝑑 ) | , | 𝑓 ( 𝑑 ) − 𝑔 ( 𝑐 ) | } .
+The desired inequalit y follo ws. □
+Returning to the exercise, let 𝜀 > 0  b e giv en. Because 𝑓  is con tin uous on the compact set 
+[ 𝑎 , 𝑏 ] , it m ust b e uniformly con tin uous here (Theorem 4.4.7). Consequen tly , there exists a 
+𝛿 > 0  suc h that
+𝑥 , 𝑦 ∈ [ 𝑎 , 𝑏 ] and | 𝑥 − 𝑦 | < 𝛿 ⇒ | 𝑓 ( 𝑥 ) − 𝑓 ( 𝑦 ) | <𝜀
+2. ( 1 )
+Cho ose 𝐾 ∈ 𝐍  suc h that 𝐾− 1( 𝑏 − 𝑎 ) < 𝛿  and for 𝑖 ∈ { 0 , … , 𝐾 }  let 𝑥𝑖 = 𝑎 + 𝑖 𝐾− 1( 𝑏 − 𝑎 ) , so
+that
+𝑥0 = 𝑎 , 𝑥𝐾 = 𝑏 , and 𝑥𝑖 + 1 − 𝑥𝑖 =𝑏 − 𝑎
+𝐾< 𝛿 .
+This partitions the in terv al [ 𝑎 , 𝑏 ]  in to subin terv als [ 𝑥𝑖 , 𝑥𝑖 + 1 ]  of equal length, suc h that this
+length is less than 𝛿 . The p oin t wise con v ergence 𝑓𝑛 → 𝑓  implies that for eac h 𝑖 ∈ { 0 , … , 𝐾 }
+there is an 𝑁𝑖 ∈ 𝐍  suc h that
+𝑛 ≥ 𝑁𝑖 ⇒ | 𝑓𝑛 ( 𝑥𝑖 ) − 𝑓 ( 𝑥𝑖 ) | <𝜀
+2. ( 2 )
+Let 𝑁 = max { 𝑁0 , … , 𝑁𝐾 }  and supp ose that 𝑛 ≥ 𝑁 . Fix 𝑥 ∈ [ 𝑎 , 𝑏 ]  and note that 𝑥 ∈ [ 𝑥𝑖 , 𝑥𝑖 + 1 ]
+for some 𝑖 ∈ { 0 , … , 𝐾 − 1 } . It follo ws from ( 1 )  and ( 2 )  that
+| 𝑓𝑛 ( 𝑥𝑖 + 1 ) − 𝑓 ( 𝑥𝑖 ) | ≤ | 𝑓𝑛 ( 𝑥𝑖 + 1 ) − 𝑓 ( 𝑥𝑖 + 1 ) | + | 𝑓 ( 𝑥𝑖 + 1 ) − 𝑓 ( 𝑥𝑖 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+W e can similarly sho w that | 𝑓𝑛 ( 𝑥𝑖 ) − 𝑓 ( 𝑥𝑖 + 1 ) | < 𝜀 . Observ e that 𝑓  is increasing b y Lem-
+ma  L.15 ; it follo ws from Lemma  L.16  that
+| 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≤ max { | 𝑓𝑛 ( 𝑥𝑖 + 1 ) − 𝑓 ( 𝑥𝑖 ) | , | 𝑓𝑛 ( 𝑥𝑖 ) − 𝑓 ( 𝑥𝑖 + 1 ) | } < 𝜀 .
+W e ha v e no w sho wn that if 𝑥 ∈ [ 𝑎 , 𝑏 ]  and 𝑛 ≥ 𝑁  then | 𝑓𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | < 𝜀 . Th us 𝑓𝑛 → 𝑓  uni-
+formly on [ 𝑎 , 𝑏 ] .
+Exercise 6.2 . 11  (Dini's Theorem).  Assume 𝑓𝑛 → 𝑓  p oin t wise on a compact set 𝐾
+and assume that for eac h 𝑥 ∈ 𝐾  the sequence 𝑓𝑛 ( 𝑥 )  is increasing. F ollo w these steps to
+sho w that if 𝑓𝑛  and 𝑓  are con tin uous on 𝐾 , then the con v ergence is uniform.
+(a) Set 𝑔𝑛 = 𝑓 − 𝑓𝑛  and translate the preceding h yp othesis in to statemen ts ab out the
+sequence ( 𝑔𝑛 ) .
+(b) Let 𝜀 > 0  b e arbitrary , and deﬁne 𝐾𝑛 = { 𝑥 ∈ 𝐾 : 𝑔𝑛 ( 𝑥 ) ≥ 𝜀 } . Argue that
+𝐾1 ⊇ 𝐾2 ⊇ 𝐾3 ⊇ ⋯ , and use this observ ation to ﬁnish the argumen t.
+Solution.
+243 / 415
+(a) The sequence ( 𝑔𝑛 )  con v erges to zero p oin t wise on 𝐾 ; for a giv en 𝑥 ∈ 𝐾 , the sequence of
+real n um b ers ( 𝑔𝑛 ( 𝑥 ) )  is decreasing; and eac h 𝑔𝑛  is a con tin uous function. T o complete
+the pro of, it will suﬃce to sho w that 𝑔𝑛 → 0  uniformly on 𝐾 .
+(b) Supp ose 𝑥 ∈ 𝐾𝑛 + 1  for some 𝑛 ∈ 𝐍 , so that 𝑔𝑛 + 1 ( 𝑥 ) ≥ 𝜀 . Since the sequence ( 𝑔𝑛 ( 𝑥 ) )
+is decreasing w e then ha v e 𝑔𝑛 ( 𝑥 ) ≥ 𝑔𝑛 + 1 ( 𝑥 ) ≥ 𝜀  and th us 𝑥 ∈ 𝐾𝑛 . It follo ws that
+𝐾𝑛 + 1 ⊆ 𝐾𝑛  and hence that ⋯ ⊆ 𝐾3 ⊆ 𝐾2 ⊆ 𝐾1 .
+If eac h 𝐾𝑛  w ere non-empt y then Theorem 3.3.5 w ould imply the existence of an 𝑥 ∈ 𝐾
+suc h that 𝑔𝑛 ( 𝑥 ) ≥ 𝜀 > 0  for eac h 𝑛 ∈ 𝐍 , so that lim𝑛 → ∞ 𝑔𝑛 ( 𝑥 ) ≠ 0 . T aking the con tra-
+p ositiv e of this and using our assumption that lim𝑛 → ∞ 𝑔𝑛 ( 𝑥 ) = 0  for all 𝑥 ∈ 𝐾 , w e see
+that there exists an 𝑁 ∈ 𝐍  suc h that 𝐾𝑁 = ∅ , whic h forces 𝐾𝑛 = ∅  for all 𝑛 ≥ 𝑁 . In
+other w ords,
+𝑥 ∈ 𝐾 and 𝑛 ≥ 𝑁 ⇒ 𝑔𝑛 ( 𝑥 ) < 𝜀 .
+Since 𝑔𝑛 → 0  p oin t wise on 𝐾  and the sequence ( 𝑔𝑛 ( 𝑥 ) )  is decreasing for an y 𝑥 ∈ 𝐾 , it
+m ust b e the case that eac h 𝑔𝑛  is non-negativ e, so that | 𝑔𝑛 | = 𝑔𝑛 . W e ma y conclude that
+𝑔𝑛 → 0  uniformly on 𝐾 .
+Exercise 6.2 . 12  (Can tor F unction).  Review the construction of the Can tor set
+𝐶 ⊆ [ 0 , 1 ]  from Section 3.1. This exercise mak es use of results and notation from this
+discussion.
+(a) Deﬁne 𝑓0 ( 𝑥 ) = 𝑥  for all 𝑥 ∈ [ 0 , 1 ] . No w, let
+𝑓1 ( 𝑥 ) =
+⎩{⎨{⎧ ( 3 / 2 ) 𝑥 for 0 ≤ 𝑥 < 1 / 3
+1 / 2 for 1 / 3 < 𝑥 < 2 / 3
+( 3 / 2 ) 𝑥 − 1 / 2 for 2 / 3 ≤ 𝑥 ≤ 1 .
+Sk etc h 𝑓0  and 𝑓1  o v er [ 0 , 1 ]  and observ e that 𝑓1  is con tin uous, increasing, and
+constan t on the middle third ( 1 / 3 , 2 / 3 ) = [ 0 , 1 ] ∖ 𝐶1 .
+(b) Construct 𝑓2  b y imitating this pro cess of ﬂattening out the middle third of eac h
+nonconstan t segmen t of 𝑓1 . Sp eciﬁcally , let
+𝑓2 ( 𝑥 ) =
+⎩{⎨{⎧ ( 1 / 2 ) 𝑓1 ( 3 𝑥 ) for 0 ≤ 𝑥 < 1 / 3
+𝑓1 ( 𝑥 ) for 1 / 3 < 𝑥 < 2 / 3
+( 1 / 2 ) 𝑓1 ( 3 𝑥 − 2 ) + 1 / 2 for 2 / 3 ≤ 𝑥 ≤ 1 .
+If w e con tin ue this pro cess, sho w that the resulting sequence ( 𝑓𝑛 )  con v erges uni-
+formly on [ 0 , 1 ] .
+(c) Let 𝑓 = lim 𝑓𝑛 . Pro v e that 𝑓  is a con tin uous, increasing function on [ 0 , 1 ]  with 
+𝑓 ( 0 ) = 0  and 𝑓 ( 1 ) = 1  that satisﬁes 𝑓′( 𝑥 ) = 0  for all 𝑥  in the op en set [ 0 , 1 ] ∖ 𝐶 .
+Recall that the “length” of the Can tor set 𝐶  is 0 . Someho w, 𝑓  manages to increase
+from 0  to 1  while remaining constan t on a set of “length 1 . ”
+244 / 415
+Solution.
+(a) Here are graphs of 𝑓0  and 𝑓1  o v er [ 0 , 1 ] .
+01
+32
+31
+01
+32
+31𝑓0 ( 𝑥 ) for 𝑥 ∈ [ 0 , 1 ]
+01
+32
+31
+01
+32
+31𝑓1 ( 𝑥 ) for 𝑥 ∈ [ 0 , 1 ]
+(b) The sequence ( 𝑓𝑛 )  is deﬁned b y
+𝑓𝑛 ( 𝑥 ) =
+⎩{{⎨{{⎧ 1
+2𝑓𝑛 − 1 ( 3 𝑥 ) if 0 ≤ 𝑥 ≤1
+3,
+𝑓𝑛 − 1 ( 𝑥 ) if1
+3< 𝑥 <2
+3,
+1
+2𝑓𝑛 − 1 ( 3 𝑥 − 2 ) +1
+2if2
+3≤ 𝑥 ≤ 1
+for 𝑛 ≥ 2 .
+W e will sho w b y induction that | 𝑓𝑛 + 1 ( 𝑥 ) − 𝑓𝑛 ( 𝑥 ) | ≤1
+6⋅ 2− 𝑛 for all 𝑥 ∈ [ 0 , 1 ]  and all
+𝑛 ∈ 𝐍 . F or the base case 𝑛 = 1 , it is straigh tforw ard to v erify that the maxim um of 
+| 𝑓2 ( 𝑥 ) − 𝑓1 ( 𝑥 ) |  is 1
+1 2, whic h is ac hiev ed at 𝑥 =1
+9,2
+9,7
+9,8
+9; see the follo wing graph.
+01
+92
+91
+34
+95
+92
+37
+98
+91
+01
+92
+91
+34
+95
+92
+37
+98
+91𝑓1 𝑓2
+245 / 415
+Supp ose that | 𝑓𝑛 + 1 ( 𝑥 ) − 𝑓𝑛 ( 𝑥 ) | ≤1
+6⋅ 2− 𝑛 for all 𝑥 ∈ [ 0 , 1 ]  some 𝑛 ∈ 𝐍 . There are three
+cases.
+Case 1.  F or 0 ≤ 𝑥 ≤1
+3 w e ha v e 𝑓𝑛 + 2 ( 𝑥 ) =1
+2𝑓𝑛 + 1 ( 3 𝑥 )  and 𝑓𝑛 + 1 ( 𝑥 ) =1
+2𝑓𝑛 ( 3 𝑥 ) . It follo ws
+that
+| 𝑓𝑛 + 2 ( 𝑥 ) − 𝑓𝑛 + 1 ( 𝑥 ) | = |1
+2𝑓𝑛 + 1 ( 3 𝑥 ) −1
+2𝑓𝑛 ( 3 𝑥 ) | =1
+2| 𝑓𝑛 + 1 ( 3 𝑥 ) − 𝑓𝑛 ( 3 𝑥 ) | ≤1
+6⋅ 2− ( 𝑛 + 1 ),
+where w e ha v e used the induction h yp othesis for the last inequalit y .
+Case 2.  F or 1
+3≤ 𝑥 ≤2
+3 w e ha v e 𝑓𝑛 + 2 ( 𝑥 ) = 𝑓𝑛 + 1 ( 𝑥 )  and th us | 𝑓𝑛 + 2 ( 𝑥 ) − 𝑓𝑛 + 1 ( 𝑥 ) | = 0 .
+Case 3.  F or 2
+3≤ 𝑥 ≤ 1  w e ha v e
+𝑓𝑛 + 2 ( 𝑥 ) =1
+2𝑓𝑛 + 1 ( 3 𝑥 − 2 ) +1
+2and 𝑓𝑛 + 1 ( 𝑥 ) =1
+2𝑓𝑛 ( 3 𝑥 − 2 ) +1
+2.
+It follo ws that
+| 𝑓𝑛 + 2 ( 𝑥 ) − 𝑓𝑛 + 1 ( 𝑥 ) | = |1
+2𝑓𝑛 + 1 ( 3 𝑥 − 2 ) −1
+2𝑓𝑛 ( 3 𝑥 − 2 ) |
+=1
+2| 𝑓𝑛 + 1 ( 3 𝑥 − 2 ) − 𝑓𝑛 ( 3 𝑥 − 2 ) | ≤1
+6⋅ 2− ( 𝑛 + 1 ),
+where w e ha v e used the induction h yp othesis for the last inequalit y .
+This completes the induction step and th us | 𝑓𝑛 + 1 ( 𝑥 ) − 𝑓𝑛 ( 𝑥 ) | ≤1
+6⋅ 2− 𝑛 for eac h 𝑛 ∈ 𝐍 .
+This inequalit y implies that for an y 𝑥 ∈ [ 0 , 1 ]  and an y p ositiv e in tegers 𝑛 > 𝑚  w e ha v e
+| 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | ≤ ∑𝑛 − 1
+𝑗 = 𝑚| 𝑓𝑗 + 1 ( 𝑥 ) − 𝑓𝑗 ( 𝑥 ) | ≤1
+6∑𝑛 − 1
+𝑗 = 𝑚1
+2𝑗.
+Since ∑∞
+𝑗 = 0 2− 𝑗 is a con v ergen t geometric series, its sequence of partial sums is a Cauc h y
+sequence. Com bining this with the inequalit y ab o v e and Theorem 6.2.5, w e see that 
+( 𝑓𝑛 )  con v erges uniformly on [ 0 , 1 ] .
+(c) It is straigh tforw ard to argue b y induction that eac h 𝑓𝑛  is a con tin uous increasing
+function satisfying 𝑓 ( 0 ) = 0  and 𝑓 ( 1 ) = 1 . It follo ws from the Con tin uous Limit Theo-
+rem (Theorem 6.2.6), Lemma  L.15 , and the uniform con v ergence 𝑓𝑛 → 𝑓  that 𝑓  is a
+con tin uous increasing function satisfying 𝑓 ( 0 ) = 0  and 𝑓 ( 1 ) = 1 .
+Let 𝑥 ∈ [ 0 , 1 ] ∖ 𝐶  b e giv en. By De Morgan’s La ws w e ha v e
+[ 0 , 1 ] ∖ 𝐶 = [ 0 , 1 ] ∖ ( ⋂∞
+𝑚 = 1𝐶𝑚 ) = ⋃∞
+𝑚 = 1( [ 0 , 1 ] ∖ 𝐶𝑚 ) .
+Th us 𝑥 ∈ [ 0 , 1 ] ∖ 𝐶𝑚  for some 𝑚 ∈ 𝐍 . W e constructed the sequence ( 𝑓𝑛 )  in suc h a w a y
+that 𝑓𝑛  is constan t on the op en set [ 0 , 1 ] ∖ 𝐶𝑚  for all 𝑛 ≥ 𝑚 ; the uniform con v ergence
+𝑓𝑛 → 𝑓  then implies that 𝑓  is constan t on [ 0 , 1 ] ∖ 𝐶𝑚  for an y 𝑚 ∈ 𝐍 . The op enness
+of [ 0 , 1 ] ∖ 𝐶𝑚  implies that there is some op en in terv al 𝐼  con tained in [ 0 , 1 ] ∖ 𝐶𝑚  and
+con taining 𝑥  suc h that 𝑓  is constan t on 𝐼 . It follo ws that that 𝑓  is diﬀeren tiable at 𝑥
+and moreo v er that 𝑓′( 𝑥 ) = 0 .
+246 / 415
+Exercise 6.2 . 13 .  Recall that the Bolzano-W eierstrass Theorem (Theorem 2.5.5) states
+that ev ery b ounded sequence of real n um b ers has a con v ergen t subsequence. An anal-
+ogous statemen t for b ounded sequences of functions is not true in general, but under
+stronger h yp otheses sev eral diﬀeren t conclusions are p ossible. One a v en ue is to assume
+the common domain for all of the functions in the sequence is coun table. (Another is
+explored in the next t w o exercises.)
+Let 𝐴 = { 𝑥1 , 𝑥2 , 𝑥3 , … }  b e a coun table set. F or eac h 𝑛 ∈ 𝐍 , let 𝑓𝑛  b e deﬁned on 𝐴  and
+assume there exists an 𝑀 > 0  suc h that | 𝑓𝑛 ( 𝑥 ) | ≤ 𝑀  for all 𝑛 ∈ 𝐍  and 𝑥 ∈ 𝐴 . F ollo w
+these steps to sho w that there exists a subsequence of ( 𝑓𝑛 )  that con v erges p oin t wise on
+𝐴 .
+(a) Wh y do es the sequence of real n um b ers 𝑓𝑛 ( 𝑥1 )  necessarily con tain a con v ergen t
+subsequence ( 𝑓 𝑛 𝑘 ) ? T o indicate that the subsequence of functions ( 𝑓 𝑛 𝑘 )  is gener-
+ated b y considering the v alues of the functions at 𝑥1 , w e will use the notation 
+𝑓 𝑛 𝑘 = 𝑓1 , 𝑘 .
+(b) No w, explain wh y the sequence 𝑓1 , 𝑘 ( 𝑥2 )  con tains a con v ergen t subsequence.
+(c) Carefully construct a nested family of subsequences ( 𝑓𝑚 , 𝑘 ) , and sho w ho w this can
+b e used to pro duce a single subsequence of ( 𝑓𝑛 )  that con v erges at ev ery p oin t of
+𝐴 .
+Solution.  F or the purp oses of this exercise, let us adopt some more precise, if cum b ersome,
+notation for sequences. A sequence in a non-empt y set 𝐸  is a function 𝑎 : 𝐍 → 𝐸 . A sequence
+𝑏 : 𝐍 → 𝐸  is a subsequence of 𝑎  if there exists a strictly increasing function 𝜃 : 𝐍 → 𝐍  suc h
+that 𝑏 = 𝑎 ∘ 𝜃 , i.e. suc h that 𝑏 ( 𝑛 ) = 𝑎 ( 𝜃 ( 𝑛 ) )  for all 𝑛 ∈ 𝐍 . W e shall write 𝑏 ◃ 𝑎  to mean that
+𝑏  is a subsequence of 𝑎 . Giv en this deﬁnition, it is clear that if 𝑐  is a subsequence of 𝑏  and if
+𝑏  is a subsequence of 𝑎 , then 𝑐  is a subsequence of 𝑎 . In other w ords, ◃  is transitiv e.
+(a) Deﬁne 𝑎0 : 𝐍 → 𝐑𝐴 (where 𝐑𝐴 is the collection of all functions from 𝐴  to 𝐑 )
+b y 𝑎0 ( 𝑛 ) = 𝑓𝑛 . By assumption, the sequence of real n um b ers whose 𝑛th term is 
+[ 𝑎0 ( 𝑛 ) ] ( 𝑥1 ) = 𝑓𝑛 ( 𝑥1 )  is b ounded. A ccording to the Bolzano-W eierstrass Theorem there
+exists a strictly increasing function 𝜃1 : 𝐍 → 𝐍  suc h that
+lim
+𝑛 → ∞[ 𝑎0 ( 𝜃1 ( 𝑛 ) ) ] ( 𝑥1 ) = lim
+𝑛 → ∞𝑓𝜃1 ( 𝑛 ) ( 𝑥1 ) = 𝑦1
+for some 𝑦1 ∈ 𝐑 . Deﬁne 𝑎1 : 𝐍 → 𝐑𝐴 b y 𝑎1 = 𝑎0 ∘ 𝜃1 . Note that 𝑎1 ◃ 𝑎0  and that
+lim
+𝑛 → ∞[ 𝑎1 ( 𝑛 ) ] ( 𝑥1 ) = lim
+𝑛 → ∞𝑓𝜃1 ( 𝑛 ) ( 𝑥1 ) = 𝑦1 .
+(b) The sequence of real n um b ers whose 𝑛th  term is [ 𝑎1 ( 𝑛 ) ] ( 𝑥2 ) = 𝑓𝜃1 ( 𝑛 ) ( 𝑥2 )  is b ounded
+b y assumption. The Bolzano-W eierstrass Theorem implies the existence of a strictly
+increasing function 𝜃2 : 𝐍 → 𝐍  suc h that
+lim
+𝑛 → ∞[ 𝑎1 ( 𝜃2 ( 𝑛 ) ) ] ( 𝑥2 ) = lim
+𝑛 → ∞𝑓𝜃1 ( 𝜃2 ( 𝑛 ) ) ( 𝑥2 ) = 𝑦2
+247 / 415
+for some 𝑦2 ∈ 𝐑 . Deﬁne 𝑎2 : 𝐍 → 𝐑𝐴 b y 𝑎2 = 𝑎1 ∘ 𝜃2 = 𝑎0 ∘ 𝜃1 ∘ 𝜃2  and note that 
+𝑎2 ◃ 𝑎1 ◃ 𝑎0 . Note further that
+lim
+𝑛 → ∞[ 𝑎2 ( 𝑛 ) ] ( 𝑥2 ) = lim
+𝑛 → ∞𝑓𝜃1 ( 𝜃2 ( 𝑛 ) ) ( 𝑥2 ) = 𝑦2
+and lim
+𝑛 → ∞[ 𝑎2 ( 𝑛 ) ] ( 𝑥1 ) = lim
+𝑛 → ∞𝑓𝜃1 ( 𝜃2 ( 𝑛 ) ) ( 𝑥1 ) = 𝑦1 ,
+since subsequences of con v ergen t sequences con v erge to the same limit as the paren t
+sequence.
+(c) W e con tin ue in this manner, obtaining for eac h 𝑚 ∈ 𝐍  a sequence 𝑎𝑚 : 𝐍 → 𝐑𝐴, a
+strictly increasing function 𝜃𝑚 : 𝐍 → 𝐍  suc h that 𝑎𝑚 = 𝑎𝑚 − 1 ∘ 𝜃𝑚 = 𝑎0 ∘ 𝜃1 ∘ ⋯ ∘ 𝜃𝑚 ,
+and a real n um b er 𝑦𝑚  suc h that
+lim
+𝑛 → ∞[ 𝑎𝑚 ( 𝑛 ) ] ( 𝑥𝑚 ) = lim
+𝑛 → ∞𝑓( 𝜃1 ∘ ⋯ ∘ 𝜃𝑚 ) ( 𝑛 ) ( 𝑥𝑚 ) = 𝑦𝑚 .
+It follo ws that 𝑎𝑚 ◃ 𝑎𝑚 − 1 ◃ ⋯ ◃ 𝑎1 ◃ 𝑎0 , whic h implies that
+lim
+𝑛 → ∞[ 𝑎𝑚 ( 𝑛 ) ] ( 𝑥𝑘 ) = lim
+𝑛 → ∞𝑓( 𝜃1 ∘ ⋯ ∘ 𝜃𝑚 ) ( 𝑛 ) ( 𝑥𝑘 ) = 𝑦𝑘
+for eac h 𝑘 ∈ { 1 , … , 𝑚 } , since subsequences of con v ergen t sequences con v erge to the same
+limit as the paren t sequence.
+Deﬁne Θ : 𝐍 → 𝐍  b y Θ ( 𝑛 ) = ( 𝜃1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) ; w e claim that Θ  is strictly increasing.
+Let 𝑚 < 𝑛  b e p ositiv e in tegers and observ e that
+𝑚 < 𝑛 ≤ 𝜃𝑛 ( 𝑛 ) ≤ ⋯ ≤ ( 𝜃𝑚 + 1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) ,
+where w e ha v e used that 𝑛 ≤ 𝜃 ( 𝑛 )  for an y strictly increasing function 𝜃 : 𝐍 → 𝐍 . An y
+comp osition of strictly increasing functions is a strictly increasing function; it follo ws
+that 𝜃1 ∘ ⋯ ∘ 𝜃𝑚  is a strictly increasing function and hence that
+𝑚 < ( 𝜃𝑚 + 1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) ⇒ ( 𝜃1 ∘ ⋯ ∘ 𝜃𝑚 ) ( 𝑚 ) < ( 𝜃1 ∘ ⋯ ∘ 𝜃𝑚 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) ,
+i.e. Θ ( 𝑚 ) < Θ ( 𝑛 ) , as claimed.
+Deﬁne 𝑏 : 𝐍 → 𝐑𝐴 b y 𝑏 = 𝑎0 ∘ Θ , so that
+𝑏 ( 𝑛 ) = ( 𝑎0 ∘ Θ ) ( 𝑛 ) = ( 𝑎0 ∘ 𝜃1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) = 𝑎𝑛 ( 𝑛 ) .
+This is a subsequence of 𝑎0  since Θ  is a strictly increasing function. This subsequence
+is sometimes kno wn as the “diagonal subsequence”; the follo wing visualization can ex-
+plain wh y .
+𝑎1 𝑎1 ( 1 ) 𝑎1 ( 2 ) 𝑎1 ( 3 ) ⋯
+𝑎2 𝑎2 ( 1 ) 𝑎2 ( 2 ) 𝑎2 ( 3 ) ⋯
+𝑎3 𝑎3 ( 1 ) 𝑎3 ( 2 ) 𝑎3 ( 3 ) ⋯
+⋮ ⋮ ⋮ ⋮ ⋱
+248 / 415
+The 𝑚th ro w corresp onds to the sequence 𝑎𝑚 ; note that eac h ro w is a subsequence of
+the ro w preceding it. The sequence 𝑏  is obtained b y taking the diagonal elemen ts of
+this inﬁnite arra y , highligh ted in red.
+Our goal no w is to sho w that 𝑏 = ( 𝑓Θ ( 𝑛 ) )∞
+𝑛 = 1  con v erges p oin t wise on 𝐴  to the function
+𝑓 : 𝐴 → 𝐑  giv en b y 𝑓 ( 𝑥𝑚 ) = 𝑦𝑚 . Let 𝑚 ∈ 𝐍  b e giv en and note that for 𝑛 ≥ 𝑚 + 1
+w e ha v e
+𝑏 ( 𝑛 ) = ( 𝑎0 ∘ Θ ) ( 𝑛 ) = ( 𝑎0 ∘ 𝜃1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) = ( 𝑎𝑚 ∘ 𝜃𝑚 + 1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) = ( 𝑎𝑚 ∘ Θ𝑚 ) ( 𝑛 ) ,
+where Θ𝑚 : { 𝑚 + 1 , 𝑚 + 2 , … } → 𝐍  is deﬁned b y
+Θ𝑚 ( 𝑛 ) = ( 𝜃𝑚 + 1 ∘ ⋯ ∘ 𝜃𝑛 ) ( 𝑛 ) .
+Similarly to ho w w e sho w ed that Θ  is strictly increasing, w e can sho w that Θ𝑚  is strictly
+increasing. It follo ws that 𝑏  is ev en tually a subsequence of 𝑎𝑚  and hence that
+lim
+𝑛 → ∞[ 𝑏 ( 𝑛 ) ] ( 𝑥𝑚 ) = lim
+𝑛 → ∞[ 𝑎𝑚 ( 𝑛 ) ] ( 𝑥𝑚 ) = 𝑦𝑚 = 𝑓 ( 𝑥𝑚 ) .
+Exercise 6.2 . 14 .  A sequence of functions ( 𝑓𝑛 )  deﬁned on a set 𝐸 ⊆ 𝐑  is called e quic on-
+tinuous  if for ev ery 𝜀 > 0  there exists a 𝛿 > 0  suc h that | 𝑓𝑛 ( 𝑥 ) − 𝑓𝑛 ( 𝑦 ) | < 𝜀  for all 𝑛 ∈ 𝐍
+and | 𝑥 − 𝑦 | < 𝛿  in 𝐸 .
+(a) What is the diﬀerence b et w een sa ying that a sequence of functions ( 𝑓𝑛 )  is equicon-
+tin uous and just asserting that eac h 𝑓𝑛  in the sequence is individually uniformly
+con tin uous?
+(b) Giv e a qualitativ e explanation for wh y the sequence 𝑔𝑛 ( 𝑥 ) = 𝑥𝑛 is not equicon tin-
+uous on [ 0 , 1 ] . Is eac h 𝑔𝑛  uniformly con tin uous on [ 0 , 1 ] ?
+Solution.
+(a) If ( 𝑓𝑛 )  is equicon tin uous then for a giv en 𝜀 > 0  the 𝛿 > 0  that w e obtain dep ends only
+on 𝜀 ; if instead w e only ha v e that eac h 𝑓𝑛  is individually uniformly con tin uous, then
+the 𝛿  ma y dep end on 𝑛 . In sym b ols, ( 𝑓𝑛 )  is equicon tin uous if
+( ∀ 𝜀 > 0 ) ( ∃ 𝛿 > 0 ) ( ∀ 𝑛 ∈ 𝐍 ) ( ( 𝑥 , 𝑦 ∈ 𝐸 and | 𝑥 − 𝑦 | < 𝛿 ) ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓𝑛 ( 𝑦 ) | < 𝜀 ) ,
+whereas eac h 𝑓𝑛  is individually uniformly con tin uous if
+( ∀ 𝑛 ∈ 𝐍 ) ( ∀ 𝜀 > 0 ) ( ∃ 𝛿 > 0 ) ( ( 𝑥 , 𝑦 ∈ 𝐸 and | 𝑥 − 𝑦 | < 𝛿 ) ⇒ | 𝑓𝑛 ( 𝑥 ) − 𝑓𝑛 ( 𝑦 ) | < 𝜀 ) ;
+notice the order of the quan tiﬁers.
+(b) The issue o ccurs near 1 ; no matter ho w small 𝛿  is tak en, it is p ossible to tak e 𝑛  large
+enough and 𝑥  within 𝛿  of 1  suc h that 𝑓𝑛 ( 𝑥 )  and 𝑓𝑛 ( 1 )  are far apart. Geometrically , the
+slop e of 𝑓𝑛  gets v ery steep near 1  as w e increase 𝑛 . T o b e more precise, let 𝛿 > 0  b e
+giv en, tak e 𝑛 ∈ 𝐍  suc h that 1
+𝑛< 𝛿 , and let 𝑥 = 1 −1
+𝑛. Observ e that 1 − 𝑥 < 𝛿  and that
+| 𝑓𝑛 ( 1 ) − 𝑓𝑛 ( 𝑥 ) | = 1 − ( 1 −1
+𝑛)𝑛≥ 1 − 𝑒− 1> 0 ,
+249 / 415
+where w e ha v e used that ( 1 −1
+𝑛)𝑛 is an increasing sequence whic h con v erges to 𝑒− 1.
+Eac h 𝑔𝑛  is uniformly con tin uous on [ 0 , 1 ]  b y Theorem 4.4.7.
+Exercise 6.2 . 15  (Arzela-Ascoli Theorem).  F or eac h 𝑛 ∈ 𝐍 , let 𝑓𝑛  b e a function
+deﬁned on [ 0 , 1 ] . If ( 𝑓𝑛 )  is b ounded on [ 0 , 1 ] —that is, there exists an 𝑀 > 0  suc h
+that | 𝑓𝑛 ( 𝑥 ) | ≤ 𝑀  for all 𝑛 ∈ 𝐍  and 𝑥 ∈ [ 0 , 1 ] —and if the collection of functions ( 𝑓𝑛 )
+is equicon tin uous ( Exercise 6.2.14 ), follo w these steps to sho w that ( 𝑓𝑛 )  con tains a uni-
+formly con v ergen t subsequence.
+(a) Use Exercise 6.2.13  to pro duce a subsequence ( 𝑓 𝑛 𝑘 )  that con v erges at ev ery ratio-
+nal p oin t in [ 0 , 1 ] . T o simplify the notation, set 𝑔𝑘 = 𝑓 𝑛 𝑘 . It remains to sho w that
+( 𝑔𝑘 )  con v erges uniformly on all of [ 0 , 1 ] .
+(b) Let 𝜀 > 0 . By equicon tin uit y , there exists a 𝛿 > 0  suc h that
+| 𝑔𝑘 ( 𝑥 ) − 𝑔𝑘 ( 𝑦 ) | <𝜀
+3
+for all | 𝑥 − 𝑦 | < 𝛿  and 𝑘 ∈ 𝐍 . Using this 𝛿 , let 𝑟1 , 𝑟2 , … , 𝑟𝑚  b e a ﬁnite  collection
+of rational p oin ts with the prop ert y that the union of the neigh b orho o ds 𝑉𝛿 ( 𝑟𝑖 )
+con tains [ 0 , 1 ] .
+(c) Explain wh y there m ust exist an 𝑁 ∈ 𝐍  suc h that
+| 𝑔𝑠 ( 𝑟𝑖 ) − 𝑔𝑡 ( 𝑟𝑖 ) | <𝜀
+3
+for all 𝑠 , 𝑡 ≥ 𝑁  and 𝑟𝑖  in the ﬁnite subset of [ 0 , 1 ]  just describ ed. Wh y do es ha ving
+the set { 𝑟1 , 𝑟2 , … , 𝑟𝑚 }  b e ﬁnite matter?
+(d) Finish the argumen t b y sho wing that, for an arbitrary 𝑥 ∈ [ 0 , 1 ] ,
+| 𝑔𝑠 ( 𝑥 ) − 𝑔𝑡 ( 𝑥 ) | < 𝜀
+for all 𝑠 , 𝑡 ≥ 𝑁 .
+Solution.
+(a) Since 𝐐 ∩ [ 0 , 1 ]  is coun table, Exercise 6.2.13  implies the existence of the desired subse-
+quence ( 𝑔𝑘 ) .
+(b) Consider the op en co v er [ 0 , 1 ] ⊆ ⋃𝑟 ∈ 𝐐 ∩ [ 0 , 1 ] 𝑉𝛿 ( 𝑟 ) . Because [ 0 , 1 ]  is compact, there m ust
+exist a ﬁnite sub co v er, i.e. there m ust exist rationals 𝑟1 , 𝑟2 , … , 𝑟𝑚  in 𝐐 ∩ [ 0 , 1 ]  suc h that
+𝑉𝛿 ( 𝑟1 ) ∪ ⋯ ∪ 𝑉𝛿 ( 𝑟𝑚 )  con tains [ 0 , 1 ] .
+(c) Let 𝑖 ∈ { 1 , … , 𝑚 }  b e giv en. Since ( 𝑔𝑘 )  con v erges at ev ery rational p oin t in [ 0 , 1 ] , the
+sequence ( 𝑔𝑘 ( 𝑟𝑖 ) )  m ust b e a Cauc h y sequence. It follo ws that there exists an 𝑁𝑖 ∈ 𝐍
+suc h that
+𝑠 , 𝑡 ≥ 𝑁𝑖 ⇒ | 𝑔𝑠 ( 𝑟𝑖 ) − 𝑔𝑡 ( 𝑟𝑖 ) | <𝜀
+3.
+250 / 415
+Th us the desired 𝑁 ∈ 𝐍  is 𝑁 = max { 𝑁1 , … , 𝑁𝑀 } ; the ﬁniteness of { 𝑟1 , … , 𝑟𝑚 }  ensures
+this maxim um exists.
+(d) Let 𝑥 ∈ [ 0 , 1 ]  b e giv en, so that 𝑥 ∈ 𝑉𝛿 ( 𝑟𝑖 )  for some 𝑖 ∈ { 1 , … , 𝑚 } , and let 𝑠 , 𝑡 ≥ 𝑁  b e
+giv en. Observ e that
+| 𝑔𝑠 ( 𝑥 ) − 𝑔𝑡 ( 𝑥 ) | ≤ | 𝑔𝑠 ( 𝑥 ) − 𝑔𝑠 ( 𝑟𝑖 ) | + | 𝑔𝑡 ( 𝑥 ) − 𝑔𝑡 ( 𝑟𝑖 ) | + | 𝑔𝑠 ( 𝑟𝑖 ) − 𝑔𝑡 ( 𝑟𝑖 ) | =𝜀
+3+𝜀
+3+𝜀
+3= 𝜀 ,
+where w e ha v e used that | 𝑥 − 𝑟𝑖 | < 𝛿 . Theorem 6.2.5 allo ws us to conclude that ( 𝑔𝑘 )  is
+a uniformly con v ergen t subsequence of ( 𝑓𝑛 ) .
+251 / 415
+6.3. Uniform Con v ergence and Diﬀeren tiation
+Exercise 6.3 . 1 .  Consider the sequence of functions deﬁned b y
+𝑔𝑛 ( 𝑥 ) =𝑥𝑛
+𝑛.
+(a) Sho w ( 𝑔𝑛 )  con v erges uniformly on [ 0 , 1 ]  and ﬁnd 𝑔 = lim 𝑔𝑛 . Sho w that 𝑔  is diﬀer-
+en tiable and compute 𝑔′( 𝑥 )  for all 𝑥 ∈ [ 0 , 1 ] .
+(b) No w, sho w that ( 𝑔′
+𝑛 )  con v erges on [ 0 , 1 ] . Is the con v ergence uniform? Set ℎ = lim 𝑔′
+𝑛
+and compare ℎ  and 𝑔′. Are they the same?
+Solution.
+(a) The limit function 𝑔 : [ 0 , 1 ] → 𝐑  is giv en b y 𝑔 ( 𝑥 ) = 0 . F or an y 𝑥 ∈ [ 0 , 1 ]  w e ha v e
+| 𝑔𝑛 ( 𝑥 ) − 𝑔 ( 𝑥 ) | =𝑥𝑛
+𝑛≤1
+𝑛;
+it follo ws that the con v ergence 𝑔𝑛 → 𝑔  is uniform. Certainly 𝑔  is diﬀeren tiable on [ 0 , 1 ]
+and satisﬁes 𝑔′( 𝑥 ) = 0  for eac h 𝑥 ∈ [ 0 , 1 ] .
+(b) The sequence ( 𝑔′
+𝑛 )  is giv en b y 𝑔′
+𝑛 ( 𝑥 ) = 𝑥𝑛 − 1 for 𝑥 ∈ [ 0 , 1 ] . This sequence con v erges
+p oin t wise to the function ℎ : [ 0 , 1 ] → 𝐑  giv en b y
+ℎ ( 𝑥 ) = {0 if 0 ≤ 𝑥 < 1 ,
+1 if 𝑥 = 1 .
+The con v ergence cannot b e uniform since eac h 𝑔′
+𝑛  is con tin uous at 1  but ℎ  is not. Note
+that ℎ ≠ 𝑔′; this giv es an alternativ e pro of for sho wing that the con v ergence 𝑔′
+𝑛 → ℎ
+is not uniform, as uniform con v ergence 𝑔′
+𝑛 → ℎ  w ould imply that 𝑔′= ℎ  b y Theorem
+6.3.1/6.3.3.
+Exercise 6.3 . 2 .  Consider the sequence of functions
+ℎ𝑛 ( 𝑥 ) = √ 𝑥2 +1
+𝑛.
+(a) Compute the p oin t wise limit of ( ℎ𝑛 )  and then pro v e that the con v ergence is uni-
+form on 𝐑 .
+(b) Note that eac h ℎ𝑛  is diﬀeren tiable. Sho w 𝑔 ( 𝑥 ) = lim ℎ′
+𝑛 ( 𝑥 )  exists for all 𝑥 , and
+explain ho w w e can b e certain that the con v ergence is not  uniform on an y neigh-
+b orho o d of zero.
+Solution.
+252 / 415
+(a) The p oin t wise limit is the function ℎ : 𝐑 → 𝐑  giv en b y ℎ ( 𝑥 ) =√
+𝑥2 = | 𝑥 | . F or an y
+𝑥 ∈ 𝐑  w e ha v e
+| ℎ𝑛 ( 𝑥 ) − ℎ ( 𝑥 ) | = √ 𝑥2 + 𝑛− 1 −√
+𝑥2 =𝑛− 1
+√
+𝑥2 + 𝑛− 1 +√
+𝑥2≤𝑛− 1
+𝑛− 1 / 2=1√𝑛.
+Th us the con v ergence ℎ𝑛 → ℎ  is uniform on 𝐑 .
+(b) Observ e that ℎ′
+𝑛 : 𝐑 → 𝐑  is giv en b y
+ℎ′
+𝑛 ( 𝑥 ) =𝑥√
+𝑥2 + 𝑛− 1.
+This sequence con v erges p oin t wise to the function 𝑔 : 𝐑 → 𝐑  giv en b y
+𝑔 ( 𝑥 ) =
+⎩{⎨{⎧ − 1 if 𝑥 < 0 ,
+0 if 𝑥 = 0 ,
+1 if 𝑥 > 0 .
+The con v ergence ℎ′
+𝑛 → 𝑔  cannot b e uniform on an y neigh b ourho o d of zero eac h ℎ′
+𝑛  is
+con tin uous at zero but 𝑔  is not. Alternativ ely , if the con v ergence ℎ′
+𝑛 → 𝑔  w ere uniform
+then Theorem 6.3.1/6.3.3 w ould imply that ℎ  is diﬀeren tiable at zero—but ℎ  fails to
+b e diﬀeren tiable precisely at zero.
+Exercise 6.3 . 3 .  Consider the sequence of functions
+𝑓𝑛 ( 𝑥 ) =𝑥
+1 + 𝑛 𝑥2.
+(a) Find the p oin ts on 𝐑  where eac h 𝑓𝑛 ( 𝑥 )  attains its maxim um and minim um v alue.
+Use this to pro v e ( 𝑓𝑛 )  con v erges uniformly on 𝐑 . What is the limit function?
+(b) Let 𝑓 = lim 𝑓𝑛 . Compute 𝑓′
+𝑛 ( 𝑥 )  and ﬁnd all the v alues of 𝑥  for whic h
+𝑓′( 𝑥 ) = lim 𝑓′
+𝑛 ( 𝑥 ) .
+Solution.
+(a) F rom the observ ation
+1
+2√𝑛−𝑥
+1 + 𝑛 𝑥2=𝑛 𝑥2− 2√𝑛 𝑥 + 1
+2√𝑛 ( 1 + 𝑛 𝑥2 )=(√𝑛 𝑥 − 1 )2
+2√𝑛 ( 1 + 𝑛 𝑥2 )≥ 0
+w e can see that 0 ≤ 𝑓𝑛 ( 𝑥 ) ≤1
+2√𝑛 for all 𝑥 ≥ 0  and also that 𝑓𝑛 ( 𝑥 ) =1
+2√𝑛 precisely when
+𝑥 =1√𝑛. Com bining this with the fact that eac h 𝑓𝑛  is an o dd function, w e see that
+−1
+2√𝑛≤ 𝑓𝑛 ( 𝑥 ) ≤1
+2√𝑛
+for ev ery 𝑥 ∈ 𝐑  and furthermore that
+𝑓𝑛 ( 𝑥 ) = −1
+2√𝑛⇔ 𝑥 = −1√𝑛and 𝑓𝑛 ( 𝑥 ) =1
+2√𝑛⇔ 𝑥 =1√𝑛.
+253 / 415
+The b ound | 𝑓𝑛 ( 𝑥 ) | ≤1
+2√𝑛 for all 𝑥 ∈ 𝐑  sho ws that 𝑓𝑛 → 0  uniformly on 𝐑 .
+(b) The quotien t rule giv es us
+𝑓′
+𝑛 ( 𝑥 ) =1 − 𝑛 𝑥2
+( 1 + 𝑛 𝑥2 )2.
+F or 𝑥 ≠ 0  w e ha v e
+𝑓′
+𝑛 ( 𝑥 ) =1
+𝑛2 𝑥4 −1
+𝑛 𝑥2
+(1
+𝑛 𝑥2 + 1 )2→ 0 as 𝑛 → ∞ ,
+and for 𝑥 = 0  w e ha v e 𝑓′
+𝑛 ( 0 ) = 1 . In part (a) w e sho w ed that the limit function
+𝑓 : 𝐑 → 𝐑  w as giv en b y 𝑓 ( 𝑥 ) = 0 . Th us 𝑓′( 𝑥 ) = lim 𝑓′
+𝑛 ( 𝑥 ) = 0  for all 𝑥 ≠ 0  and
+𝑓′( 0 ) = 0 ≠ 1 = lim 𝑓′
+𝑛 ( 0 ) .
+Exercise 6.3 . 4 .  Let
+ℎ𝑛 ( 𝑥 ) =sin ( 𝑛 𝑥 )√𝑛.
+Sho w that ℎ𝑛 → 0  uniformly on 𝐑  but that the sequence of deriv ativ es ( ℎ′
+𝑛 )  div erges
+for ev ery 𝑥 ∈ 𝐑 .
+Solution.  The b ound
+| ℎ𝑛 ( 𝑥 ) | ≤1√𝑛
+for eac h 𝑥 ∈ 𝐑  sho ws that ℎ𝑛 → 0  uniformly on 𝐑 . The sequence of deriv ativ es ( ℎ′
+𝑛 )  is giv en
+b y
+𝑎𝑛 ≔ ℎ′
+𝑛 ( 𝑥 ) =√𝑛 cos ( 𝑛 𝑥 ) .
+W e claim that ( 𝑎𝑛 )  do es not con v erge for an y 𝑥 ∈ 𝐑 ; to see this, w e will consider three cases.
+Case 1.  Supp ose 𝑥 = 𝑘 𝜋  for some ev en in teger 𝑘 . In this case w e ha v e 𝑎𝑛 =√𝑛 , whic h
+div erges.
+Case 2.  Supp ose 𝑥 = 𝑘 𝜋  for some o dd in teger 𝑘 . In this case w e ha v e 𝑎𝑛 = ( − 1 )𝑛 √𝑛 , whic h
+div erges.
+Case 3.  Supp ose 𝑥  is not of the form 𝑘 𝜋  for an y in teger 𝑘  and supp ose b y w a y of con tradic-
+tion that 𝑎𝑛 → 𝐿  for some 𝐿 ∈ 𝐑 . It follo ws that
+𝑎𝑛√𝑛= cos ( 𝑛 𝑥 ) → 0 ,
+whic h also implies that cos ( ( 𝑛 + 1 ) 𝑥 ) → 0 . Consider the trigonometric iden tit y
+sin ( 𝑛 𝑥 ) =cos ( 𝑛 𝑥 ) cos ( 𝑥 ) − cos ( ( 𝑛 + 1 ) 𝑥 )
+sin ( 𝑥 );
+254 / 415
+since 𝑥 ≠ 𝑘 𝜋  for an y in teger 𝑘 , w e are not dividing b y zero. Because b oth cos ( 𝑛 𝑥 ) → 0  and 
+cos ( ( 𝑛 + 1 ) 𝑥 ) → 0 , w e see that sin ( 𝑛 𝑥 ) → 0 . It follo ws that
+sin2( 𝑛 𝑥 ) + cos2( 𝑛 𝑥 ) → 0 ,
+whic h con tradicts that sin2( 𝑛 𝑥 ) + cos2( 𝑛 𝑥 ) = 1  for eac h 𝑛 ∈ 𝐍 .
+Exercise 6.3 . 5 .  Let
+𝑔𝑛 ( 𝑥 ) =𝑛 𝑥 + 𝑥2
+2 𝑛,
+and set 𝑔 ( 𝑥 ) = lim 𝑔𝑛 ( 𝑥 ) . Sho w that 𝑔  is diﬀeren tiable in t w o w a ys:
+(a) Compute 𝑔 ( 𝑥 )  b y algebraically taking the limit as 𝑛 → ∞  and then ﬁnd 𝑔′( 𝑥 ) .
+(b) Compute 𝑔′
+𝑛 ( 𝑥 )  for eac h 𝑛 ∈ 𝐍  and sho w that the sequence of deriv ativ es ( 𝑔′
+𝑛 )
+con v erges uniformly on ev ery in terv al [ − 𝑀 , 𝑀 ] . Use Theorem 6.3.3 to conclude 
+𝑔′( 𝑥 ) = lim 𝑔′
+𝑛 ( 𝑥 ) .
+(c) Rep eat parts (a) and (b) for the sequence 𝑓𝑛 ( 𝑥 ) = ( 𝑛 𝑥2+ 1 ) / ( 2 𝑛 + 𝑥 ) .
+Solution.
+(a) F or a ﬁxed 𝑥 ∈ 𝐑  w e ha v e
+𝑔𝑛 ( 𝑥 ) =𝑥
+2+𝑥2
+2 𝑛→𝑥
+2as 𝑛 → ∞ .
+It follo ws that 𝑔 ( 𝑥 ) =𝑥
+2 and hence that 𝑔′( 𝑥 ) =1
+2 for an y 𝑥 ∈ 𝐑 .
+(b) The sequence of deriv ativ es ( 𝑔′
+𝑛 )  is giv en b y
+𝑔′
+𝑛 ( 𝑥 ) =1
+2+𝑥
+𝑛.
+F or 𝑥 ∈ [ − 𝑀 , 𝑀 ]  w e ha v e
+| 𝑔′
+𝑛 ( 𝑥 ) −1
+2| =| 𝑥 |
+𝑛≤𝑀
+𝑛.
+Th us 𝑔′
+𝑛 →1
+2 uniformly on an y in terv al of the form [ − 𝑀 , 𝑀 ] . Observ e that 0 ∈ [ − 𝑀 , 𝑀 ]
+and 𝑔𝑛 ( 0 ) = 0  is con v ergen t. W e ma y no w apply Theorem 6.3.3 to see that 𝑔𝑛 → 𝑔  uni-
+formly on [ − 𝑀 , 𝑀 ]  and furthermore that 𝑔′( 𝑥 ) = lim 𝑔′
+𝑛 ( 𝑥 ) =1
+2 for an y 𝑥 ∈ [ − 𝑀 , 𝑀 ] .
+By taking 𝑀  suﬃcien tly large, this sho ws that 𝑔′( 𝑥 ) =1
+2 for all 𝑥 ∈ 𝐑 .
+(c) The sequence ( 𝑓𝑛 )  is giv en b y
+𝑓𝑛 ( 𝑥 ) =𝑛 𝑥2+ 1
+2 𝑛 + 𝑥.
+255 / 415
+(Strictly sp eaking this is only deﬁned on 𝐑 ∖ { − 2 𝑛 } , but since w e are only in terested
+in the limit as 𝑛 → ∞ , this isn’t a problem: ev en tually the sequence is deﬁned on an y
+in terv al of the form [ − 𝑀 , 𝑀 ] .)
+Note that
+𝑓𝑛 ( 𝑥 ) =𝑥2+1
+𝑛
+2 +𝑥
+𝑛→𝑥2
+2as 𝑛 → ∞ .
+Th us the p oin t wise limit function is 𝑓 ( 𝑥 ) =𝑥2
+2, whic h satisﬁes 𝑓′( 𝑥 ) = 𝑥 .
+The sequence of deriv ativ es ( 𝑓′
+𝑛 )  is giv en b y
+𝑓′
+𝑛 ( 𝑥 ) =𝑛 𝑥2+ 4 𝑛2𝑥 − 1
+𝑥2 + 4 𝑛 𝑥 + 4 𝑛2=𝑥2
+𝑛+ 4 𝑥 −1
+𝑛2
+𝑥2
+𝑛2 +4 𝑥
+𝑛+ 4→ 𝑥 as 𝑛 → ∞ .
+F or an y 𝑥 ∈ [ − 𝑀 , 𝑀 ]  observ e that
+| 𝑓′
+𝑛 ( 𝑥 ) − 𝑥 | =| 𝑥3+ 3 𝑛 𝑥2+ 1 |
+( 2 𝑛 + 𝑥 )2≤𝑀3+ 3 𝑀2𝑛 + 1
+( 2 𝑛 − 𝑀 )2,
+pro vided 𝑛 >𝑀
+2. Note that the n umerator of this b ound is linear in 𝑛  whereas the
+denominator is quadratic in 𝑛 ; it follo ws that this b ound con v erges to zero and hence
+that 𝑓′
+𝑛 → 𝑥  uniformly on [ − 𝑀 , 𝑀 ] . Observ e that 0 ∈ [ − 𝑀 , 𝑀 ]  and 𝑓𝑛 ( 0 ) =1
+2 𝑛→ 0  as
+𝑛 → ∞ . Theorem 6.3.3 then implies that 𝑓𝑛 → 𝑓  uniformly on [ − 𝑀 , 𝑀 ]  and further-
+more that 𝑓′( 𝑥 ) = lim 𝑓′
+𝑛 ( 𝑥 ) = 𝑥  for an y 𝑥 ∈ [ − 𝑀 , 𝑀 ] . By taking 𝑀  suﬃcien tly large,
+this sho ws that 𝑓′( 𝑥 ) = 𝑥  for all 𝑥 ∈ 𝐑 .
+Exercise 6.3 . 6 .  Pro vide an example or explain wh y the request is imp ossible. Let’s
+tak e the domain of the functions to b e all of 𝐑 .
+(a) A sequence ( 𝑓𝑛 )  of no where diﬀeren tiable functions with 𝑓𝑛 → 𝑓  uniformly and 𝑓
+ev erywhere diﬀeren tiable.
+(b) A sequence ( 𝑓𝑛 )  of diﬀeren tiable functions suc h that ( 𝑓′
+𝑛 )  con v erges uniformly but
+the original sequence ( 𝑓𝑛 )  do es not con v erge for an y 𝑥 ∈ 𝐑 .
+(c) A sequence ( 𝑓𝑛 )  of diﬀeren tiable functions suc h that b oth ( 𝑓𝑛 )  and ( 𝑓′
+𝑛 )  con v erge
+uniformly but 𝑓 = lim 𝑓𝑛  is not diﬀeren tiable at some p oin t.
+Solution.
+(a) Deﬁne a sequence ( 𝑓𝑛 : 𝐑 → 𝐑 )  b y
+𝑓𝑛 ( 𝑥 ) = {1
+𝑛if 𝑥 ∈ 𝐐 ,
+0 if 𝑥 ∉ 𝐐 .
+256 / 415
+Observ e that 𝑓𝑛 → 0  uniformly on 𝐑  since | 𝑓𝑛 ( 𝑥 ) | ≤1
+𝑛 for an y 𝑥 ∈ 𝐑 . Certainly the
+zero function is diﬀeren tiable ev erywhere, but eac h 𝑓𝑛  is no where con tin uous and hence
+no where diﬀeren tiable.
+(b) Deﬁne a sequence ( 𝑓𝑛 : 𝐑 → 𝐑 )  b y
+𝑓𝑛 ( 𝑥 ) = 𝑛 .
+Eac h 𝑓𝑛  is diﬀeren tiable and the sequence ( 𝑓′
+𝑛 )  is giv en b y 𝑓′
+𝑛 ( 𝑥 ) = 0 , whic h con v erges
+uniformly to the zero function. Ho w ev er, ( 𝑓𝑛 ( 𝑥 ) )  is div ergen t for ev ery 𝑥 ∈ 𝐑 .
+(c) This is imp ossible. An y p oin t 𝑥 ∈ 𝐑  is con tained in some in terv al of the form [ − 𝑀 , 𝑀 ] ;
+applying Theorem 6.3.3 to this in terv al sho ws that 𝑓  is diﬀeren tiable at 𝑥 .
+Exercise 6.3 . 7 .  Use the Mean V alue Theorem to supply a pro of for Theorem 6.3.2.
+T o get started, observ e that the triangle inequalit y implies that, for an y 𝑥 ∈ [ 𝑎 , 𝑏 ]  and 
+𝑚 , 𝑛 ∈ 𝐍 ,
+| 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | ≤ | ( 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) ) − ( 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) ) | + | 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) | .
+Solution.  Let 𝜀 > 0  b e giv en. Since the sequence ( 𝑓𝑛 ( 𝑥0 ) )  is con v ergen t, there exists an 
+𝑁1 ∈ 𝐍  suc h that
+𝑛 , 𝑚 ≥ 𝑁1 ⇒ | 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) | <𝜀
+2,
+and since the sequence ( 𝑓′
+𝑛 )  con v erges uniformly on [ 𝑎 , 𝑏 ] , there exists an 𝑁2 ∈ 𝐍  suc h that
+𝑥 ∈ [ 𝑎 , 𝑏 ] and 𝑛 , 𝑚 ≥ 𝑁2 ⇒ | 𝑓′
+𝑛 ( 𝑥 ) − 𝑓′
+𝑚 ( 𝑥 ) | <𝜀
+2 ( 𝑏 − 𝑎 ).
+Let 𝑁 = max { 𝑁1 , 𝑁2 }  and supp ose that 𝑛 , 𝑚 ≥ 𝑁  and 𝑥 ∈ ( 𝑥0 , 𝑏 ]  (the argumen t is easily
+mo diﬁed if 𝑥 ∈ [ 𝑎 , 𝑥0 ) ). Note that 𝑓𝑛 − 𝑓𝑚  is diﬀeren tiable on the in terv al [ 𝑥0 , 𝑥 ] ; the Mean
+V alue Theorem then implies that there is some 𝑐 ∈ ( 𝑥0 , 𝑥 )  suc h that
+| 𝑥 − 𝑥0 | | 𝑓′
+𝑛 ( 𝑐 ) − 𝑓′
+𝑚 ( 𝑐 ) | = | ( 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) ) − ( 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) ) | .
+It follo ws that
+| 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | ≤ | ( 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) ) − ( 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) ) | + | 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) |
+= | 𝑥 − 𝑥0 | | 𝑓′
+𝑛 ( 𝑐 ) − 𝑓′
+𝑚 ( 𝑐 ) | + | 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) |
+≤ ( 𝑏 − 𝑎 ) | 𝑓′
+𝑛 ( 𝑐 ) − 𝑓′
+𝑚 ( 𝑐 ) | + | 𝑓𝑛 ( 𝑥0 ) − 𝑓𝑚 ( 𝑥0 ) |
+<𝜀
+2+𝜀
+2
+= 𝜀 .
+W e ha v e no w sho wn that for an y 𝑛 , 𝑚 ≥ 𝑁  and 𝑥 ∈ [ 𝑎 , 𝑏 ] ,
+| 𝑓𝑛 ( 𝑥 ) − 𝑓𝑚 ( 𝑥 ) | < 𝜀 ;
+257 / 415
+it follo ws from Theorem 6.2.5 that the sequence ( 𝑓𝑛 )  is uniformly con v ergen t on [ 𝑎 , 𝑏 ] .
+258 / 415
+6.4. Series of F unctions
+Exercise 6.4 . 1 .  Supply the details for the pro of of the W eierstrass M-T est (Corollary
+6.4.5).
+Solution.  Let 𝜀 > 0  b e giv en. Since the series ∑∞
+𝑛 = 1 𝑀𝑛  is con v ergen t, its sequence of partial
+sums is a Cauc h y sequence. Consequen tly , there exists an 𝑁 ∈ 𝐍  suc h that
+𝑛 > 𝑚 ≥ 𝑁 ⇒ 𝑀𝑚 + 1 + ⋯ + 𝑀𝑛 < 𝜀 .
+Supp ose 𝑥 ∈ 𝐴  and 𝑛 > 𝑚 ≥ 𝑁  and observ e that
+| 𝑓𝑚 + 1 ( 𝑥 ) + ⋯ + 𝑓𝑛 ( 𝑥 ) | ≤ | 𝑓𝑚 + 1 ( 𝑥 ) | + ⋯ + | 𝑓𝑛 ( 𝑥 ) | ≤ 𝑀𝑚 + 1 + ⋯ + 𝑀𝑛 < 𝜀 .
+It follo ws from Theorem 6.4.4 that the series ∑∞
+𝑛 = 1 𝑓𝑛  con v erges uniformly on 𝐴 .
+Exercise 6.4 . 2 .  Decide whether eac h prop osition is true or false, pro viding a short
+justiﬁcation or coun terexample as appropriate.
+(a) If ∑∞
+𝑛 = 1 𝑔𝑛  con v erges uniformly , then ( 𝑔𝑛 )  con v erges uniformly to zero.
+(b) If 0 ≤ 𝑓𝑛 ( 𝑥 ) ≤ 𝑔𝑛 ( 𝑥 )  and ∑∞
+𝑛 = 1 𝑔𝑛  con v erges uniformly , then ∑∞
+𝑛 = 1 𝑓𝑛  con v erges
+uniformly .
+(c) If ∑∞
+𝑛 = 1 𝑓𝑛  con v erges uniformly on 𝐴 , then there exist constan ts 𝑀𝑛  suc h that 
+| 𝑓𝑛 ( 𝑥 ) | ≤ 𝑀𝑛  for all 𝑥 ∈ 𝐴  and ∑∞
+𝑛 = 1 𝑀𝑛  con v erges.
+Solution.
+(a) This is true. Supp ose that eac h 𝑔𝑛  is deﬁned on some domain 𝐴 ⊆ 𝐑 . Note that The-
+orem 6.4.4 implies in particular that for an y 𝜀 > 0  there is an 𝑁 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐴 and 𝑛 ≥ 𝑁 ⇒ | 𝑔𝑛 ( 𝑥 ) | ≤ 𝜀 .
+Th us 𝑔𝑛  con v erges uniformly to the zero function.
+(b) This is true. Supp ose that eac h 𝑓𝑛  and eac h 𝑔𝑛  is deﬁned on some domain 𝐴 ⊆ 𝐑 .
+Theorem 6.4.4 implies that for an y 𝜀 > 0  there is an 𝑁 ∈ 𝐍  suc h that
+𝑥 ∈ 𝐴 and 𝑛 > 𝑚 ≥ 𝑁 ⇒ 𝑔𝑚 + 1 ( 𝑥 ) + ⋯ + 𝑔𝑛 ( 𝑥 ) < 𝜀 ;
+note w e ha v e used the non-negativit y of eac h 𝑔𝑛 . Supp ose 𝑥 ∈ 𝐴  and 𝑛 > 𝑚 ≥ 𝑁 . By
+assumption w e ha v e
+𝑓𝑚 + 1 ( 𝑥 ) + ⋯ + 𝑓𝑛 ( 𝑥 ) ≤ 𝑔𝑚 + 1 ( 𝑥 ) + ⋯ + 𝑔𝑛 ( 𝑥 ) < 𝜀 .
+By com bining this inequalit y with the non-negativit y of eac h 𝑓𝑛  and Theorem 6.4.4,
+w e see that the series ∑∞
+𝑛 = 1 𝑓𝑛  con v erges uniformly on 𝐴 .
+259 / 415
+(c) This is false. F or eac h 𝑛 ∈ 𝐍  deﬁne a function 𝑓𝑛 : 𝐑 → 𝐑  b y 𝑓𝑛 ( 𝑛 ) =1
+𝑛 and 𝑓𝑛 ( 𝑥 ) = 0
+for 𝑥 ≠ 𝑛 . Let 𝑓 : 𝐑 → 𝐑  b e giv en b y
+𝑓 ( 𝑥 ) = {1
+𝑥if 𝑥 ∈ 𝐍 ,
+0 otherwise.
+W e claim that ∑∞
+𝑛 = 1 𝑓𝑛  con v erges to 𝑓  uniformly on 𝐑 . Observ e that the partial sum
+function is
+𝑠𝑛 ( 𝑥 ) = 𝑓1 ( 𝑥 ) + ⋯ + 𝑓𝑛 ( 𝑥 ) = {1
+𝑥if 𝑥 ∈ { 1 , … , 𝑛 } ,
+0 otherwise.
+It follo ws that | 𝑠𝑛 ( 𝑥 ) − 𝑓 ( 𝑥 ) | ≤1
+𝑛 + 1 for an y 𝑥 ∈ 𝐑 . Because this b ound con v erges to
+zero and do es not dep end on 𝑥 , our claim follo ws.
+No w observ e that sup { | 𝑓𝑛 ( 𝑥 ) | : 𝑥 ∈ 𝐑 } =1
+𝑛 for an y 𝑛 ∈ 𝐍 ; it follo ws that an y b ound 
+𝑀𝑛  suc h that | 𝑓𝑛 ( 𝑥 ) | ≤ 𝑀𝑛  for all 𝑥 ∈ 𝐴  m ust satisfy 𝑀𝑛 ≥1
+𝑛. Since the harmonic
+series div erges, it m ust b e the case that ∑∞
+𝑛 = 1 𝑀𝑛  div erges. Th us the con v erse of the
+W eierstrass M-T est do es not hold.
+Exercise 6.4 . 3 .
+(a) Sho w that
+𝑔 ( 𝑥 ) = ∑∞
+𝑛 = 0cos ( 2𝑛𝑥 )
+2𝑛
+is con tin uous on all of 𝐑 .
+(b) The function 𝑔  w as cited in Section 5.4 as an example of a con tin uous no where
+diﬀeren tiable function. What happ ens if w e try to use Theorem 6.4.3 to explore
+whether 𝑔  is diﬀeren tiable?
+Solution.
+(a) Observ e that
+|cos ( 2𝑛𝑥 )
+2𝑛| ≤1
+2𝑛
+for ev ery 𝑥 ∈ 𝐑 . Since the series ∑∞
+𝑛 = 0 2− 𝑛 is con v ergen t, the W eierstrass M-T est implies
+that 𝑔 ( 𝑥 ) = ∑∞
+𝑛 = 0 2− 𝑛cos ( 2𝑛𝑥 )  con v erges uniformly on 𝐑 . Eac h function 2− 𝑛cos ( 2𝑛𝑥 )
+is con tin uous on 𝐑  and th us 𝑔  is con tin uous on 𝐑  b y Theorem 6.4.2.
+(b) T o use Theorem 6.4.3, w e w ould need to sho w that the series
+∑∞
+𝑛 = 0(cos ( 2𝑛𝑥 )
+2𝑛)′
+= − ∑∞
+𝑛 = 0sin ( 2𝑛𝑥 )
+260 / 415
+con v erges uniformly on 𝐑 . Ho w ev er, this series do es not ev en con v erge p oin t wise on 
+𝐑 . F or example, consider the series of real n um b ers
+∑∞
+𝑛 = 0sin ( 2𝑛) .
+T o sho w that this series is div ergen t, w e will sho w that the sequence ( sin ( 2𝑛) )  do es not
+con v erge to zero. T o see this, consider the follo wing t w o cases.
+Case 1.  If there exists an 𝑁 ∈ 𝐍  suc h that | sin ( 2𝑛 + 1) | > | sin ( 2𝑛) |  for all 𝑛 ≥ 𝑁 , then
+it m ust b e the case that sin ( 2𝑛)  do es not con v erge to zero.
+Case 2.  If there do es not exist suc h an 𝑁  then there m ust b e inﬁnitely man y 𝑛 ∈ 𝐍
+suc h that | sin ( 2𝑛 + 1) | ≤ | sin ( 2𝑛) | . F or suc h an 𝑛 , the iden tit y
+sin ( 2𝑛 + 1) = 2 sin ( 2𝑛) cos ( 2𝑛)
+and the fact that sin ( 2𝑛) ≠ 0  for an y 𝑛 ∈ 𝐍  sho ws that | cos ( 2𝑛) | ≤1
+2. The Pythagorean
+iden tit y then implies that | sin ( 2𝑛) | ≥√
+3
+2. So in this case the sequence ( sin ( 2𝑛) )  satisﬁes
+| sin ( 2𝑛) | ≥√
+3
+2 inﬁnitely often and hence do es not con v erge to zero.
+Th us Theorem 6.4.3 do es not allo w us to conclude an ything ab out the diﬀeren tiabilit y
+of 𝑔 .
+Exercise 6.4 . 4 .  Deﬁne
+𝑔 ( 𝑥 ) = ∑∞
+𝑛 = 0𝑥2 𝑛
+( 1 + 𝑥2 𝑛 ).
+Find the v alues of 𝑥  where the series con v erges and sho w that w e get a con tin uous
+function on this set.
+Solution.  F or | 𝑥 | = 1  w e ha v e 𝑔 ( 𝑥 ) = ∑∞
+𝑛 = 01
+2, whic h div erges. F or | 𝑥 | > 1  w e ha v e
+𝑥2 𝑛
+1 + 𝑥2 𝑛=1
+𝑥− 2 𝑛 + 1→ 1 as 𝑛 → ∞
+and th us 𝑔 ( 𝑥 )  div erges.
+No w supp ose that 𝑟 > 0  is suc h that 0 < 𝑟2< 1  and observ e that for all 𝑥 ∈ [ − 𝑟 , 𝑟 ]  w e ha v e
+0 ≤𝑥2 𝑛
+1 + 𝑥2 𝑛≤ 𝑥2 𝑛≤ 𝑟2 𝑛.
+Since ∑∞
+𝑛 = 0 𝑟2 𝑛 is a con v ergen t geometric series, the W eierstrass M-T est implies that 𝑔  con-
+v erges uniformly on [ − 𝑟 , 𝑟 ] . Since an y 𝑥 ∈ ( − 1 , 1 )  is con tained inside an in terv al of this form,
+w e see that 𝑔  con v erges and is con tin uous at eac h 𝑥 ∈ ( − 1 , 1 )  b y Theorem 6.4.2. Com bining
+this with our previous discussion, w e ma y conclude that 𝑔  con v erges p oin t wise precisely on
+the op en in terv al ( − 1 , 1 ) .
+261 / 415
+Exercise 6.4 . 5 .
+(a) Pro v e that
+ℎ ( 𝑥 ) = ∑∞
+𝑛 = 1𝑥𝑛
+𝑛2= 𝑥 +𝑥2
+4+𝑥3
+9+𝑥4
+1 6+ ⋯
+is con tin uous on [ − 1 , 1 ] .
+(b) The series
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 1𝑥𝑛
+𝑛= 𝑥 +𝑥2
+2+𝑥3
+3+𝑥4
+4+ ⋯
+con v erges for ev ery 𝑥  in the half-op en in terv al [ − 1 , 1 )  but do es not con v erge when
+𝑥 = 1 . F or a ﬁxed 𝑥0 ∈ ( − 1 , 1 ) , explain ho w w e can still use the W eierstrass M-
+T est to pro v e that 𝑓  is con tin uous at 𝑥0 .
+Solution.
+(a) F or an y 𝑥 ∈ [ − 1 , 1 ]  w e ha v e
+|𝑥𝑛
+𝑛2| ≤1
+𝑛2.
+Since the series ∑∞
+𝑛 = 11
+𝑛2  is con v ergen t, the W eierstrass M-T est implies that ℎ  con v erges
+uniformly on [ − 1 , 1 ]  and Theorem 6.4.2 then implies that ℎ  is con tin uous on [ − 1 , 1 ] ,
+since eac h function 𝑥𝑛
+𝑛2  is con tin uous on [ − 1 , 1 ] .
+(b) Observ e that
+|𝑥𝑛
+𝑛| ≤ | 𝑥0 |𝑛
+for ev ery 𝑥 ∈ [ − 𝑥0 , 𝑥0 ] . Since ∑∞
+𝑛 = 1 | 𝑥0 |𝑛 is a con v ergen t geometric series, the W eier-
+strass M-T est implies that 𝑓  con v erges uniformly on [ − 𝑥0 , 𝑥0 ] . Theorem 6.4.2 then
+implies that 𝑓  is con tin uous on [ − 𝑥0 , 𝑥0 ]  and in particular at 𝑥0 , since eac h function 
+𝑥𝑛
+𝑛 is con tin uous on [ − 𝑥0 , 𝑥0 ] .
+Exercise 6.4 . 6 .  Let
+𝑓 ( 𝑥 ) =1
+𝑥−1
+𝑥 + 1+1
+𝑥 + 2−1
+𝑥 + 3+1
+𝑥 + 4− ⋯ .
+Sho w 𝑓  is deﬁned for all 𝑥 > 0 . Is 𝑓  con tin uous on ( 0 , ∞ ) ? Ho w ab out diﬀeren tiable?
+Solution.  Observ e that
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0( − 1 )𝑛
+𝑥 + 𝑛.
+262 / 415
+The term-b y-term diﬀeren tiated series is
+−1
+𝑥2+ ∑∞
+𝑛 = 1( − 1 )𝑛 + 1
+( 𝑥 + 𝑛 )2.
+Notice that
+|( − 1 )𝑛 + 1
+( 𝑥 + 𝑛 )2| ≤1
+𝑛2
+for an y 𝑥 ∈ ( 0 , ∞ )  and an y 𝑛 ∈ 𝐍 . Since the series ∑∞
+𝑛 = 11
+𝑛2  is con v ergen t, the W eierstrass
+M-T est implies that the series ∑∞
+𝑛 = 1( − 1 )𝑛 + 1
+( 𝑥 + 𝑛 )2  con v erges uniformly on ( 0 , ∞ ) . It follo ws that
+the term-b y-term diﬀeren tiated series con v erges uniformly on ( 0 , ∞ ) . Observ e that
+𝑓 ( 1 ) = ∑∞
+𝑛 = 0( − 1 )𝑛
+1 + 𝑛
+con v erges b y the Alternating Series T est (Theorem 2.7.7). Since an y 𝑥 ∈ ( 0 , ∞ )  is con tained
+either inside an in terv al of the form [ 𝑎 , 1 ]  or inside an in terv al of the form [ 1 , 𝑎 ] , Theorem
+6.4.3 allo ws us to conclude that 𝑓  is deﬁned and diﬀeren tiable (hence con tin uous) at eac h 
+𝑥 ∈ ( 0 , ∞ ) .
+Exercise 6.4 . 7 .  Let
+𝑓 ( 𝑥 ) = ∑∞
+𝑘 = 1sin ( 𝑘 𝑥 )
+𝑘3.
+(a) Sho w that 𝑓 ( 𝑥 )  is diﬀeren tiable and that the deriv ativ e 𝑓′( 𝑥 )  is con tin uous.
+(b) Can w e determine if 𝑓  is t wice-diﬀeren tiable?
+Solution.
+(a) Let 𝑓𝑘 : 𝐑 → 𝐑  b e giv en b y 𝑓𝑘 ( 𝑥 ) =sin ( 𝑘 𝑥 )
+𝑘3  and observ e that
+| 𝑓′
+𝑘 ( 𝑥 ) | = |cos ( 𝑘 𝑥 )
+𝑘2| ≤1
+𝑘2
+for an y 𝑥 ∈ 𝐑 . The W eierstrass M-T est then implies that the series
+∑∞
+𝑘 = 1𝑓′
+𝑘 ( 𝑥 ) = ∑∞
+𝑘 = 1cos ( 𝑘 𝑥 )
+𝑘2
+con v erges uniformly on 𝐑 ; since eac h 𝑓′
+𝑘  is con tin uous on 𝐑 , Theorem 6.4.2 sho ws that
+∑∞
+𝑘 = 1 𝑓′
+𝑘 ( 𝑥 )  is also con tin uous on 𝐑 . Com bining our previous discussion with Theorem
+6.4.3 and the fact that 𝑓 ( 0 ) = 0 , w e see that ∑∞
+𝑘 = 1sin ( 𝑘 𝑥 )
+𝑘3  con v erges uniformly on 𝐑  to
+a diﬀeren tiable function 𝑓 , that
+𝑓′( 𝑥 ) = ∑∞
+𝑘 = 1𝑓′
+𝑘 ( 𝑥 ) = ∑∞
+𝑘 = 1cos ( 𝑘 𝑥 )
+𝑘2,
+263 / 415
+and that 𝑓′ is con tin uous on 𝐑 .
+(b) W e will sho w that Theorem 6.4.3 cannot b e used to determine if 𝑓  is t wice-diﬀeren tiable
+on 𝐑 , b y sho wing that the series of second deriv ativ es
+∑∞
+𝑘 = 1𝑓″
+𝑘 ( 𝑥 ) = − ∑∞
+𝑘 = 1sin ( 𝑘 𝑥 )
+𝑘
+do es not con v erge uniformly on 𝐑 . T o see this, w e will use the negation of Theorem
+6.4.4. Let 𝑁 ∈ 𝐍  b e giv en and let 𝑥 =𝜋
+4 𝑁. F or an y 𝑁 + 1 ≤ 𝑘 ≤ 2 𝑁  w e ha v e
+𝜋
+4≤ 𝑘 𝑥 ≤𝜋
+2⇒ sin ( 𝑘 𝑥 ) ≥1√
+2.
+No w observ e that
+| ∑2 𝑁
+𝑘 = 𝑁 + 1sin ( 𝑘 𝑥 )
+𝑘| ≥1√
+2∑2 𝑁
+𝑘 = 𝑁 + 11
+𝑘≥1√
+2∑2 𝑁
+𝑘 = 𝑁 + 11
+2 𝑁=1
+2√
+2.
+It follo ws from Theorem 6.4.4 that the con v ergence of the series ∑∞
+𝑘 = 1sin ( 𝑘 𝑥 )
+𝑘 is not uni-
+form on 𝐑 . Consequen tly , w e ma y not use Theorem 6.4.3 to conclude an ything ab out
+the t wice-diﬀeren tiabilit y of 𝑓  on 𝐑 .
+Exercise 6.4 . 8 .  Consider the function
+𝑓 ( 𝑥 ) = ∑∞
+𝑘 = 1sin ( 𝑥 / 𝑘 )
+𝑘.
+Where is 𝑓  deﬁned? Con tin uous? Diﬀeren tiable? T wice-diﬀeren tiable?
+Solution.  Let 𝑓𝑘 : 𝐑 → 𝐑  b e giv en b y 𝑓𝑘 ( 𝑥 ) =sin ( 𝑥 / 𝑘 )
+𝑘, so that 𝑓 ( 𝑥 ) = ∑∞
+𝑘 = 1 𝑓𝑘 ( 𝑥 ) . Observ e
+that
+𝑓′
+𝑘 ( 𝑥 ) =cos (𝑥
+𝑘)
+𝑘2and 𝑓″
+𝑘 ( 𝑥 ) = −sin (𝑥
+𝑘)
+𝑘3.
+The b ound | 𝑓″
+𝑘 ( 𝑥 ) | ≤1
+𝑘3  for all 𝑥 ∈ 𝐑  com bined with the W eierstrass M-T est sho ws that the
+seires ∑∞
+𝑘 = 1 𝑓″
+𝑘 ( 𝑥 )  con v erges uniformly on 𝐑 . Since
+𝑓 ( 0 ) = 0 and ∑∞
+𝑘 = 1𝑓′
+𝑘 ( 0 ) = ∑∞
+𝑘 = 11
+𝑘2
+are b oth con v ergen t, Theorem 6.4.3 sho ws that ∑∞
+𝑘 = 1 𝑓′
+𝑘 ( 𝑥 )  and ∑∞
+𝑘 = 1 𝑓𝑘 ( 𝑥 )  b oth con v erge
+uniformly on 𝐑 . F urthermore,
+𝑓′( 𝑥 ) = ∑∞
+𝑘 = 1𝑓′
+𝑘 ( 𝑥 ) and 𝑓″( 𝑥 ) = ∑∞
+𝑘 = 1𝑓″
+𝑘 ( 𝑥 ) .
+In particular, 𝑓  is deﬁned and con tin uous on 𝐑 .
+264 / 415
+Exercise 6.4 . 9 .  Let
+ℎ ( 𝑥 ) = ∑∞
+𝑛 = 11
+𝑥2 + 𝑛2.
+(a) Sho w that ℎ  is a con tin uous function deﬁned on all of 𝐑 .
+(b) Is ℎ  diﬀeren tiable? If so, is the deriv ativ e function ℎ′ con tin uous?
+Solution.
+(a) W e ha v e the b ound
+1
+𝑥2 + 𝑛2≤1
+𝑛2
+for all 𝑥 ∈ 𝐑 ; the W eierstrass M-T est then implies that the series ∑∞
+𝑛 = 11
+𝑥2 + 𝑛2  con v erges
+uniformly on 𝐑 . Since eac h 1
+𝑥2 + 𝑛2  is con tin uous on 𝐑 , Theorem 6.4.2 allo ws us to con-
+clude that ℎ  is also con tin uous on 𝐑 .
+(b) The term-b y-term diﬀeren tiated series is
+− ∑∞
+𝑛 = 12 𝑥
+( 𝑥2 + 𝑛2 )2.
+Note that
+| 𝑥 | ≤ 1 and 𝑛 ≥ 2 ⇒ |2 𝑥
+( 𝑥2 + 𝑛2 )2| ≤2
+𝑛4≤1
+𝑛2,
+| 𝑥 | > 1 ⇒ |2 𝑥
+( 𝑥2 + 𝑛2 )2| =2 | 𝑥 |
+𝑥4 + 2 𝑥2 𝑛2 + 𝑛4≤1
+| 𝑥 | 𝑛2≤1
+𝑛2.
+Since the series ∑∞
+𝑛 = 11
+𝑛2  is con v ergen t and eac h summand 2 𝑥
+( 𝑥2 + 𝑛2 )2  is con tin uous on 
+𝐑 , the W eierstrass M-T est and Theorem 6.4.2 imply that the series ∑∞
+𝑛 = 12 𝑥
+( 𝑥2 + 𝑛2 )2  con-
+v erges uniformly on 𝐑  to a con tin uous function. W e sho w ed in part (a) that ℎ  con v erges
+uniformly on 𝐑  and th us b y Theorem 6.4.3 w e ha v e
+ℎ′( 𝑥 ) = − ∑∞
+𝑛 = 12 𝑥
+( 𝑥2 + 𝑛2 )2.
+265 / 415
+Exercise 6.4 . 10 .  Let { 𝑟1 , 𝑟2 , 𝑟3 , … }  b e an en umeration of the set of rational n um b ers.
+F or eac h 𝑟𝑛 ∈ 𝐐 , deﬁne
+𝑢𝑛 ( 𝑥 ) = {1 / 2𝑛 for 𝑥 > 𝑟𝑛
+0 for 𝑥 ≤ 𝑟𝑛 .
+No w, let ℎ ( 𝑥 ) = ∑∞
+𝑛 = 1 𝑢𝑛 ( 𝑥 ) . Pro v e that ℎ  is a monotone function deﬁned on all of 𝐑
+that is con tin uous at ev ery irrational p oin t.
+Solution.  Observ e that | 𝑢𝑛 ( 𝑥 ) | ≤ 2− 𝑛 for all 𝑥 ∈ 𝐑 . Since ∑∞
+𝑛 = 1 2− 𝑛 is a con v ergen t geo-
+metric series, the W eierstrass M-T est implies that ℎ  con v erges uniformly on 𝐑 . T o see that ℎ
+is strictly increasing, let 𝑥 < 𝑦  b e giv en real n um b ers. There is a coun table inﬁnit y of rational
+n um b ers con tained in [ 𝑥 , 𝑦 ) , whic h w e can en umerate as a subsequence { 𝑟 𝑛 1 , 𝑟 𝑛 2 , 𝑟 𝑛 3 , … }  of
+the sequence { 𝑟1 , 𝑟2 , 𝑟3 , … } . No w,
+ℎ ( 𝑦 ) − ℎ ( 𝑥 ) = ∑∞
+𝑛 = 1( 𝑢𝑛 ( 𝑦 ) − 𝑢𝑛 ( 𝑥 ) ) .
+Let 𝑛 ∈ 𝐍  b e giv en and consider the follo wing three cases.
+Case 1.  If 𝑟𝑛 < 𝑥 < 𝑦  then 𝑢𝑛 ( 𝑦 ) = 𝑢𝑛 ( 𝑥 ) = 2− 𝑛 and th us 𝑢𝑛 ( 𝑦 ) − 𝑢𝑛 ( 𝑥 ) = 0 .
+Case 2.  If 𝑥 < 𝑦 ≤ 𝑟𝑛  then 𝑢𝑛 ( 𝑦 ) = 𝑢𝑛 ( 𝑥 ) = 0  and th us 𝑢𝑛 ( 𝑦 ) − 𝑢𝑛 ( 𝑥 ) = 0 .
+Case 3.  If 𝑥 ≤ 𝑟𝑛 < 𝑦  then 𝑟𝑛 ∈ { 𝑟 𝑛 1 , 𝑟 𝑛 2 , 𝑟 𝑛 3 , … } , so that 𝑛 = 𝑛𝑘  for some unique 𝑘 ∈ 𝐍 .
+Th us 𝑢𝑛 ( 𝑦 ) = 2− 𝑛𝑘  and 𝑢𝑛 ( 𝑥 ) = 0 , whic h giv es us 𝑢𝑛 ( 𝑦 ) − 𝑢𝑛 ( 𝑥 ) = 2− 𝑛𝑘 .
+It follo ws that
+ℎ ( 𝑦 ) − ℎ ( 𝑥 ) = ∑∞
+𝑘 = 12− 𝑛𝑘 > 0 .
+Th us ℎ ( 𝑦 ) > ℎ ( 𝑥 )  whenev er 𝑦 > 𝑥 , i.e. ℎ  is strictly increasing.
+T o see that ℎ  is con tin uous at ev ery irrational p oin t, let us ﬁrst sho w that eac h 𝑢𝑛  is con tin-
+uous at ev ery irrational p oin t. Let 𝑛 ∈ 𝐍  and 𝑦 ∈ 𝐈  b e giv en and let 𝛿 = | 𝑦 − 𝑟𝑛 | ; note that
+𝛿  m ust b e p ositiv e since 𝑦  is not rational. There are t w o cases:
+Case 1.  If 𝑦 < 𝑟𝑛  then 𝑢𝑛 ( 𝑥 ) = 0  for all 𝑥 ∈ ( 𝑦 − 𝛿 , 𝑦 + 𝛿 )  and hence 𝑢𝑛  is con tin uous at 𝑦 .
+Case 2.  If 𝑦 > 𝑟𝑛  then 𝑢𝑛 ( 𝑥 ) = 2− 𝑛 for all 𝑥 ∈ ( 𝑦 − 𝛿 , 𝑦 + 𝛿 )  and hence 𝑢𝑛  is con tin uous at
+𝑦 .
+Th us eac h summand 𝑢𝑛  is con tin uous on 𝐈 , and w e sho w ed earlier that ℎ  con v erges uniformly
+on 𝐑  and so in particular uniformly on 𝐈 ; Theorem 6.4.2 allo ws us to conclude that ℎ  is also
+con tin uous on 𝐈 .
+266 / 415
+6.5. P o w er Series
+Exercise 6.5 . 1 .  Consider the function 𝑔  deﬁned b y the p o w er series
+𝑔 ( 𝑥 ) = 𝑥 −𝑥2
+2+𝑥3
+3−𝑥4
+4+𝑥5
+5− ⋯ .
+(a) Is 𝑔  deﬁned on ( − 1 , 1 ) ? Is it con tin uous on this set? Is 𝑔  deﬁned on ( − 1 , 1 ] ? Is it
+con tin uous on this set? What happ ens on [ − 1 , 1 ] ? Can the p o w er series for 𝑔 ( 𝑥 )
+p ossibly con v erge for an y other p oin ts | 𝑥 | > 1 ? Explain.
+(b) F or what v alues of 𝑥  is 𝑔′( 𝑥 )  deﬁned? Find a form ula for 𝑔′.
+Solution.
+(a) Observ e that
+𝑔 ( 1 ) = 1 −1
+2+1
+3−1
+4+ ⋯
+is con v ergen t b y the Alternating Series T est (Theorem 2.7.7). It follo ws from Theorem
+6.5.1 that 𝑔  con v erges absolutely on ( − 1 , 1 )  and hence 𝑔  is deﬁned on ( − 1 , 1 ] . Theorem
+6.5.7 then implies that 𝑔  is con tin uous on ( − 1 , 1 ] . Note that
+𝑔 ( − 1 ) = − 1 −1
+2−1
+3−1
+4− ⋯
+is the negated harmonic series, whic h div erges. Th us 𝑔 ( − 1 )  is not deﬁned. W e claim
+that 𝑔 ( 𝑥 )  cannot p ossibly con v erge for an y other p oin ts | 𝑥 | > 1 . T o see this, supp ose
+that 𝑔 ( 𝑥 )  do es con v erge for some 𝑥 ∈ 𝐑  suc h that | 𝑥 | > 1  and let 𝑟 ∈ 𝐑  b e suc h that 
+| 𝑥 | > 𝑟 > 1 . It follo ws from Theorem 6.5.1 that 𝑔 ( 𝑟 )  con v erges absolutely—but
+𝑟 +𝑟2
+2+𝑟3
+3+𝑟4
+4+ ⋯
+div erges b y comparison with the harmonic series.
+(b) Theorem 6.5.7 guaran tees that 𝑔  is diﬀeren tiable on ( − 1 , 1 )  and the deriv ativ e is giv en
+b y
+𝑔′( 𝑥 ) = 1 − 𝑥 + 𝑥2− 𝑥3+ 𝑥4− ⋯ .
+Note that this series do es not con v erge at 𝑥 = 1 , despite 𝑔 ( 1 )  con v erging.
+267 / 415
+Exercise 6.5 . 2 .  Find suitable co eﬃcien ts ( 𝑎𝑛 )  so that the resulting p o w er series ∑ 𝑎𝑛 𝑥𝑛
+has the giv en prop erties, or explain wh y suc h a request is imp ossible.
+(a) Con v erges for ev ery v alue of 𝑥 ∈ 𝐑 .
+(b) Div erges for ev ery v alue of 𝑥 ∈ 𝐑 .
+(c) Con v erges absolutely for all 𝑥 ∈ [ − 1 , 1 ]  and div erges oﬀ of this set.
+(d) Con v erges conditionally at 𝑥 = − 1  and con v erges absolutely at 𝑥 = 1 .
+(e) Con v erges conditionally at b oth 𝑥 = − 1  and 𝑥 = 1 .
+Solution.
+(a) Let 𝑎𝑛 = 0  for ev ery 𝑛 ≥ 0 .
+(b) This is imp ossible: an y p o w er series con v erges to zero at 𝑥 = 0 .
+(c) Let 𝑎0 = 0  and 𝑎𝑛 =1
+𝑛2  for eac h 𝑛 ∈ 𝐍 . F or | 𝑥 | ≤ 1  w e ha v e
+|𝑥𝑛
+𝑛2| ≤1
+𝑛2
+and th us ∑ 𝑎𝑛 𝑥𝑛 con v erges absolutely . If | 𝑥 | > 1  then 𝑛− 2𝑥𝑛→ ∞  and th us ∑ 𝑎𝑛 𝑥𝑛
+div erges.
+(d) This is imp ossible. Note that
+∑∞
+𝑛 = 0| 𝑎𝑛 ( − 1 )𝑛| = ∑∞
+𝑛 = 0| 𝑎𝑛 | = ∑∞
+𝑛 = 0| 𝑎𝑛 1𝑛| .
+Th us a p o w er series con v erges absolutely at 𝑥 = 1  if and only if it con v erges absolutely
+at 𝑥 = − 1 .
+(e) Let
+𝑎𝑛 =
+⎩{⎨{⎧ 0 if 𝑛 = 0 or 𝑛 is odd,
+2 ( − 1 )1 + 𝑛 / 2
+𝑛if 𝑛 is even,
+so that
+∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛= 𝑥2−𝑥4
+2+𝑥6
+3−𝑥8
+4+ ⋯ .
+Observ e that
+∑∞
+𝑛 = 0𝑎𝑛 = ∑∞
+𝑛 = 0𝑎𝑛 ( − 1 )𝑛= 1 −1
+2+1
+3−1
+4+ ⋯
+are b oth conditionally con v ergen t series.
+268 / 415
+Exercise 6.5 . 3 .  Use the W eierstrass M-T est to pro v e Theorem 6.5.2.
+Solution.  Note that for an y 𝑥 ∈ 𝐑  suc h that | 𝑥 | ≤ | 𝑥0 |  w e ha v e
+| 𝑎𝑛 𝑥𝑛| = | 𝑎𝑛 | | 𝑥 |𝑛≤ | 𝑎𝑛 | | 𝑥0 |𝑛.
+The series ∑∞
+𝑛 = 0 | 𝑎𝑛 | | 𝑥0 |𝑛 is con v ergen t b y assumption, so the W eierstrass M-T est implies
+that ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 con v erges uniformly on [ − 𝑐 , 𝑐 ] , where 𝑐 = | 𝑥0 | .
+Exercise 6.5 . 4  (T erm-b y-term An tidiﬀeren tiation).  Assume 𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛
+con v erges on ( − 𝑅 , 𝑅 ) .
+(a) Sho w
+𝐹 ( 𝑥 ) = ∑∞
+𝑛 = 0𝑎𝑛
+𝑛 + 1𝑥𝑛 + 1
+is deﬁned on ( − 𝑅 , 𝑅 )  and satisﬁes 𝐹′( 𝑥 ) = 𝑓 ( 𝑥 ) .
+(b) An tideriv ativ es are not unique. If 𝑔  is an arbitrary function satisfying 𝑔′( 𝑥 ) = 𝑓 ( 𝑥 )
+on ( − 𝑅 , 𝑅 ) , ﬁnd a p o w er series represen tation for 𝑔 .
+Solution.
+(a) Let 𝑥 ∈ ( − 𝑅 , 𝑅 )  b e giv en. Theorem 6.5.1 implies that the series ∑∞
+𝑛 = 0 | 𝑎𝑛 | | 𝑥 |𝑛 is con-
+v ergen t, whic h implies that the series ∑∞
+𝑛 = 0 | 𝑎𝑛 | | 𝑥 |𝑛 + 1 is con v ergen t. Observ e that
+|𝑎𝑛
+𝑛 + 1𝑥𝑛 + 1| =| 𝑎𝑛 |
+𝑛 + 1| 𝑥 |𝑛 + 1≤ | 𝑎𝑛 | | 𝑥 |𝑛 + 1
+for eac h 𝑛 ≥ 0 . Th us 𝐹 ( 𝑥 )  is absolutely con v ergen t b y the Comparison T est. It follo ws
+that 𝐹  is deﬁned on the op en in terv al ( − 𝑅 , 𝑅 )  and it is then immediate from Theorem
+6.5.7 that 𝐹′( 𝑥 ) = 𝑓 ( 𝑥 )  on this in terv al.
+(b) Corollary 5.3.4 implies that 𝑔 ( 𝑥 ) = 𝑘 + 𝐹 ( 𝑥 )  on ( − 𝑅 , 𝑅 )  for some constan t 𝑘 ∈ 𝐑 . Th us
+𝑔 ( 𝑥 ) = 𝑘 + ∑∞
+𝑛 = 0𝑎𝑛
+𝑛 + 1𝑥𝑛 + 1= 𝑘 + 𝑎0 𝑥 +𝑎1
+2𝑥2+𝑎2
+3𝑥3+ ⋯ .
+Exercise 6.5 . 5 .
+(a) If 𝑠  satisﬁes 0 < 𝑠 < 1 , sho w 𝑛 𝑠𝑛 − 1 is b ounded for all 𝑛 ≥ 1 .
+(b) Giv en an arbitrary 𝑥 ∈ ( − 𝑅 , 𝑅 ) , pic k 𝑡  to satisfy | 𝑥 | < 𝑡 < 𝑅 . Use this start to
+construct a pro of for Theorem 6.5.6.
+Solution.
+(a) Certainly 0 < 𝑛 𝑠𝑛 − 1 for eac h 𝑛 ≥ 1 . Let 𝑁 ∈ 𝐍  b e suc h that 𝑠 ≤ 1 −1
+𝑁 + 1. F or 𝑛 ≥ 𝑁
+it follo ws that
+269 / 415
+𝑠 ≤ 1 −1
+𝑛 + 1⇔ ( 𝑛 + 1 ) 𝑠 ≤ 𝑛 ⇔ ( 𝑛 + 1 ) 𝑠𝑛≤ 𝑛 𝑠𝑛 − 1.
+Th us the sequence ( 𝑛 𝑠𝑛 − 1)  is b ounded b elo w and ev en tually decreasing. It follo ws
+from the Monotone Con v ergence Theorem that this sequence is con v ergen t and hence
+b ounded.
+(b) F rom part (a), there is an 𝑀 > 0  suc h that
+𝑛 |𝑥
+𝑡|𝑛 − 1
+≤ 𝑀
+for all 𝑛 ∈ 𝐍 . Since 𝑡 ∈ ( − 𝑅 , 𝑅 ) , Theorem 6.5.1 implies that the series ∑∞
+𝑛 = 0 𝑎𝑛 𝑡𝑛 is
+absolutely con v ergen t. It follo ws that the series ∑∞
+𝑛 = 1 𝑀 | 𝑎𝑛 | 𝑡𝑛 − 1 is con v ergen t. No w
+observ e that
+| 𝑛 𝑎𝑛 𝑥𝑛 − 1| = 𝑛 | 𝑎𝑛 | | 𝑥 |𝑛 − 1= 𝑛 |𝑥
+𝑡|𝑛 − 1
+| 𝑎𝑛 | 𝑡𝑛 − 1≤ 𝑀 | 𝑎𝑛 | 𝑡𝑛 − 1
+for eac h 𝑛 ∈ 𝐍 . Th us b y comparison with the con v ergen t series ∑∞
+𝑛 = 1 𝑀 | 𝑎𝑛 | 𝑡𝑛 − 1 w e see
+that the series ∑∞
+𝑛 = 1 𝑛 𝑎𝑛 𝑥𝑛 − 1 is absolutely con v ergen t. It follo ws that the p o w er series
+∑∞
+𝑛 = 1 𝑛 𝑎𝑛 𝑥𝑛 − 1 con v erges on the op en in terv al ( − 𝑅 , 𝑅 ) .
+Exercise 6.5 . 6 .  Previous w ork on geometric series (Example 2.7.5) justiﬁes the form ula
+1
+1 − 𝑥= 1 + 𝑥 + 𝑥2+ 𝑥3+ 𝑥4+ ⋯ , for all | 𝑥 | < 1 .
+Use the results ab out p o w er series pro v ed in this section to ﬁnd v alues for ∑∞
+𝑛 = 1 𝑛 / 2𝑛
+and ∑∞
+𝑛 = 1 𝑛2/ 2𝑛. The discussion in Section 6.1 ma y b e helpful.
+Solution.  The p o w er series
+1
+1 − 𝑥= ∑∞
+𝑛 = 0𝑥𝑛
+has radius of con v ergence 𝑅 = 1 . Theorem 6.5.6 then implies that the form ula
+1
+( 1 − 𝑥 )2= ∑∞
+𝑛 = 1𝑛 𝑥𝑛 − 1
+is v alid on ( − 1 , 1 ) , from whic h w e obtain
+𝑥
+( 1 − 𝑥 )2= ∑∞
+𝑛 = 1𝑛 𝑥𝑛( 1 )
+for all 𝑥 ∈ ( − 1 , 1 ) . Substituting 𝑥 =1
+2 giv es us
+2 = ∑∞
+𝑛 = 1𝑛
+2𝑛.
+270 / 415
+Diﬀeren tiating the p o w er series ( 1 )  term-b y-term giv es us
+1 + 𝑥
+( 1 − 𝑥 )3= ∑∞
+𝑛 = 1𝑛2𝑥𝑛 − 1,
+v alid on ( − 1 , 1 ) , from whic h w e obtain
+𝑥 ( 1 + 𝑥 )
+( 1 − 𝑥 )3= ∑∞
+𝑛 = 1𝑛2𝑥𝑛,
+v alid on ( − 1 , 1 ) . Substituting 𝑥 =1
+2 giv es us
+6 = ∑∞
+𝑛 = 1𝑛2
+2𝑛.
+Exercise 6.5 . 7 .  Let ∑ 𝑎𝑛 𝑥𝑛 b e a p o w er series with 𝑎𝑛 ≠ 0 , and assume
+𝐿 = lim
+𝑛 → ∞|𝑎𝑛 + 1
+𝑎𝑛|
+exists.
+(a) Sho w that if 𝐿 ≠ 0 , then the series con v erges for all 𝑥 ∈ ( − 1 / 𝐿 , 1 / 𝐿 ) . (The advice
+in Exercise 2.7.9  ma y b e helpful.)
+(b) Sho w that if 𝐿 = 0 , then the series con v erges for all 𝑥 ∈ 𝐑 .
+(c) Sho w that (a) and (b) con tin ue to hold if 𝐿  is replaced b y the limit
+𝐿′= lim
+𝑛 → ∞𝑠𝑛 where 𝑠𝑛 = sup { |𝑎𝑘 + 1
+𝑎𝑘| : 𝑘 ≥ 𝑛 } .
+(General prop erties of the limit sup erior  are discussed in Exercise 2.4.7 .)
+Solution.
+(a) Certainly the p o w er series con v erges if 𝑥 = 0 , so supp ose that 0 < | 𝑥 | <1
+𝐿. It follo ws
+that
+lim
+𝑛 → ∞|𝑎𝑛 + 1 𝑥𝑛 + 1
+𝑎𝑛 𝑥𝑛| = 𝐿 | 𝑥 | < 1
+and hence the series ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 is absolutely con v ergen t b y the Ratio T est.
+(b) Certainly the p o w er series con v erges if 𝑥 = 0 , so supp ose that 𝑥 ≠ 0 . It follo ws that
+lim
+𝑛 → ∞|𝑎𝑛 + 1 𝑥𝑛 + 1
+𝑎𝑛 𝑥𝑛| = 𝐿 | 𝑥 | = 0
+and hence the series ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 is absolutely con v ergen t b y the Ratio T est.
+(c) Let us reﬁne the Ratio T est ( Exercise 2.7.9 ) as follo ws. Giv en a series ∑∞
+𝑛 = 1 𝑎𝑛  with 
+𝑎𝑛 ≠ 0 , if
+271 / 415
+lim
+𝑛 → ∞𝑠𝑛 = 𝑟 < 1 where 𝑠𝑛 = sup { |𝑎𝑘 + 1
+𝑎𝑘| : 𝑘 ≥ 𝑛 } ,
+then the series ∑∞
+𝑛 = 1 𝑎𝑛  con v erges absolutely . T o see this, let 𝑟′ b e suc h that 𝑟 < 𝑟′< 1 .
+Since lim𝑛 → ∞ 𝑠𝑛 = 𝑟 , there is an 𝑁 ∈ 𝐍  suc h that
+| 𝑠𝑁 − 𝑟 | = 𝑠𝑁 − 𝑟 < 𝑟′− 𝑟 ⇒ 𝑠𝑁 < 𝑟′;
+for the ﬁrst equalit y w e ha v e used that the sequence ( 𝑠𝑛 )  decreases to 𝑟  (see Exercise
+2.4.7 ). It follo ws from this inequalit y that
+𝑛 ≥ 𝑁 ⇒ |𝑎𝑛 + 1
+𝑎𝑛| ≤ 𝑠𝑁 < 𝑟′⇒ | 𝑎𝑛 + 1 | < | 𝑎𝑛 | 𝑟′.
+W e ma y no w argue as in Exercise 2.7.9  to conclude the pro of of this reﬁned ratio test.
+Using this reﬁned test, the desired results ab out p o w er series follo w as in parts (a)
+and (b).
+Exercise 6.5 . 8 .
+(a) Sho w that p o w er series represen tations are unique. If w e ha v e
+∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛= ∑∞
+𝑛 = 0𝑏𝑛 𝑥𝑛
+for all 𝑥  in an in terv al ( − 𝑅 , 𝑅 ) , pro v e that 𝑎𝑛 = 𝑏𝑛  for all 𝑛 = 0 , 1 , 2 , … .
+(b) Let 𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 con v erge on ( − 𝑅 , 𝑅 ) , and assume 𝑓′( 𝑥 ) = 𝑓 ( 𝑥 )  for all
+𝑥 ∈ ( − 𝑅 , 𝑅 )  and 𝑓 ( 0 ) = 1 . Deduce the v alues of 𝑎𝑛 .
+Solution.
+(a) Let us sho w that if a p o w er series ℎ ( 𝑥 ) = ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 satisﬁes ℎ ( 𝑥 ) = 0  for all
+𝑥 ∈ ( − 𝑅 , 𝑅 ) , then 𝑎𝑛 = 0  for all 𝑛 ≥ 0 . Theorem 6.5.7 implies that
+ℎ( 𝑘 )( 𝑥 ) = ∑∞
+𝑛 = 𝑘𝑛 ( 𝑛 − 1 ) ⋯ ( 𝑛 − 𝑘 + 1 ) 𝑎𝑛 𝑥𝑛 − 𝑘
+for all 𝑥 ∈ ( − 𝑅 , 𝑅 )  and all 𝑘 ≥ 0 , where ℎ( 𝑘 ) is the 𝑘th  deriv ativ e of ℎ . Since ℎ  is iden-
+tically zero on ( − 𝑅 , 𝑅 ) , it m ust b e that ℎ( 𝑘 ) is iden tically zero on ( − 𝑅 , 𝑅 )  and th us
+0 = ℎ( 𝑘 )( 0 ) = 𝑘 ! 𝑎𝑘 ⇔ 𝑎𝑘 = 0
+for eac h 𝑘 ≥ 0 .
+No w supp ose that
+∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛= ∑∞
+𝑛 = 0𝑏𝑛 𝑥𝑛
+for all 𝑥  in an in terv al ( − 𝑅 , 𝑅 ) . It follo ws that
+272 / 415
+∑∞
+𝑛 = 0( 𝑎𝑛 − 𝑏𝑛 ) 𝑥𝑛= 0
+for all 𝑥 ∈ ( − 𝑅 , 𝑅 )  and our previous discussion then sho ws that 𝑎𝑛 − 𝑏𝑛 = 0  for all 
+𝑛 ≥ 0 .
+(b) Theorem 6.5.7 giv es us
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛= ∑∞
+𝑛 = 0( 𝑛 + 1 ) 𝑎𝑛 + 1 𝑥𝑛= 𝑓′( 𝑥 )
+for all 𝑥 ∈ ( − 𝑅 , 𝑅 ) . It follo ws from part (a) that
+𝑎𝑛 + 1 =𝑎𝑛
+𝑛 + 1
+for all 𝑛 ≥ 0 . F rom 𝑓 ( 0 ) = 1  w e obtain 𝑎0 = 1  and hence 𝑎1 = 1 , 𝑎2 =1
+2, 𝑎3 =1
+6, and in
+general
+𝑎𝑛 =1
+𝑛 !.
+Exercise 6.5 . 9 .  Review the deﬁnitions and results from Section 2.8 concerning pro ducts
+of series and Cauc h y pro ducts in particular. A t the end of Section 2.9, w e men tioned the
+follo wing result: If b oth ∑ 𝑎𝑛  and ∑ 𝑏𝑛  con v erge conditionally to 𝐴  and 𝐵  resp ectiv ely ,
+then it is p ossible for the Cauc h y pro duct,
+∑ 𝑑𝑛 where 𝑑𝑛 = 𝑎0 𝑏𝑛 + 𝑎1 𝑏𝑛 − 1 + ⋯ + 𝑎𝑛 𝑏0 ,
+to div erge. Ho w ev er, if ∑ 𝑑𝑛  do es con v erge, then it m ust con v erge to 𝐴 𝐵 . T o pro v e
+this, set
+𝑓 ( 𝑥 ) = ∑ 𝑎𝑛 𝑥𝑛, 𝑔 ( 𝑥 ) = ∑ 𝑏𝑛 𝑥𝑛, and ℎ ( 𝑥 ) = ∑ 𝑑𝑛 𝑥𝑛.
+Use Ab el’s Theorem and the result in Exercise 2.8.7  to establish this result.
+Solution.  Our h yp othesis is that 𝑓 , 𝑔 , and ℎ  all con v erge at 𝑥 = 1 . It follo ws from Theorem
+6.5.1 that 𝑓  and 𝑔  con v erge absolutely for an y 𝑥 ∈ ( − 1 , 1 )  and hence b y Exercise 2.8.7  w e
+ha v e
+ℎ ( 𝑥 ) = ∑∞
+𝑛 = 0𝑑𝑛 𝑥𝑛= ( ∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛) ( ∑∞
+𝑛 = 0𝑏𝑛 𝑥𝑛) = 𝑓 ( 𝑥 ) 𝑔 ( 𝑥 ) for all 𝑥 ∈ ( − 1 , 1 ) . ( 1 )
+Ab el’s Theorem (Theorem 6.5.4) implies that 𝑓 , 𝑔 , and ℎ  con v erge uniformly on [ 0 , 1 ]  and
+hence are con tin uous on [ 0 , 1 ] . The con tin uit y at 𝑥 = 1  allo ws us to extend the equalit y in 
+( 1 )  to all 𝑥 ∈ ( − 1 , 1 ] , whic h giv es us
+ℎ ( 1 ) = ∑∞
+𝑛 = 0𝑑𝑛 = ( ∑∞
+𝑛 = 0𝑎𝑛 ) ( ∑∞
+𝑛 = 0𝑏𝑛 ) = 𝐴 𝐵 .
+273 / 415
+Exercise 6.5 . 10 .  Let 𝑔 ( 𝑥 ) = ∑∞
+𝑛 = 0 𝑏𝑛 𝑥𝑛 con v erge on ( − 𝑅 , 𝑅 ) , and assume ( 𝑥𝑛 ) → 0
+with 𝑥𝑛 ≠ 0 . If 𝑔 ( 𝑥𝑛 ) = 0  for all 𝑛 ∈ 𝐍 , sho w that 𝑔 ( 𝑥 )  m ust b e iden tically zero on all
+of ( − 𝑅 , 𝑅 ) .
+Solution.  Theorem 6.5.7 implies that 𝑔  is con tin uous at zero. It follo ws that
+𝑏0 = 𝑔 ( 0 ) = 𝑔 ( lim
+𝑘 → ∞𝑥𝑘 ) = lim
+𝑘 → ∞𝑔 ( 𝑥𝑘 ) = 0 .
+Theorem 6.5.7 also allo ws us to diﬀeren tiate 𝑔  term-b y-term, obtaining the p o w er series
+𝑔′( 𝑥 ) = ∑∞
+𝑛 = 1𝑛 𝑏𝑛 𝑥𝑛 − 1,
+v alid on ( − 𝑅 , 𝑅 ) . It follo ws that
+𝑏1 = 𝑔′( 0 ) = lim
+𝑘 → ∞𝑔 ( 𝑥𝑘 ) − 𝑔 ( 0 )
+𝑥𝑘= 0 .
+W e can con tin ue in this manner to see that 𝑏𝑛 = 0  for eac h 𝑛 ≥ 0 , whic h b y Exercise 6.5.8
+implies that 𝑔  is iden tically zero on ( − 𝑅 , 𝑅 ) .
+Exercise 6.5 . 11 .  A series ∑∞
+𝑛 = 0 𝑎𝑛  is said to b e A b el-summable to  𝐿  if the p o w er series
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛
+con v erges for all 𝑥 ∈ [ 0 , 1 )  and 𝐿 = lim𝑥 → 1− 𝑓 ( 𝑥 ) .
+(a) Sho w that an y series that con v erges to a limit 𝐿  is also Ab el-summable to 𝐿 .
+(b) Sho w that ∑∞
+𝑛 = 0 ( − 1 )𝑛 is Ab el-summable and ﬁnd the sum.
+Solution.
+(a) Supp ose ∑∞
+𝑛 = 0 𝑎𝑛  con v erges to 𝐿 . In other w ords, the p o w er series 𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛
+con v erges to 𝐿  at 𝑥 = 1 ; Ab el’s Theorem then implies that the p o w er series is uniformly
+con v ergen t on [ 0 , 1 ]  and hence con tin uous on [ 0 , 1 ] . It follo ws that
+lim
+𝑥 → 1−𝑓 ( 𝑥 ) = 𝑓 ( lim
+𝑥 → 1−𝑥 ) = 𝑓 ( 1 ) = ∑∞
+𝑛 = 0𝑎𝑛 = 𝐿 .
+(b) Let
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0( − 1 )𝑛𝑥𝑛= ∑∞
+𝑛 = 0( − 𝑥 )𝑛=1
+1 + 𝑥;
+this is v alid for | 𝑥 | < 1 . It follo ws that ∑∞
+𝑛 = 0 ( − 1 )𝑛 is Ab el-summable to 1
+2:
+lim
+𝑥 → 1−𝑓 ( 𝑥 ) = lim
+𝑥 → 1−1
+1 + 𝑥=1
+2.
+274 / 415
+6.6. T a ylor Series
+Exercise 6.6 . 1 .  The deriv ation in Example 6.6.1 sho ws the T a ylor series for arctan ( 𝑥 )
+is v alid for all 𝑥 ∈ ( − 1 , 1 ) . Notice, ho w ev er, that the series also con v erges when 𝑥 = 1 .
+Assuming that arctan ( 𝑥 )  is con tin uous, explain wh y the v alue of the series at 𝑥 = 1
+m ust necessarily b e arctan ( 1 ) . What in teresting iden tit y do w e get in this case?
+Solution.  The p o w er series
+𝑥 −1
+3𝑥3+1
+5𝑥5−1
+7𝑥7+ ⋯
+con v erges on ( − 1 , 1 ] ; it follo ws from Theorem 6.5.7 that the p o w er series is con tin uous on
+this in terv al. Giv en that arctan  is also con tin uous at 𝑥 = 1 , it follo ws that the function
+𝑓 : ( − 1 , 1 ] → 𝐑  giv en b y
+𝑓 ( 𝑥 ) = arctan ( 𝑥 ) − ( 𝑥 −1
+3𝑥3+1
+5𝑥5−1
+7𝑥7+ ⋯ )
+is con tin uous at 𝑥 = 1  and satisﬁes 𝑓 ( 𝑥 ) = 0  for all 𝑥 ∈ ( − 1 , 1 ) . The con tin uit y at 𝑥 = 1  then
+implies that 𝑓 ( 1 ) = 0  also, whic h giv es us the iden tit y
+𝜋
+4= arctan ( 1 ) = 1 −1
+3+1
+5−1
+7+ ⋯
+Exercise 6.6 . 2 .  Starting from one of the previously generated series in this section, use
+manipulations similar to those in Example 6.6.1 to ﬁnd T a ylor series represen tations for
+eac h of the follo wing functions. F or precisely what v alues of 𝑥  is eac h series represen ta-
+tion v alid?
+(a) 𝑥 cos ( 𝑥2)
+(b) 𝑥 / ( 1 + 4 𝑥2)2
+(c) log ( 1 + 𝑥2)
+Solution.
+(a) Starting from the p o w er series
+sin ( 𝑥 ) = ∑∞
+𝑛 = 0( − 1 )𝑛𝑥2 𝑛 + 1
+( 2 𝑛 + 1 ) != 𝑥 −𝑥3
+3 !+𝑥5
+5 !−𝑥7
+7 !+ ⋯ ,
+whic h con v erges for an y 𝑥 ∈ 𝐑 , Theorem 6.5.6 implies that the diﬀeren tiated series
+cos ( 𝑥 ) = ∑∞
+𝑛 = 0( − 1 )𝑛𝑥2 𝑛
+( 2 𝑛 ) != 1 −𝑥2
+2 !+𝑥4
+4 !−𝑥6
+6 !+ ⋯
+also con v erges for an y 𝑥 ∈ 𝐑 . F rom this w e obtain
+275 / 415
+𝑥 cos ( 𝑥2) = ∑∞
+𝑛 = 0( − 1 )𝑛𝑥4 𝑛 + 1
+( 2 𝑛 ) != 𝑥 −𝑥5
+2 !+𝑥9
+4 !−𝑥1 3
+6 !+ ⋯ ,
+v alid for all 𝑥 ∈ 𝐑 .
+(b) Starting from the p o w er series
+1
+( 1 − 𝑥 )2= 1 + 2 𝑥 + 3 𝑥2+ 4 𝑥3+ 5 𝑥4+ ⋯ ,
+deriv ed in Example 6.6.1 and v alid for all | 𝑥 | < 1 , w e obtain
+1
+( 1 + 𝑥 )2= 1 − 2 𝑥 + 3 𝑥2− 4 𝑥3+ 5 𝑥4− ⋯ ,
+v alid for all | 𝑥 | < 1 . Substituting 4 𝑥2 for 𝑥  giv es us
+1
+( 1 + 4 𝑥2 )2= 1 − 2 ⋅ 4 𝑥2+ 3 ⋅ 42𝑥4− 4 ⋅ 43𝑥6+ 5 ⋅ 44𝑥8− ⋯ ,
+v alid for all | 4 𝑥2| < 1 , i.e. all | 𝑥 | <1
+2. F rom this w e obtain
+𝑥
+( 1 + 4 𝑥2 )2= ∑∞
+𝑛 = 0( − 1 )𝑛( 𝑛 + 1 ) 4𝑛𝑥2 𝑛 + 1
+= 𝑥 − 2 ⋅ 4 𝑥3+ 3 ⋅ 42𝑥5− 4 ⋅ 43𝑥7+ 5 ⋅ 44𝑥9− ⋯ ,
+v alid for all | 𝑥 | <1
+2. Note that for 𝑥 =1
+2 the p o w er series b ecomes
+1
+2∑∞
+𝑛 = 0( − 1 )𝑛( 𝑛 + 1 ) ,
+whic h is div ergen t. Similarly , 𝑥 = −1
+2 giv es us the div ergen t series
+−1
+2∑∞
+𝑛 = 0( − 1 )𝑛( 𝑛 + 1 ) .
+Th us the p o w er series represen tation
+𝑥
+( 1 + 4 𝑥2 )2= ∑∞
+𝑛 = 0( − 1 )𝑛( 𝑛 + 1 ) 4𝑛𝑥2 𝑛 + 1
+= 𝑥 − 2 ⋅ 4 𝑥3+ 3 ⋅ 42𝑥5− 4 ⋅ 43𝑥7+ 5 ⋅ 44𝑥9− ⋯
+is v alid precisely on the op en in terv al ( −1
+2,1
+2) .
+(c) Starting from the p o w er series
+1
+1 + 𝑥= 1 − 𝑥 + 𝑥2− 𝑥3+ 𝑥4− 𝑥5+ ⋯ ,
+v alid on ( − 1 , 1 ) , w e ma y use Exercise 6.5.4  to tak e term-b y-term an tideriv ativ es:
+log ( 1 + 𝑥 ) + 𝐶 = 𝑥 −𝑥2
+2+𝑥3
+3−𝑥4
+4+𝑥5
+5−𝑥6
+6+ ⋯ = ∑∞
+𝑛 = 1( − 1 )𝑛 + 1𝑥𝑛
+𝑛;
+276 / 415
+this is v alid for 𝑥 ∈ ( − 1 , 1 ) . T aking 𝑥 = 0  sho ws that 𝐶 = 0 . Note that the p o w er series
+∑∞
+𝑛 = 1 𝑛− 1( − 1 )𝑛 + 1𝑥𝑛 is con v ergen t at 𝑥 = 1  and div ergen t at 𝑥 = − 1 . Th us the p o w er
+series con v erges precisely on ( − 1 , 1 ] . It follo ws from Ab el’s Theorem (Theorem 6.5.4)
+and the con tin uit y of log ( 1 + 𝑥 )  at 𝑥 = 1  that the p o w er series represen tation
+log ( 1 + 𝑥 ) = ∑∞
+𝑛 = 1( − 1 )𝑛 + 1𝑥𝑛
+𝑛
+is v alid on the half-op en in terv al ( − 1 , 1 ] . Since 𝑥2∈ [ 0 , 1 ] ⊆ ( − 1 , 1 ]  whenev er 𝑥 ∈ [ − 1 , 1 ] ,
+w e see that the represen tation
+log ( 1 + 𝑥2) = ∑∞
+𝑛 = 1( − 1 )𝑛 + 1𝑥2 𝑛
+𝑛= 𝑥2−𝑥4
+2+𝑥6
+3−𝑥8
+4+𝑥1 0
+5−𝑥1 2
+6+ ⋯
+is v alid on [ − 1 , 1 ] .
+Exercise 6.6 . 3 .  Deriv e the form ula for the T a ylor co eﬃcien ts giv en in Theorem 6.6.2.
+Solution.  Supp ose 𝑓 : ( − 𝑅 , 𝑅 ) → 𝐑 , for some 𝑅 > 0 , is inﬁnitely diﬀeren tiable and has a
+p o w er series represen tation
+𝑓 ( 𝑥 ) = 𝑎0 + 𝑎1 𝑥 + 𝑎2 𝑥2+ 𝑎3 𝑥3+ ⋯
+Theorem 6.5.7 implies that on the in terv al ( − 𝑅 , 𝑅 )  w e ha v e
+𝑓( 𝑛 )( 𝑥 ) = ∑∞
+𝑘 = 0( 𝑘 + 1 ) ⋯ ( 𝑘 + 𝑛 ) 𝑎𝑘 + 𝑛 𝑥𝑘,
+from whic h it is immediate that 𝑓( 𝑛 )( 0 ) = 𝑛 ! 𝑎𝑛 .
+Exercise 6.6 . 4 .  Explain ho w Lagrange’s Remainder Theorem can b e mo diﬁed to pro v e
+1 −1
+2+1
+3−1
+4+1
+5−1
+6+ ⋯ = log ( 2 ) .
+Solution.  Let 𝑓 : ( 0 , ∞ ) → 𝐑  b e giv en b y 𝑓 ( 𝑥 ) = log ( 𝑥 ) . Note that 𝑓  is inﬁnitely diﬀeren-
+tiable and satisﬁes
+𝑓( 𝑛 )( 𝑥 ) =( − 1 )𝑛 − 1( 𝑛 − 1 ) !
+𝑥𝑛
+for eac h 𝑛 ≥ 1 . Consider the T a ylor series of 𝑓  cen tred at 𝑎 = 1 :
+𝑓 ( 1 ) + ∑∞
+𝑛 = 1𝑓( 𝑛 )( 1 )
+𝑛 !( 𝑥 − 1 )𝑛= ∑∞
+𝑛 = 1( − 1 )𝑛 − 1
+𝑛( 𝑥 − 1 )𝑛.
+As noted in the textb o ok (p. 202), Lagrange’s Remainder Theorem implies that for eac h 
+𝑁 ∈ 𝐍  there exists some 𝑐𝑁 ∈ ( 1 , 2 )  suc h that
+277 / 415
+𝐸𝑁 ( 2 ) = log ( 2 ) − ∑𝑁
+𝑛 = 1( − 1 )𝑛 − 1
+𝑛=𝑓𝑁 + 1( 𝑐𝑁 )
+( 𝑁 + 1 ) !=( − 1 )𝑁
+( 𝑁 + 1 ) 𝑐𝑁 + 1
+𝑁.
+This implies that | 𝐸𝑁 ( 2 ) | ≤ ( 𝑁 + 1 )− 1, from whic h it follo ws that lim𝑁 → ∞ 𝐸𝑁 ( 2 ) = 0 , i.e.
+log ( 2 ) = ∑∞
+𝑛 = 1( − 1 )𝑛 − 1
+𝑛= 1 −1
+2+1
+3−1
+4+1
+5−1
+6+ ⋯
+Exercise 6.6 . 5 .
+(a) Generate the T a ylor co eﬃcien ts for the exp onen tial function 𝑓 ( 𝑥 ) = 𝑒𝑥, and then
+pro v e that the corresp onding T a ylor series con v erges uniformly to 𝑒𝑥 on an y in ter-
+v al of the form [ − 𝑅 , 𝑅 ] .
+(b) V erify the form ula 𝑓′( 𝑥 ) = 𝑒𝑥.
+(c) Use a substitution to generate the series for 𝑒− 𝑥, and then informally calculate
+𝑒𝑥⋅ 𝑒− 𝑥 b y m ultiplying together the t w o series and collecting common p o w ers of
+𝑥 .
+Solution.
+(a) Since 𝑓( 𝑛 )( 𝑥 ) = 𝑒𝑥 for an y 𝑛 ≥ 0 , the T a ylor co eﬃcien ts are
+𝑓( 𝑛 )( 0 )
+𝑛 !=1
+𝑛 !.
+Let 𝑅 > 0  b e giv en and supp ose 𝑥 ∈ [ − 𝑅 , 𝑅 ] . F or 𝑁 ∈ 𝐍 , Lagrange’s Remainder The-
+orem implies that there is some 𝑐𝑁  satisfying | 𝑐𝑁 | < | 𝑥 | ≤ 𝑅  and
+| 𝐸𝑁 ( 𝑥 ) | = |𝑓𝑁 + 1( 𝑐𝑁 )
+( 𝑁 + 1 ) !𝑥𝑁 + 1| =𝑒𝑐𝑁
+( 𝑁 + 1 ) !| 𝑥 |𝑁 + 1≤𝑒𝑅𝑅𝑁 + 1
+( 𝑁 + 1 ) !.
+Since lim𝑁 → ∞ 𝑒𝑅𝑅𝑁 + 1[ ( 𝑁 + 1 ) ! ]− 1= 0  (this can b e seen using, for example, Stirling’s
+appro ximation ), w e see that the T a ylor series con v erges uniformly to 𝑒𝑥 on [ − 𝑅 , 𝑅 ] .
+(b) Diﬀeren tiating the T a ylor series
+𝑓 ( 𝑥 ) = ∑∞
+𝑛 = 0𝑥𝑛
+𝑛 !
+term-b y-term giv es us
+𝑓′( 𝑥 ) = ∑∞
+𝑛 = 1𝑛 𝑥𝑛 − 1
+𝑛 != ∑∞
+𝑛 = 1𝑥𝑛 − 1
+( 𝑛 − 1 ) != ∑∞
+𝑛 = 0𝑥𝑛
+𝑛 != 𝑓 ( 𝑥 ) = 𝑒𝑥.
+(c) Informally ,
+𝑒𝑥⋅ 𝑒− 𝑥= ( 1 + 𝑥 +𝑥2
+2 !+ ⋯ ) ( 1 − 𝑥 +𝑥2
+2 !− ⋯ )
+278 / 415
+= 1 + ( 1 − 1 ) 𝑥 + (1
+2 !+1
+2 !− 1 ) 𝑥2+ (1
+3 !−1
+3 !+1
+2 !−1
+2 !) 𝑥3+ ⋯ = 1 .
+Exercise 6.6 . 6 .  Review the pro of that 𝑔′( 0 ) = 0  for the function
+𝑔 ( 𝑥 ) = {𝑒− 1 / 𝑥2for 𝑥 ≠ 0 ,
+0 for 𝑥 = 0
+in tro duced at the end of this section.
+(a) Compute 𝑔′( 𝑥 )  for 𝑥 ≠ 0 . Then use the deﬁnition of the deriv ativ e to ﬁnd 𝑔″( 0 ) .
+(b) Compute 𝑔″( 𝑥 )  and 𝑔‴( 𝑥 )  for 𝑥 ≠ 0 . Use these observ ations and in v en t whatev er
+notation is needed to giv e a general description for the 𝑛 th deriv ativ e 𝑔( 𝑛 )( 𝑥 )  at
+p oin ts diﬀeren t from zero.
+(c) Construct a general argumen t for wh y 𝑔( 𝑛 )( 0 ) = 0  for all 𝑛 ∈ 𝐍 .
+Solution.
+(a) F or 𝑥 ≠ 0  w e ha v e
+𝑔′( 𝑥 ) = ( 𝑒− 𝑥− 2)′= 2 𝑥− 3𝑒− 𝑥− 2.
+This giv es us
+𝑔″( 0 ) = lim
+𝑥 → 0𝑔′( 𝑥 ) − 𝑔′( 0 )
+𝑥= 2 lim
+𝑥 → 0𝑥− 4
+𝑒𝑥− 2 .
+Note that
+lim
+𝑥 → 0( 𝑥− 4)′
+( 𝑒𝑥− 2)′= lim
+𝑥 → 0− 4 𝑥− 5
+− 2 𝑥− 3 𝑒𝑥− 2 = 2 lim
+𝑥 → 0𝑥− 2
+𝑒𝑥− 2 .
+Note further that
+lim
+𝑥 → 0( 𝑥− 2)′
+( 𝑒𝑥− 2)′= lim
+𝑥 → 0− 2 𝑥− 3
+− 2 𝑥− 3 𝑒𝑥− 2 = lim
+𝑥 → 0𝑒− 𝑥− 2= 0 .
+It follo ws from t w o applications of the ∞ / ∞  case of L’Hospital’s R ule (Theorem 5.3.8)
+that 𝑔″( 0 ) = 0 .
+(b) F or 𝑥 ≠ 0  w e ha v e
+𝑔″( 𝑥 ) = 4 𝑥− 6𝑒− 𝑥− 2− 6 𝑥− 4𝑒− 𝑥− 2and 𝑔″( 𝑥 ) = 8 𝑥− 9𝑒− 𝑥− 2− 3 6 𝑥− 7𝑒− 𝑥− 2+ 2 4 𝑥− 5𝑒− 𝑥− 2.
+W e conjecture that for 𝑥 ≠ 0  the 𝑛th  deriv ativ e of 𝑔  is giv en b y the form ula
+𝑔( 𝑛 )( 𝑥 ) = 𝑒− 𝑥− 2∑𝑛 − 1
+𝑗 = 0𝑐𝑛 , 𝑗 𝑥− 3 𝑛 + 2 𝑗,
+279 / 415
+where 𝑐𝑛 , 0 , … , 𝑐𝑛 , 𝑛 − 1  are real n um b ers dep ending only on 𝑛 . W e will pro v e this b y in-
+duction. The base case 𝑛 = 1  w as handled in part (a). Supp ose the result is true for
+some 𝑛 ∈ 𝐍 . F or 𝑥 ≠ 0 , the usual rules of diﬀeren tiation giv e us
+𝑔( 𝑛 + 1 )( 𝑥 ) = − 2 𝑥− 3𝑒− 𝑥− 2∑𝑛 − 1
+𝑗 = 0𝑐𝑛 , 𝑗 𝑥− 3 𝑛 + 2 𝑗+ 𝑒− 𝑥− 2∑𝑛 − 1
+𝑗 = 0( − 3 𝑛 + 2 𝑗 ) 𝑐𝑛 , 𝑗 𝑥− 3 𝑛 + 2 𝑗 − 1
+= 𝑒− 𝑥− 2[ ∑𝑛 − 1
+𝑗 = 0− 2 𝑐𝑛 , 𝑗 𝑥− 3 ( 𝑛 + 1 ) + 2 𝑗+ ∑𝑛 − 1
+𝑗 = 0( − 3 𝑛 + 2 𝑗 ) 𝑐𝑛 , 𝑗 𝑥− 3 𝑛 + 2 𝑗 − 1]
+= 𝑒− 𝑥− 2[ ∑𝑛 − 1
+𝑗 = 0− 2 𝑐𝑛 , 𝑗 𝑥− 3 ( 𝑛 + 1 ) + 2 𝑗+ ∑𝑛
+𝑗 = 1( − 3 𝑛 + 2 𝑗 − 2 ) 𝑐𝑛 , 𝑗 − 1 𝑥− 3 ( 𝑛 + 1 ) + 2 𝑗]
+= 𝑒− 𝑥− 2∑𝑛
+𝑗 = 0𝑐𝑛 + 1 , 𝑗 𝑥− 3 ( 𝑛 + 1 ) + 2 𝑗,
+where
+𝑐𝑛 + 1 , 𝑗 =
+⎩{{⎨{{⎧ − 2 𝑐𝑛 , 0 if 𝑗 = 0 ,
+− 2 𝑐𝑛 , 𝑗 + ( − 3 𝑛 + 2 𝑗 − 2 ) 𝑐𝑛 , 𝑗 − 1 if 1 ≤ 𝑗 ≤ 𝑛 − 1 ,
+( − 𝑛 − 2 ) 𝑐𝑛 , 𝑛 − 1 if 𝑗 = 𝑛 .
+This completes the induction step and the pro of.
+(c) Using L’Hospital’s R ule, it is straigh tforw ard to argue that
+lim
+𝑥 → 0𝑥− 𝑗𝑒− 𝑥− 2= 0
+for an y p ositiv e in teger 𝑗 . Using this result and part (b), for an y 𝑛 ∈ 𝐍  w e ha v e
+𝑔( 𝑛 + 1 )( 0 ) = lim
+𝑥 → 0𝑔( 𝑛 )( 𝑥 )
+𝑥= lim
+𝑥 → 0( ∑𝑛 − 1
+𝑗 = 0𝑐𝑛 , 𝑗 𝑥− 3 𝑛 + 2 𝑗 − 1𝑒− 𝑥− 2) = 0 .
+Exercise 6.6 . 7 .  Find an example of eac h of the follo wing or explain wh y no suc h func-
+tion exists.
+(a) An inﬁnitely diﬀeren tiable function 𝑔 ( 𝑥 )  on all of 𝐑  with a T a ylor series that con-
+v erges to 𝑔 ( 𝑥 )  only for 𝑥 ∈ ( − 1 , 1 ) .
+(b) An inﬁnitely diﬀeren tiable function ℎ ( 𝑥 )  with the same T a ylor series as sin ( 𝑥 )  but
+suc h that ℎ ( 𝑥 ) ≠ sin ( 𝑥 )  for all 𝑥 ≠ 0 .
+(c) An inﬁnitely diﬀeren tiable function 𝑓 ( 𝑥 )  on all of 𝐑  with a T a ylor series that con-
+v erges to 𝑓 ( 𝑥 )  if and only if 𝑥 ≤ 0 .
+Solution.
+(a) Consider 𝑔 : 𝐑 → 𝐑  giv en b y 𝑔 ( 𝑥 ) = ( 1 + 𝑥2)− 1, whic h satisﬁes
+280 / 415
+𝑔( 𝑛 )( 𝑥 ) =𝑝𝑛 ( 𝑥 )
+( 1 + 𝑥2 )2 𝑛
+for 𝑛 ∈ 𝐍  and some p olynomial 𝑝𝑛 . As sho wn in Example 6.6.1, the T a ylor series of 
+𝑔  is
+1 − 𝑥2+ 𝑥4− 𝑥6+ ⋯ ,
+whic h con v erges if and only if | 𝑥 | < 1 .
+(b) As sho wn in the textb o ok and Exercise 6.6.6 , the function 𝑔 : 𝐑 → 𝐑  giv en b y
+𝑔 ( 𝑥 ) = {𝑒− 𝑥− 2if 𝑥 ≠ 0 ,
+0 if 𝑥 = 0
+has the same T a ylor series as the zero function and y et satisﬁes 𝑔 ( 𝑥 ) ≠ 0  for all 𝑥 ≠ 0 .
+It follo ws that the function ℎ : 𝐑 → 𝐑  giv en b y
+ℎ ( 𝑥 ) = {𝑒− 𝑥− 2+ sin ( 𝑥 ) if 𝑥 ≠ 0 ,
+0 if 𝑥 = 0
+has the same T a ylor series as sin  and y et satisﬁes ℎ ( 𝑥 ) ≠ sin ( 𝑥 )  for all 𝑥 ≠ 0 .
+(c) Consider the function 𝑓 : 𝐑 → 𝐑  giv en b y
+𝑓 ( 𝑥 ) = {𝑒− 𝑥− 2if 𝑥 > 0 ,
+0 if 𝑥 ≤ 0 .
+Sligh t mo diﬁcations to the argumen ts giv en in the textb o ok and Exercise 6.6.6  sho w
+that 𝑓  is inﬁnitely diﬀeren tiable and satisﬁes 𝑓( 𝑛 )( 0 ) = 0  for all 𝑛 ∈ 𝐍 , so that eac h
+T a ylor co eﬃcien t of 𝑓  is zero, i.e. the T a ylor series of 𝑓  is zero. Since 𝑓 ( 𝑥 ) = 0  if and
+only if 𝑥 ≤ 0 , w e see that the T a ylor series of 𝑓  con v erges to 𝑓  if and only if 𝑥 ≤ 0 .
+Exercise 6.6 . 8 .  Here is a w eak er form of Lagrange’s Remainder Theorem whose pro of
+is arguably more illuminating than the one for the stronger result.
+(a) First establish a lemma: If 𝑔  and ℎ  are diﬀeren tiable on [ 0 , 𝑥 ]  with 𝑔 ( 0 ) = ℎ ( 0 )  and
+𝑔′( 𝑡 ) ≤ ℎ′( 𝑡 )  for all 𝑡 ∈ [ 0 , 𝑥 ] , then 𝑔 ( 𝑡 ) ≤ ℎ ( 𝑡 )  for all 𝑡 ∈ [ 0 , 𝑥 ] .
+(b) Let 𝑓 , 𝑆𝑁 , and 𝐸𝑁  b e as Theorem 6.6.3, and tak e 0 < 𝑥 < 𝑅 . If | 𝑓𝑁 + 1( 𝑡 ) | ≤ 𝑀  for
+all 𝑡 ∈ [ 0 , 𝑥 ] , sho w
+| 𝐸𝑁 ( 𝑥 ) | ≤𝑀 𝑥𝑁 + 1
+( 𝑁 + 1 ) !.
+Solution.
+(a) It will suﬃce to sho w that if 𝑓  is diﬀeren tiable on [ 0 , 𝑥 ]  with 𝑓 ( 0 ) = 0  and 𝑓′( 𝑡 ) ≥ 0  for
+all 𝑡 ∈ [ 0 , 𝑥 ] , then 𝑓 ( 𝑡 ) ≥ 0  for all 𝑡 ∈ [ 0 , 𝑥 ] ; the general case then follo ws b y considering
+281 / 415
+𝑓 = ℎ − 𝑔 . Supp ose therefore that 𝑡 ∈ [ 0 , 𝑥 ]  is giv en. Applying the Mean V alue Theorem
+to 𝑓  on the in terv al [ 0 , 𝑡 ]  yields some 𝑐 ∈ ( 0 , 𝑡 )  suc h that
+𝑓 ( 𝑡 ) − 𝑓 ( 0 ) = 𝑓′( 𝑐 ) ( 𝑡 − 0 ) ⇔ 𝑓 ( 𝑡 ) = 𝑓′( 𝑐 ) 𝑡 ≥ 0 .
+(b) T ak e 𝑔 ( 𝑡 ) = 𝑓( 𝑁 )( 𝑡 ) − 𝑓( 𝑁 )( 0 )  and ℎ ( 𝑡 ) = 𝑀 𝑡  in the lemma of part (a) to see that
+𝑓( 𝑁 )( 𝑡 ) − 𝑓( 𝑁 )( 0 ) ≤ 𝑀 𝑡
+for all 𝑡 ∈ [ 0 , 𝑥 ] . Using this result, tak e 𝑔 ( 𝑡 ) = 𝑓( 𝑁 − 1 )( 𝑡 ) − ( 𝑓( 𝑁 − 1 )( 0 ) + 𝑓( 𝑁 )( 0 ) 𝑡 )  and 
+ℎ ( 𝑡 ) =𝑀 𝑡2
+2 in the lemma of part (a) to see that
+𝑓( 𝑁 − 1 )( 𝑡 ) − ( 𝑓( 𝑁 − 1 )( 0 ) + 𝑓( 𝑁 )( 0 ) 𝑡 ) ≤𝑀 𝑡2
+2
+for all 𝑡 ∈ [ 0 , 𝑥 ] . If w e con tin ue in this manner w e obtain the inequalit y
+𝑓 ( 𝑡 ) − ( 𝑓 ( 0 ) + 𝑓′( 0 ) 𝑡 +𝑓″( 0 )
+2𝑡2+ ⋯ +𝑓( 𝑁 )( 0 )
+𝑁 !𝑡𝑁) = 𝐸𝑁 ( 𝑡 ) ≤𝑀 𝑡𝑁 + 1
+( 𝑁 + 1 ) !( 1 )
+for all 𝑡 ∈ [ 0 , 𝑥 ] . Rep eating this pro cess, starting with 𝑔 ( 𝑡 ) = − 𝑀 𝑡  and
+ℎ ( 𝑡 ) = 𝑓𝑁( 𝑡 ) − 𝑓𝑁( 0 ) , w e obtain
+−𝑀 𝑡𝑁 + 1
+( 𝑁 + 1 ) !≤ 𝐸𝑁 ( 𝑡 ) ( 2 )
+for all 𝑡 ∈ [ 0 , 𝑥 ] . T aking 𝑡 = 𝑥  in ( 1 )  and ( 2 )  giv es us
+| 𝐸𝑁 ( 𝑥 ) | ≤𝑀 𝑥𝑁 + 1
+( 𝑁 + 1 ) !.
+282 / 415
+Exercise 6.6 . 9  (Cauc h y's Remainder Theorem).  Let 𝑓  b e diﬀeren tiable 𝑁 + 1
+times on ( − 𝑅 , 𝑅 ) . F or eac h 𝑎 ∈ ( − 𝑅 , 𝑅 ) , let 𝑆𝑁 ( 𝑥 , 𝑎 )  b e the partial sum of the T a ylor
+series for 𝑓  cen tered at 𝑎 ; in other w ords, deﬁne
+𝑆𝑁 ( 𝑥 , 𝑎 ) = ∑𝑁
+𝑛 = 0𝑐𝑛 ( 𝑥 − 𝑎 )𝑛where 𝑐𝑛 =𝑓( 𝑛 )( 𝑎 )
+𝑛 !.
+Let 𝐸𝑁 ( 𝑥 , 𝑎 ) = 𝑓 ( 𝑥 ) − 𝑆𝑁 ( 𝑥 , 𝑎 ) . No w ﬁx 𝑥 ≠ 0  in ( − 𝑅 , 𝑅 )  and consider 𝐸𝑁 ( 𝑥 , 𝑎 )  as a
+function of 𝑎 .
+(a) Find 𝐸𝑁 ( 𝑥 , 𝑥 ) .
+(b) Explain wh y 𝐸𝑁 ( 𝑥 , 𝑎 )  is diﬀeren tiable with resp ect to 𝑎 , and sho w
+𝐸′
+𝑁 ( 𝑥 , 𝑎 ) =− 𝑓( 𝑁 + 1 )( 𝑎 )
+𝑁 !( 𝑥 − 𝑎 )𝑁.
+(c) Sho w
+𝐸𝑁 ( 𝑥 ) = 𝐸𝑁 ( 𝑥 , 0 ) =𝑓( 𝑁 + 1 )( 𝑐 )
+𝑁 !( 𝑥 − 𝑐 )𝑁𝑥
+for some 𝑐  b et w een 0  and 𝑥 . This is Cauc h y’s form of the remainder for T a ylor
+series cen tered at the origin.
+Solution.
+(a) W e ha v e
+𝐸𝑁 ( 𝑥 , 𝑥 ) = 𝑓 ( 𝑥 ) − 𝑆𝑁 ( 𝑥 , 𝑥 ) = 𝑓 ( 𝑥 ) − 𝑐0 = 𝑓 ( 𝑥 ) − 𝑓 ( 𝑥 ) = 0 .
+(b) W e are giv en that 𝑓  is 𝑁 + 1  times diﬀeren tiable on ( − 𝑅 , 𝑅 )  and hence, b y the usual
+rules of diﬀeren tiation,
+𝐸′
+𝑁 ( 𝑥 , 𝑎 ) =d
+d 𝑎[ 𝑓 ( 𝑥 ) − 𝑓 ( 𝑎 ) − ∑𝑁
+𝑛 = 1𝑓( 𝑛 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛]
+= − 𝑓′( 𝑎 ) − ∑𝑁
+𝑛 = 11
+𝑛 !d
+d 𝑎[ 𝑓( 𝑛 )( 𝑎 ) ( 𝑥 − 𝑎 )𝑛]
+= − 𝑓′( 𝑎 ) − ∑𝑁
+𝑛 = 1𝑓( 𝑛 + 1 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛+ ∑𝑁
+𝑛 = 1𝑓( 𝑛 )( 𝑎 )
+( 𝑛 − 1 ) !( 𝑥 − 𝑎 )𝑛 − 1
+= [− 𝑓( 𝑁 + 1 )( 𝑎 )
+𝑁 !( 𝑥 − 𝑎 )𝑁− ∑𝑁 − 1
+𝑛 = 1𝑓( 𝑛 + 1 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛]
++ [ − 𝑓′( 𝑎 ) + ∑𝑁 − 1
+𝑛 = 0𝑓( 𝑛 + 1 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛]
+283 / 415
+=− 𝑓( 𝑁 + 1 )( 𝑎 )
+𝑁 !( 𝑥 − 𝑎 )𝑁− ∑𝑁 − 1
+𝑛 = 1𝑓( 𝑛 + 1 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛
++ ∑𝑁 − 1
+𝑛 = 1𝑓( 𝑛 + 1 )( 𝑎 )
+𝑛 !( 𝑥 − 𝑎 )𝑛
+=− 𝑓( 𝑁 + 1 )( 𝑎 )
+𝑁 !( 𝑥 − 𝑎 )𝑁.
+(c) Using the Mean V alue Theorem on 𝐸𝑁 ( 𝑥 , 𝑎 ) , as a function of 𝑎 , on the in terv al [ 0 , 𝑥 ]
+yields some 𝑐 ∈ ( 0 , 𝑥 )  suc h that
+𝐸𝑁 ( 𝑥 , 𝑥 ) − 𝐸𝑁 ( 𝑥 , 0 ) = 𝐸′
+𝑁 ( 𝑥 , 𝑐 ) 𝑥 .
+By parts (a) and (b) this expression b ecomes
+𝐸𝑁 ( 𝑥 , 0 ) =𝑓( 𝑁 + 1 )( 𝑐 )
+𝑁 !( 𝑥 − 𝑐 )𝑁𝑥 .
+Exercise 6.6 . 10 .  Consider 𝑓 ( 𝑥 ) = 1 /√
+1 − 𝑥 .
+(a) Generate the T a ylor series for 𝑓  cen tered at zero, and use Lagrange’s Remainder
+Theorem to sho w the series con v erges to 𝑓  on [ 0 , 1 / 2 ] . (The case 𝑥 < 1 / 2  is more
+straigh tforw ard while 𝑥 = 1 / 2  requires some extra care.) What happ ens when w e
+attempt this with 𝑥 > 1 / 2 ?
+(b) Use Cauc h y’s Remainder Theorem pro v ed in Exercise 6.6.9  to sho w the series rep-
+resen tation for 𝑓  holds on [ 0 , 1 ) .
+Solution.
+(a) It is a straigh tforw ard calculation to see that
+𝑓( 𝑛 )( 𝑥 ) =( 2 𝑛 − 1 ) ( 2 𝑛 − 3 ) ⋯ ( 3 ) ( 1 )
+2𝑛( 1 − 𝑥 )− 𝑛 − 1 / 2,
+whic h giv es us
+𝑓( 𝑛 )( 0 ) =( 2 𝑛 − 1 ) ( 2 𝑛 − 3 ) ⋯ ( 3 ) ( 1 )
+2𝑛.
+Th us the T a ylor series for 𝑓  cen tered at zero is
+1 + ∑∞
+𝑛 = 1( 2 𝑛 − 1 ) ( 2 𝑛 − 3 ) ⋯ ( 3 ) ( 1 )
+( 2𝑛 ) ( 𝑛 ! )𝑥𝑛= 1 + ∑∞
+𝑛 = 1( 2 𝑛 − 1 ) ( 2 𝑛 − 3 ) ⋯ ( 3 ) ( 1 )
+( 2 𝑛 ) ( 2 𝑛 − 2 ) ⋯ ( 2 ) ( 1 )𝑥𝑛
+= 1 + ∑∞
+𝑛 = 1( ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗) 𝑥𝑛.
+F or 0 < 𝑥 <1
+2 and 𝑛 ≥ 2 , Lagrange’s Remainder Theorem states that there is some 𝑐𝑛
+suc h that 0 < 𝑐𝑛 < 𝑥  and
+284 / 415
+𝐸𝑛 − 1 ( 𝑥 ) =𝑓( 𝑛 )( 𝑐𝑛 )
+𝑛 !𝑥𝑛= ( ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗) (𝑥
+1 − 𝑐𝑛)𝑛
+(1
+√ 1 − 𝑐𝑛) .
+Note that 0 < 𝑐𝑛 < 𝑥 ≤1
+2 implies that
+1
+2< 1 − 𝑐𝑛 < 1 ⇒ 1 <1
+1 − 𝑐𝑛< 2 ⇒ 0 <𝑥
+1 − 𝑐𝑛< 1
+and th us 0 < (𝑥
+1 − 𝑐𝑛)𝑛
+(1
+√ 1 − 𝑐𝑛) <√
+2 , whic h giv es us
+0 < 𝐸𝑛 − 1 ( 𝑥 ) <√
+2 ( ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗) .
+W e sho w ed in Exercise 2.7.10 (b)  that lim𝑛 → ∞ ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗= 0 . It no w follo ws from the
+Squeeze Theorem that lim𝑛 → ∞ 𝐸𝑛 − 1 ( 𝑥 ) = 0 . This argumen t breaks do wn when 𝑥 >1
+2
+since in that case w e can no longer conclude that the sequence (𝑥
+1 − 𝑐𝑛)𝑛
+(1
+√ 1 − 𝑐𝑛)  is
+b ounded.
+(b) F or 𝑥 ∈ ( 0 , 1 )  and 𝑛 ∈ 𝐍 , Cauc h y’s Remainder Theorem (see Exercise 6.6.9 ) states that
+there exists some 𝑐𝑛  suc h that 0 < 𝑐𝑛 < 𝑥  and
+𝐸𝑛 ( 𝑥 ) =𝑓( 𝑛 + 1 )( 𝑐𝑛 )
+𝑛 !( 𝑥 − 𝑐𝑛 )𝑛
+=( 2 𝑛 + 1 ) ( 2 𝑛 − 1 ) ⋯ ( 3 ) ( 1 )
+2𝑛 + 1 𝑛 !( 1 − 𝑐𝑛 )− 𝑛 − 3 / 2( 𝑥 − 𝑐𝑛 )𝑛𝑥
+=𝑥
+( 1 − 𝑐𝑛 )3 / 2( ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗) ( 𝑛 + 1 ) (𝑥 − 𝑐𝑛
+1 − 𝑐𝑛)𝑛
+.
+Note that the inequalities 0 < 𝑐𝑛 < 𝑥 < 1  imply that
+𝑥
+( 1 − 𝑐𝑛 )3 / 2<𝑥
+( 1 − 𝑥 )3 / 2and𝑥 − 𝑐𝑛
+1 − 𝑐𝑛< 𝑥 .
+Note further that since 0 <2 𝑗 − 1
+2 𝑗= 1 −1
+2 𝑗< 1  for eac h 1 ≤ 𝑗 ≤ 𝑛 , the pro duct ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗
+is strictly less than 1 . It follo ws that
+0 ≤ 𝐸𝑛 ( 𝑥 ) <𝑥
+( 1 − 𝑥 )3 / 2( 𝑛 + 1 ) 𝑥𝑛.
+Since lim𝑛 → ∞ ( 𝑛 + 1 ) 𝑥𝑛= 0  (whic h can b e seen using, for example, L’Hospital’s R ule),
+the Squeeze Theorem implies that lim𝑛 → ∞ 𝐸𝑛 ( 𝑥 ) = 0 .
+285 / 415
+6.7. The W eierstrass Appro ximation Theorem
+Exercise 6.7 . 1 .  Assuming W A T, sho w that if 𝑓  is con tin uous on [ 𝑎 , 𝑏 ] , then there exists
+a sequence ( 𝑝𝑛 )  of p olynomials suc h that 𝑝𝑛 → 𝑓  uniformly on [ 𝑎 , 𝑏 ] .
+Solution.  The W eierstrass Appro ximation Theorem implies that for eac h 𝑛 ∈ 𝐍  there exists
+a p olynomial 𝑝𝑛  suc h that
+| 𝑓 ( 𝑥 ) − 𝑝𝑛 ( 𝑥 ) | <1
+𝑛
+for all 𝑥 ∈ [ 𝑎 , 𝑏 ] . It follo ws that 𝑝𝑛 → 𝑓  uniformly on [ 𝑎 , 𝑏 ] .
+Exercise 6.7 . 2 .  Pro v e Theorem 6.7.3.
+Solution.  Since 𝑓  is a con tin uous function deﬁned on the compact set [ 𝑎 , 𝑏 ] , Theorem 4.4.7
+implies that 𝑓  is uniformly con tin uous on [ 𝑎 , 𝑏 ] . Th us there exists a 𝛿 > 0  suc h that
+𝑥 , 𝑦 ∈ [ 𝑎 , 𝑏 ] and | 𝑥 − 𝑦 | < 𝛿 ⇒ | 𝑓 ( 𝑥 ) − 𝑓 ( 𝑦 ) | <𝜀
+2.
+Let 𝑛 ∈ 𝐍  b e suc h that 1
+𝑛< 𝛿  and for eac h 0 ≤ 𝑘 ≤ 𝑛  let 𝑥𝑘 = 𝑎 + 𝑘𝑏 − 𝑎
+𝑛. Let 𝜙 : [ 𝑎 , 𝑏 ] → 𝐑
+b e the p olygonal function whic h is linear on eac h subin terv al [ 𝑥𝑘 , 𝑥𝑘 + 1 ]  and passes through
+the p oin ts ( 𝑥𝑘 , 𝑓 ( 𝑥𝑘 ) )  and ( 𝑥𝑘 + 1 , 𝑓 ( 𝑥𝑘 + 1 ) ) . F or 𝑥 ∈ [ 𝑎 , 𝑏 ]  w e ha v e 𝑥 ∈ [ 𝑥𝑘 , 𝑥𝑘 + 1 ]  for some 
+0 ≤ 𝑘 ≤ 𝑛 − 1 . It follo ws that
+| 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥 ) | ≤ | 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥𝑘 ) | + | 𝜙 ( 𝑥𝑘 ) − 𝜙 ( 𝑥 ) | ≤ | 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥𝑘 ) | + | 𝜙 ( 𝑥𝑘 ) − 𝜙 ( 𝑥𝑘 + 1 ) | ;
+for the last inequalit y w e are using that 𝜙  is a line segmen t on the in terv al [ 𝑥𝑘 , 𝑥𝑘 + 1 ]
+and th us | 𝜙 ( 𝑥 ) − 𝜙 ( 𝑦 ) | ≤ | 𝜙 ( 𝑥𝑘 ) − 𝜙 ( 𝑥𝑘 + 1 ) |  for an y 𝑥 ∈ [ 𝑥𝑘 , 𝑥𝑘 + 1 ] . By deﬁnition w e ha v e
+𝜙 ( 𝑥𝑘 ) = 𝑓 ( 𝑥𝑘 )  for an y 𝑘  and so
+| 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥 ) | ≤ | 𝑓 ( 𝑥 ) − 𝑓 ( 𝑥𝑘 ) | + | 𝑓 ( 𝑥𝑘 ) − 𝑓 ( 𝑥𝑘 + 1 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+Exercise 6.7 . 3 .
+(a) Find the second degree p olynomial 𝑝 ( 𝑥 ) = 𝑞0 + 𝑞1 𝑥 + 𝑞2 𝑥2 that in terp olates the
+three p oin ts ( − 1 , 1 ) , ( 0 , 0 ) , and ( 1 , 1 )  on the graph of 𝑔 ( 𝑥 ) = | 𝑥 | . Sk etc h 𝑔 ( 𝑥 )  and 
+𝑝 ( 𝑥 )  o v er [ − 1 , 1 ]  on the same set of axes.
+(b) Find the fourth degree p olynomial that in terp olates 𝑔 ( 𝑥 ) = | 𝑥 |  at the p oin ts
+𝑥 = − 1 , − 1 / 2 , 0 , 1 / 2 , and 1 . A dd a sk etc h of this p olynomial to the graph from (a).
+Solution.
+(a) It is clear that the desired second degree p olynomial is 𝑝 ( 𝑥 ) = 𝑥2.
+(b) W e are lo oking for a p olynomial 𝑞 ( 𝑥 ) = 𝑎0 + 𝑎1 𝑥 + 𝑎2 𝑥2+ 𝑎3 𝑥3+ 𝑎4 𝑥4 suc h that
+286 / 415
+𝑞 ( − 1 ) = 1 , 𝑞 ( −1
+2) =1
+2, 𝑞 ( 0 ) = 0 , 𝑞 (1
+2) =1
+2, and 𝑞 ( 1 ) = 1 .
+The condition 𝑞 ( 0 ) = 0  immediately giv es us 𝑎0 = 0  and the remaining four conditions
+giv e us the linear system
+⎝⎜⎜⎜⎜⎜⎜⎜⎛− 1
+−1
+2
+1
+2
+11
+1
+4
+1
+4
+1− 1
+−1
+8
+1
+8
+11
+1
+1 6
+1
+1 6
+1 ⎠⎟⎟⎟⎟⎟⎟⎟⎞
+⎝⎜⎜⎜⎜⎜⎜⎜⎛𝑎1
+𝑎2
+𝑎3
+𝑎4 ⎠⎟⎟⎟⎟⎟⎟⎟⎞
+=
+⎝⎜⎜⎜⎜⎜⎜⎜⎛1
+1
+2
+1
+2
+1 ⎠⎟⎟⎟⎟⎟⎟⎟⎞
+.
+Solving this system, w e obtain 𝑎1 = 0 , 𝑎2 =7
+3, 𝑎3 = 0 , and 𝑎4 = −4
+3. Th us the desired
+fourth degree p olynomial is 𝑞 ( 𝑥 ) =1
+3𝑥2( 7 − 4 𝑥2) .
+01
+21
+−1 −1
+201
+21
+𝑥𝑔 ( 𝑥 ) = | 𝑥 | 𝑝 ( 𝑥 ) = 𝑥2𝑞 ( 𝑥 ) =1
+3𝑥2( 7 − 4 𝑥2)
+Exercise 6.7 . 4 .  Sho w that 𝑓 ( 𝑥 ) =√
+1 − 𝑥  has T a ylor series co eﬃcien ts 𝑎𝑛  where 𝑎0 = 1
+and
+𝑎𝑛 =− 1 ⋅ 3 ⋅ 5 ⋯ ( 2 𝑛 − 3 )
+2 ⋅ 4 ⋅ 6 ⋯ 2 𝑛
+for 𝑛 ≥ 1 .
+Solution.  W e ha v e 𝑓 ( 0 ) = 𝑎0 = 1  and a straigh tforw ard calculation sho ws that
+𝑓( 𝑛 )( 𝑥 ) =− 1 ⋅ 3 ⋅ 5 ⋯ ( 2 𝑛 − 3 )
+2𝑛( 1 − 𝑥 )− 𝑛 − 1 / 2
+for 𝑛 ≥ 1 . It follo ws from this that
+𝑎𝑛 =𝑓( 𝑛 )( 0 )
+𝑛 !=− 1 ⋅ 3 ⋅ 5 ⋯ ( 2 𝑛 − 3 )
+2𝑛 𝑛 !=− 1 ⋅ 3 ⋅ 5 ⋯ ( 2 𝑛 − 3 )
+2 ⋅ 4 ⋅ 6 ⋯ 2 𝑛
+for an y 𝑛 ≥ 1 .
+287 / 415
+Exercise 6.7 . 5 .
+(a) F ollo w the advice in Exercise 6.6.9  to pro v e the Cauc h y form of the remainder:
+𝐸𝑁 ( 𝑥 ) =𝑓( 𝑁 + 1 )( 𝑐 )
+𝑁 !( 𝑥 − 𝑐 )𝑁𝑥
+for some 𝑐  b et w een 0  and 𝑥 .
+(b) Use this result to pro v e equation (1) is v alid for all 𝑥 ∈ ( − 1 , 1 ) .
+Solution.
+(a) See Exercise 6.6.9 .
+(b) Supp ose 0 < | 𝑥 | < 1 . F or 𝑛 ∈ 𝐍 , the Cauc h y Remainder Theorem implies that there
+exists some 𝑐𝑛  suc h that 0 < | 𝑐𝑛 | < | 𝑥 |  and
+𝐸𝑛 ( 𝑥 ) =𝑓( 𝑛 + 1 )( 𝑐𝑛 )
+𝑛 !( 𝑥 − 𝑐𝑛 )𝑛𝑥
+=− 1 ⋅ 3 ⋯ ( 2 𝑛 − 3 ) ( 2 𝑛 − 1 )
+2𝑛 + 1 𝑛 !( 1 − 𝑐𝑛 )− 𝑛 − 3 / 2( 𝑥 − 𝑐𝑛 )𝑛𝑥
+= −1
+2⋅1 ⋅ 3 ⋯ ( 2 𝑛 − 3 ) ( 2 𝑛 − 1 )
+2 ⋅ 4 ⋯ ( 2 𝑛 − 2 ) ( 2 𝑛 )(𝑥 − 𝑐𝑛
+1 − 𝑐𝑛)𝑛𝑥
+( 1 − 𝑐𝑛 )3 / 2
+= −1
+2( ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗) (𝑥 − 𝑐𝑛
+1 − 𝑐𝑛)𝑛𝑥
+( 1 − 𝑐𝑛 )3 / 2.
+Since 2 𝑗 − 1
+2 𝑗< 1  for eac h 1 ≤ 𝑗 ≤ 𝑛 , w e ha v e ∏𝑛
+𝑗 = 12 𝑗 − 1
+2 𝑗< 1  and th us
+| 𝐸𝑛 ( 𝑥 ) | < |𝑥 − 𝑐𝑛
+1 − 𝑐𝑛|𝑛| 𝑥 |
+( 1 − 𝑐𝑛 )3 / 2;
+w e ha v e used that | 𝑐𝑛 | < 1  implies 0 < 1 − 𝑐𝑛  to obtain | 1 − 𝑐𝑛 | = 1 − 𝑐𝑛 . Note that
+𝑐𝑛 ≤ | 𝑐𝑛 | < | 𝑥 | ⇒ − | 𝑥 | < − 𝑐𝑛 ⇒1
+( 1 − 𝑐𝑛 )3 / 2<1
+( 1 − | 𝑥 | )3 / 2.
+Note further that if 0 < 𝑐𝑛 < 𝑥 < 1  then
+𝑥 𝑐𝑛 < 𝑐𝑛 ⇒ 𝑥 − 𝑐𝑛 < 𝑥 − 𝑥 𝑐𝑛 ⇒𝑥 − 𝑐𝑛
+1 − 𝑐𝑛< 𝑥 ⇒ |𝑥 − 𝑐𝑛
+1 − 𝑐𝑛| < | 𝑥 | ,
+and if − 1 < 𝑥 < 𝑐𝑛 < 0  then
+𝑐𝑛 < 𝑥 𝑐𝑛 ⇒ 𝑐𝑛 − 𝑥 < 𝑥 𝑐𝑛 − 𝑥 ⇒𝑐𝑛 − 𝑥
+1 − 𝑐𝑛< − 𝑥 ⇒ |𝑥 − 𝑐𝑛
+1 − 𝑐𝑛| < | 𝑥 | .
+Com bining these inequalities, w e see that
+288 / 415
+| 𝐸𝑛 ( 𝑥 ) | <| 𝑥 |𝑛 + 1
+( 1 − | 𝑥 | )3 / 2
+and it follo ws that lim𝑛 → ∞ 𝐸𝑛 ( 𝑥 ) = 0  since | 𝑥 | < 1 .
+Exercise 6.7 . 6 .
+(a) Let
+𝑐𝑛 =1 ⋅ 3 ⋅ 5 ⋯ ( 2 𝑛 − 1 )
+2 ⋅ 4 ⋅ 6 ⋯ 2 𝑛
+for 𝑛 ≥ 1 . Sho w 𝑐𝑛 <2√2 𝑛 + 1.
+(b) Use (a) to sho w that ∑∞
+𝑛 = 0 𝑎𝑛  con v erges (absolutely , in fact) where 𝑎𝑛  is the se-
+quence of T a ylor co eﬃcien ts generated in Exercise 6.7.4 .
+(c) Carefully explain ho w this v eriﬁes that equation (1) holds for all 𝑥 ∈ [ − 1 , 1 ] .
+Solution.
+(a) W e will pro v e this b y induction. F or the base case 𝑛 = 1 , w e ha v e
+𝑐1 =1
+2<2√
+3=2
+√ 2 ( 1 ) + 1.
+No w supp ose that the inequalit y holds for some 𝑛 ∈ 𝐍 , so that
+𝑐𝑛 + 1 = 𝑐𝑛 ⋅2 𝑛 + 1
+2 𝑛 + 2<2√
+2 𝑛 + 1⋅2 𝑛 + 1
+2 𝑛 + 2=2√
+2 𝑛 + 1
+2 𝑛 + 2.
+Observ e that
+2√
+2 𝑛 + 1
+2 𝑛 + 2<2√
+2 𝑛 + 3⇔√
+2 𝑛 + 1
+2 𝑛 + 2<1√
+2 𝑛 + 3
+⇔2 𝑛 + 1
+4 𝑛2 + 8 𝑛 + 4<1
+2 𝑛 + 3
+⇔ 4 𝑛2+ 8 𝑛 + 3 < 4 𝑛2+ 8 𝑛 + 4
+⇔ 0 < 1 .
+Th us 𝑐𝑛 + 1 <2√2 𝑛 + 3. This completes the induction step and the pro of.
+(b) Since ∑∞
+𝑛 = 0 | 𝑎𝑛 | = 1 + ∑∞
+𝑛 = 1 | 𝑎𝑛 | , it will suﬃce to sho w that ∑∞
+𝑛 = 1 | 𝑎𝑛 |  is con v ergen t.
+Note that for 𝑛 ≥ 1  w e ha v e, b y part (a),
+| 𝑎𝑛 | =𝑐𝑛
+2 𝑛 − 1<2
+( 2 𝑛 − 1 )√
+2 𝑛 + 1<2
+( 2 𝑛 − 1 )3 / 2≤2
+𝑛3 / 2.
+Since the series ∑∞
+𝑛 = 1 2 𝑛− 3 / 2 is con v ergen t b y Corollary 2.4.7, w e see b y comparison
+that the series ∑∞
+𝑛 = 1 | 𝑎𝑛 |  is con v ergen t.
+289 / 415
+(c) P art (b) sho ws that the p o w er series ∑∞
+𝑛 = 0 𝑎𝑛 𝑥𝑛 con v erges absolutely at the p oin ts 
+𝑥 = − 1  and 𝑥 = 1 . It follo ws from Ab el’s Theorem (Theorem 6.5.4) that the p o w er
+series con v erges uniformly and hence is con tin uous on [ − 1 , 1 ] . Th us the function
+ℎ : [ − 1 , 1 ] → 𝐑  giv en b y
+ℎ ( 𝑥 ) =√
+1 − 𝑥 − ∑∞
+𝑛 = 0𝑎𝑛 𝑥𝑛
+is con tin uous on its domain and, b y Exercise 6.7.5 , satisﬁes ℎ ( 𝑥 ) = 0  for all 𝑥 ∈ ( − 1 , 1 ) .
+It m ust then b e the case that ℎ ( − 1 ) = ℎ ( 1 ) = 0  also.
+Exercise 6.7 . 7 .
+(a) Use the fact that | 𝑎 | =√
+𝑎2  to pro v e that, giv en 𝜀 > 0 , there exists a p olynomial 
+𝑞 ( 𝑥 )  satisfying
+| | 𝑥 | − 𝑞 ( 𝑥 ) | < 𝜀
+for all 𝑥 ∈ [ − 1 , 1 ] .
+(b) Generalize this conclusion to an arbitrary in terv al [ 𝑎 , 𝑏 ] .
+Solution.
+(a) Note that 𝑥 ∈ [ − 1 , 1 ]  implies that 1 − 𝑥2∈ [ 0 , 1 ]  and th us b y Exercise 6.7.6  w e ha v e
+√ 1 − ( 1 − 𝑥 )2= ∑∞
+𝑛 = 0𝑎𝑛 ( 1 − 𝑥2)𝑛.
+As w e sho w ed in Exercise 6.7.6  this con v ergence is uniform, so there exists an 𝑁 ∈ 𝐍
+suc h that
+| √ 1 − ( 1 − 𝑥 )2− ∑𝑁
+𝑛 = 0𝑎𝑛 ( 1 − 𝑥2)𝑛| = | | 𝑥 | − ∑𝑁
+𝑛 = 0𝑎𝑛 ( 1 − 𝑥2)𝑛| < 𝜀
+for all 𝑥 ∈ [ − 1 , 1 ] . Th us the desired p olynomial is 𝑞 ( 𝑥 ) = ∑𝑁
+𝑛 = 0 𝑎𝑛 ( 1 − 𝑥2)𝑛.
+(b) F or 𝑎 < 𝑏  and 𝜀 > 0 , w e w ould lik e to ﬁnd a p olynomial 𝑝  suc h that | | 𝑥 | − 𝑝 ( 𝑥 ) | < 𝜀
+for all 𝑥 ∈ [ 𝑎 , 𝑏 ] . Let 𝑐 = max { | 𝑎 | , | 𝑏 | }  and note that 𝑐 > 0 . Note further that 𝑥 ∈ [ 𝑎 , 𝑏 ]
+implies that 𝑥
+𝑐∈ [ − 1 , 1 ]  and th us b y part (a) there exists a p olynomial 𝑞  suc h that
+| |𝑥
+𝑐| − 𝑞 (𝑥
+𝑐) | <𝜀
+𝑐( 1 )
+for all 𝑥
+𝑐∈ [ − 1 , 1 ] , i.e. for all 𝑥 ∈ [ − 𝑐 , 𝑐 ] . Let 𝑝  b e the p olynomial giv en b y 𝑝 ( 𝑥 ) = 𝑐 𝑞 (𝑥
+𝑐) .
+It follo ws from ( 1 )  that
+| | 𝑥 | − 𝑝 ( 𝑥 ) | < 𝜀
+for all 𝑥 ∈ [ − 𝑐 , 𝑐 ]  and hence in particular for all 𝑥 ∈ [ 𝑎 , 𝑏 ] .
+290 / 415
+Exercise 6.7 . 8 .
+(a) Fix 𝑎 ∈ [ − 1 , 1 ]  and sk etc h
+ℎ𝑎 ( 𝑥 ) =1
+2( | 𝑥 − 𝑎 | + ( 𝑥 − 𝑎 ) )
+o v er [ − 1 , 1 ] . Note that ℎ𝑎  is p olygonal and satisﬁes ℎ𝑎 ( 𝑥 ) = 0  for all 𝑥 ∈ [ − 1 , 𝑎 ] .
+(b) Explain wh y w e kno w ℎ𝑎 ( 𝑥 )  can b e uniformly appro ximated with a p olynomial on
+[ − 1 , 1 ] .
+(c) Let 𝜙  b e a p olygonal function that is linear on eac h subin terv al of the partition
+− 1 = 𝑎0 < 𝑎1 < 𝑎2 < ⋯ < 𝑎𝑛 = 1 .
+Sho w there exist constan ts 𝑏0 , 𝑏1 , … , 𝑏𝑛 − 1  so that
+𝜙 ( 𝑥 ) = 𝜙 ( − 1 ) + 𝑏0 ℎ 𝑎 0 ( 𝑥 ) + 𝑏1 ℎ 𝑎 1 ( 𝑥 ) + ⋯ + 𝑏𝑛 − 1 ℎ 𝑎 𝑛 − 1 ( 𝑥 )
+for all 𝑥 ∈ [ − 1 , 1 ] .
+(d) Complete the pro of of W A T for the in terv al [ − 1 , 1 ] , and then generalize to an
+arbitrary in terv al [ 𝑎 , 𝑏 ] .
+Solution.
+(a) Belo w is a sk etc h of ℎ1 / 2 , ℎ0 , and ℎ− 1 / 2  on [ − 1 , 1 ] .
+01
+213
+2
+−1 −1
+201
+21
+𝑥ℎ1 / 2 ℎ0 ℎ− 1 / 2
+(b) F rom Exercise 6.7.7 (b) , for a giv en 𝜀 > 0  w e kno w that there exists a p olynomial 𝑞
+suc h that
+| | 𝑥 − 𝑎 | − 𝑞 ( 𝑥 − 𝑎 ) | < 2 𝜀
+291 / 415
+for all 𝑥 ∈ [ − 1 , 1 ] . Let 𝑝 ( 𝑥 ) =1
+2𝑞 ( 𝑥 − 𝑎 ) +1
+2( 𝑥 − 𝑎 )  and observ e that
+| ℎ𝑎 ( 𝑥 ) − 𝑝 ( 𝑥 ) | =1
+2| | 𝑥 − 𝑎 | − 𝑞 ( 𝑥 − 𝑎 ) | < 𝜀
+for all 𝑥 ∈ [ − 1 , 1 ] .
+(c) F or 0 ≤ 𝑗 ≤ 𝑛 − 1 , the p olygonal function 𝜙  is giv en b y a line segmen t on the subin ter-
+v al [ 𝑎𝑗 , 𝑎𝑗 + 1 ] ; let 𝑚𝑗  b e the slop e of this line segmen t, i.e.
+𝑚𝑗 =𝜙 ( 𝑎𝑗 + 1 ) − 𝜙 ( 𝑎𝑗 )
+𝑎𝑗 + 1 − 𝑎𝑗.
+No w set 𝑏0 = 𝑚0  and 𝑏𝑗 = 𝑚𝑗 − 𝑚𝑗 − 1  for 𝑗 ∈ { 1 , … , 𝑛 − 1 }  and let 𝜓 : [ − 1 , 1 ] → 𝐑  b e
+giv en b y
+𝜓 ( 𝑥 ) = 𝜙 ( 𝑎0 ) + 𝑏0 ℎ 𝑎 0 ( 𝑥 ) + 𝑏1 ℎ 𝑎 1 ( 𝑥 ) + ⋯ + 𝑏𝑛 − 1 ℎ 𝑎 𝑛 − 1 ( 𝑥 ) .
+Our aim is to sho w that 𝜙 ( 𝑥 ) = 𝜓 ( 𝑥 )  for all 𝑥 ∈ [ − 1 , 1 ] . F or suc h an 𝑥 , w e ha v e
+𝑥 ∈ [ 𝑎𝑗 , 𝑎𝑗 + 1 ]  for some 𝑗 ∈ { 1 , … , 𝑛 − 1 } . Note that, since 𝜙  is linear on the subin terv al
+[ 𝑎𝑗 , 𝑎𝑗 + 1 ]  with slop e 𝑚𝑗 ,
+𝜙 ( 𝑥 ) = 𝜙 ( 𝑎𝑗 ) + 𝑚𝑗 ( 𝑥 − 𝑎𝑗 ) .
+Note further that
+ℎ 𝑎 0 ( 𝑥 ) = 𝑥 − 𝑎0 , … , ℎ 𝑎 𝑗 ( 𝑥 ) = 𝑥 − 𝑎𝑗 , and ℎ 𝑎 𝑗 + 1 = ⋯ = ℎ 𝑎 𝑛 − 1 ( 𝑥 ) = 0 .
+Th us
+𝜓 ( 𝑥 ) = 𝜙 ( 𝑎0 ) + 𝑏0 ℎ 𝑎 0 ( 𝑥 ) + 𝑏1 ℎ 𝑎 1 + ⋯ + 𝑏𝑗 ℎ 𝑎 𝑗 ( 𝑥 )
+= 𝜙 ( 𝑎0 ) + 𝑚0 ( 𝑥 − 𝑎0 ) + ( 𝑚1 − 𝑚0 ) ( 𝑥 − 𝑎1 ) + ⋯ + ( 𝑚𝑗 − 𝑚𝑗 − 1 ) ( 𝑥 − 𝑎𝑗 )
+= 𝜙 ( 𝑎0 ) + 𝑚0 ( 𝑎1 − 𝑎0 )⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟
+𝜙 ( 𝑎1 )+ 𝑚1 ( 𝑎2 − 𝑎1 ) + ⋯ + 𝑚𝑗 − 1 ( 𝑎𝑗 − 𝑎𝑗 − 1 ) + 𝑚𝑗 ( 𝑥 − 𝑎𝑗 )
+= 𝜙 ( 𝑎1 ) + 𝑚1 ( 𝑎2 − 𝑎1 )⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟ ⏟
+𝜙 ( 𝑎2 )+ ⋯ + 𝑚𝑗 − 1 ( 𝑎𝑗 − 𝑎𝑗 − 1 ) + 𝑚𝑗 ( 𝑥 − 𝑎𝑗 )
+= ⋯
+= 𝜙 ( 𝑎𝑗 ) + 𝑚𝑗 ( 𝑥 − 𝑎𝑗 )
+= 𝜙 ( 𝑥 ) .
+(d) Let 𝑓 : [ − 1 , 1 ] → 𝐑  b e con tin uous and let 𝜀 > 0  b e giv en. By Theorem 6.7.3 (see
+Exercise 6.7.2 ), there exists a p olygonal function 𝜙 : [ − 1 , 1 ] → 𝐑  whic h is linear on eac h
+subin terv al of some partition
+− 1 = 𝑎0 < 𝑎1 < ⋯ < 𝑎𝑛 = 1
+and whic h satisﬁes | 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥 ) | <𝜀
+2 for all 𝑥 ∈ [ − 1 , 1 ] . By part (c), there exist con-
+stan ts 𝑏0 , … , 𝑏𝑛 − 1  suc h that
+292 / 415
+𝜙 ( 𝑥 ) = 𝜙 ( 𝑎0 ) + 𝑏0 ℎ 𝑎 0 ( 𝑥 ) + 𝑏1 ℎ 𝑎 1 ( 𝑥 ) + ⋯ + 𝑏𝑛 − 1 ℎ 𝑎 𝑛 − 1 ( 𝑥 )
+for all 𝑥 ∈ [ − 1 , 1 ] . F urthermore, b y part (b), for eac h 𝑗 ∈ { 0 , … , 𝑛 − 1 }  there exists a
+p olynomial 𝑝𝑗  suc h that
+| ℎ 𝑎 𝑗 ( 𝑥 ) − 𝑝𝑗 ( 𝑥 ) | <𝜀
+2 𝑛 ( 1 + | 𝑏𝑗 | ).
+Let 𝑝  b e the p olynomial giv en b y
+𝑝 ( 𝑥 ) = 𝜙 ( 𝑎0 ) + 𝑏0 𝑝0 ( 𝑥 ) + ⋯ + 𝑏𝑛 − 1 𝑝𝑛 − 1 ( 𝑥 )
+and observ e that for an y 𝑥 ∈ [ − 1 , 1 ]  w e ha v e
+| 𝜙 ( 𝑥 ) − 𝑝 ( 𝑥 ) | = | 𝑏0 ℎ 𝑎 0 ( 𝑥 ) + ⋯ + 𝑏𝑛 − 1 ℎ 𝑎 𝑛 − 1 ( 𝑥 ) − 𝑏0 𝑝0 ( 𝑥 ) − ⋯ − 𝑏𝑛 − 1 𝑝𝑛 − 1 ( 𝑥 ) |
+≤ | 𝑏0 | | ℎ 𝑎 0 ( 𝑥 ) − 𝑝0 ( 𝑥 ) | + ⋯ + | 𝑏𝑛 − 1 | | ℎ 𝑎 𝑛 − 1 ( 𝑥 ) − 𝑝𝑛 − 1 ( 𝑥 ) |
+<𝜀 | 𝑏0 |
+2 𝑛 ( 1 + | 𝑏0 | )+ ⋯ +𝜀 | 𝑏𝑛 − 1 |
+2 𝑛 ( 1 + | 𝑏𝑛 − 1 | )
+<𝜀
+2 𝑛+ ⋯ +𝜀
+2 𝑛
+=𝜀
+2.
+It no w follo ws that for an y 𝑥 ∈ [ − 1 , 1 ]  w e ha v e
+| 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | ≤ | 𝑓 ( 𝑥 ) − 𝜙 ( 𝑥 ) | + | 𝜙 ( 𝑥 ) − 𝑝 ( 𝑥 ) | <𝜀
+2+𝜀
+2= 𝜀 .
+W e can no w pro v e the general case. F or 𝑎 < 𝑏 , let 𝑓 : [ 𝑎 , 𝑏 ] → 𝐑  b e con tin uous and let
+𝜀 > 0  b e giv en. W e w ould lik e to ﬁnd a p olynomial 𝑝  suc h that | 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | < 𝜀  for all
+𝑥 ∈ [ 𝑎 , 𝑏 ] . Note that the function
+[ − 1 , 1 ] → [ 𝑎 , 𝑏 ]
+𝑥 ↦𝑏 − 𝑎
+2( 𝑥 + 1 ) + 𝑎
+is a con tin uous bĳection with con tin uous in v erse
+[ 𝑎 , 𝑏 ] → [ − 1 , 1 ]
+𝑥 ↦2 ( 𝑥 − 𝑎 )
+𝑏 − 𝑎− 1 .
+Th us 𝑔 : [ − 1 , 1 ] → 𝐑  giv en b y
+𝑔 ( 𝑥 ) = 𝑓 (𝑏 − 𝑎
+2( 𝑥 + 1 ) + 𝑎 )
+is w ell-deﬁned and, as a comp osition of con tin uous functions, is con tin uous on [ − 1 , 1 ] .
+It follo ws from our previous discussion that there exists a p olynomial 𝑞  suc h that
+| 𝑔 ( 𝑥 ) − 𝑞 ( 𝑥 ) | < 𝜀  for all 𝑥 ∈ [ − 1 , 1 ] . Let 𝑝  b e the p olynomial deﬁned b y
+293 / 415
+𝑝 ( 𝑥 ) = 𝑞 (2 ( 𝑥 − 𝑎 )
+𝑏 − 𝑎− 1 ) .
+Since 𝑥 ∈ [ 𝑎 , 𝑏 ]  implies that 2 ( 𝑥 − 𝑎 )
+𝑏 − 𝑎− 1 ∈ [ − 1 , 1 ] , w e ha v e
+| 𝑔 (2 ( 𝑥 − 𝑎 )
+𝑏 − 𝑎− 1 ) − 𝑞 (2 ( 𝑥 − 𝑎 )
+𝑏 − 𝑎− 1 ) | = | 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | < 𝜀
+for all 𝑥 ∈ [ 𝑎 , 𝑏 ] .
+Exercise 6.7 . 9 .
+(a) Find a coun terexample whic h sho ws that W A T is not true if w e replace the closed
+in terv al [ 𝑎 , 𝑏 ]  with the op en in terv al ( 𝑎 , 𝑏 ) .
+(b) What happ ens if w e replace [ 𝑎 , 𝑏 ]  with the closed set [ 𝑎 , ∞ ) . Do es the theorem
+still hold?
+Solution.
+(a) Consider 𝑓 : ( 0 , 1 ) → 𝐑  giv en b y 𝑓 ( 𝑥 ) = 𝑥− 1. Since an y p olynomial is b ounded on 
+( 0 , 1 ) , if w e could uniformly appro ximate 𝑓  with a p olynomial on ( 0 , 1 )  then w e w ould
+ha v e that 𝑓  is b ounded on ( 0 , 1 ) , whic h is not true.
+(b) The theorem do es not hold. Consider 𝑔 : [ 0 , ∞ ) → 𝐑  giv en b y 𝑔 ( 𝑥 ) = sin ( 𝑥 ) . Eviden tly
+𝑔  cannot b e uniformly appro ximated b y a constan t p olynomial on [ 0 , ∞ ) , and for a
+non-constan t p olynomial 𝑝  w e ha v e lim𝑥 → ∞ | 𝑝 ( 𝑥 ) | = + ∞ , whereas | 𝑔 ( 𝑥 ) | ≤ 1  for all
+𝑥 ∈ [ 0 , ∞ )  it follo ws that w e cannot uniformly appro ximate 𝑔  with a non-constan t p oly-
+nomial on [ 0 , ∞ )  either.
+Exercise 6.7 . 10 .  Is there a coun table subset of p olynomials 𝒞  with the prop ert y that
+ev ery con tin uous function on [ 𝑎 , 𝑏 ]  can b e uniformly appro ximated b y p olynomials from
+𝒞 ?
+Solution.  There is suc h a coun table subset. Let 𝒫 ( 𝐑 )  b e the collection of p olynomials with
+real co eﬃcien ts, let 𝒫 ( 𝐐 ) ⊆ 𝒫 ( 𝐑 )  b e the collection of p olynomials with rational co eﬃcien ts,
+and for eac h 𝑛 ≥ 0  let 𝒫𝑛 ( 𝐐 ) ⊆ 𝒫 ( 𝐐 )  b e the collection of p olynomials of degree 𝑛  with ra-
+tional co eﬃcien ts. Observ e that 𝒫0 ( 𝐐 )  is in bĳection with 𝐐 ∖ { 0 }  and 𝒫𝑛 ( 𝐐 )  is in bĳection
+with ( 𝐐 ∖ { 0 } ) × 𝐐𝑛 − 1 for eac h 𝑛 ≥ 1 . Th us eac h 𝒫𝑛 ( 𝐐 )  is coun table and it follo ws from
+the expression
+𝒫 ( 𝐐 ) = { 0 } ∪ ⋃∞
+𝑛 = 0𝒫𝑛 ( 𝐐 )
+(b y 0  w e mean the zero p olynomial) and Theorem 1.5.8 (ii) that 𝒫 ( 𝐐 )  is coun table.
+No w let 𝑎 < 𝑏  b e giv en and let 𝑀 = max { | 𝑎 | , | 𝑏 | , 1 } . Supp ose 𝑓 : [ 𝑎 , 𝑏 ] → 𝐑  is con tin uous and
+let 𝜀 > 0  b e giv en. By the W eierstrass Appro ximation Theorem, there exists a p olynomial
+294 / 415
+𝑝 ( 𝑥 ) = 𝑎𝑛 𝑥𝑛+ 𝑎𝑛 − 1 𝑥𝑛 − 1+ ⋯ + 𝑎1 𝑥 + 𝑎0 ∈ 𝒫 ( 𝐑 )
+suc h that | 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | <𝜀
+2 for all 𝑥 ∈ [ 𝑎 , 𝑏 ] . By the densit y of 𝐐  in 𝐑 , w e can c ho ose rational
+n um b ers 𝑏𝑛 , 𝑏𝑛 − 1 , … , 𝑏1 , 𝑏0  suc h that | 𝑎𝑗 − 𝑏𝑗 | < 𝜀 ( 2 𝑀𝑛( 𝑛 + 1 ) )− 1 for eac h 𝑗 ∈ { 0 , … , 𝑛 } . Let
+𝑞 ( 𝑥 ) = 𝑏𝑛 𝑥𝑛+ 𝑏𝑛 − 1 𝑥𝑛 − 1+ ⋯ + 𝑏1 𝑥 + 𝑏0 ∈ 𝒫 ( 𝐐 )
+and observ e that for an y 𝑥 ∈ [ 𝑎 , 𝑏 ]  w e ha v e
+| 𝑝 ( 𝑥 ) − 𝑞 ( 𝑥 ) | = | ( 𝑎𝑛 − 𝑏𝑛 ) 𝑥𝑛+ ( 𝑎𝑛 − 1 − 𝑏𝑛 − 1 ) 𝑥𝑛 − 1+ ⋯ + ( 𝑎1 − 𝑏1 ) 𝑥 + ( 𝑎0 − 𝑏0 ) |
+≤ | 𝑎𝑛 − 𝑏𝑛 | | 𝑥 |𝑛+ | 𝑎𝑛 − 1 − 𝑏𝑛 − 1 | | 𝑥 |𝑛 − 1+ ⋯ + | 𝑎1 − 𝑏1 | | 𝑥 | + | 𝑎0 − 𝑏0 |
+≤ | 𝑎𝑛 − 𝑏𝑛 | 𝑀𝑛+ | 𝑎𝑛 − 1 − 𝑏𝑛 − 1 | 𝑀𝑛 − 1+ ⋯ + | 𝑎1 − 𝑏1 | 𝑀 + | 𝑎0 − 𝑏0 |
+≤ | 𝑎𝑛 − 𝑏𝑛 | 𝑀𝑛+ | 𝑎𝑛 − 1 − 𝑏𝑛 − 1 | 𝑀𝑛+ ⋯ + | 𝑎1 − 𝑏1 | 𝑀𝑛+ | 𝑎0 − 𝑏0 | 𝑀𝑛
+≤𝜀
+2 ( 𝑛 + 1 )+𝜀
+2 ( 𝑛 + 1 )+ ⋯ +𝜀
+2 ( 𝑛 + 1 )+𝜀
+2 ( 𝑛 + 1 )
+=𝜀
+2.
+It follo ws that
+| 𝑓 ( 𝑥 ) − 𝑞 ( 𝑥 ) | ≤ | 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | + | 𝑝 ( 𝑥 ) − 𝑞 ( 𝑥 ) | <𝜀
+2+𝜀
+2= 𝜀
+for an y 𝑥 ∈ [ 𝑎 , 𝑏 ] . Th us the desired coun table subset 𝒞  is 𝒫 ( 𝐐 ) .
+Exercise 6.7 . 11 .  Assume that 𝑓  has a con tin uous deriv ativ e on [ 𝑎 , 𝑏 ] . Sho w that there
+exists a p olynomial 𝑝 ( 𝑥 )  suc h that
+| 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | < 𝜀 and | 𝑓′( 𝑥 ) − 𝑝′( 𝑥 ) | < 𝜀
+for all 𝑥 ∈ [ 𝑎 , 𝑏 ] .
+Solution.  By assumption 𝑓′ is con tin uous on [ 𝑎 , 𝑏 ] , so the W eierstrass Appro ximation The-
+orem yields a p olynomial 𝑞  suc h that
+| 𝑓′( 𝑥 ) − 𝑞 ( 𝑥 ) | < min { 𝜀 ,𝜀
+𝑏 − 𝑎}
+for all 𝑥 ∈ [ 𝑎 , 𝑏 ] . Let 𝑝  b e the p olynomial whic h satisﬁes 𝑝′= 𝑞  and 𝑝 ( 𝑎 ) = 𝑓 ( 𝑎 )  and
+observ e that | 𝑓′( 𝑥 ) − 𝑝′( 𝑥 ) | = | 𝑓′( 𝑥 ) − 𝑞 ( 𝑥 ) | < 𝜀  for eac h 𝑥 ∈ [ 𝑎 , 𝑏 ] . No w let 𝑔 : [ 𝑎 , 𝑏 ] → 𝐑
+b e giv en b y 𝑔 ( 𝑥 ) = 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) . Observ e that 𝑔 ( 𝑎 ) = 0  and 𝑔′( 𝑥 ) = 𝑓′( 𝑥 ) − 𝑞 ( 𝑥 ) , so that
+| 𝑔′( 𝑥 ) | < 𝜀 ( 𝑏 − 𝑎 )− 1 for all 𝑥 ∈ [ 𝑎 , 𝑏 ] . Let 𝑥 ∈ ( 𝑎 , 𝑏 ]  b e giv en. By the Mean V alue Theorem
+(Theorem 5.3.2), there exists some 𝑐 ∈ ( 𝑎 , 𝑥 )  suc h that
+| 𝑓 ( 𝑥 ) − 𝑝 ( 𝑥 ) | = | 𝑔 ( 𝑥 ) − 𝑔 ( 𝑎 ) | = | 𝑔′( 𝑐 ) ( 𝑥 − 𝑎 ) | ≤𝜀
+𝑏 − 𝑎( 𝑏 − 𝑎 ) = 𝜀 .
+Th us 𝑝  is the desired p olynomial.
+295 / 415

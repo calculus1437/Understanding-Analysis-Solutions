@@ -1,0 +1,6 @@
+@media print {
+  body, .markdown-preview-view {
+    font-family: var(--font-family-preview), "Source Han Serif SC VF Medium" !important;
+    font-size: var(--font-size-preview, 18px) !important;
+  }
+}

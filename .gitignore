@@ -1,0 +1,11 @@
+# 忽略所有文件和目录
+*
+
+# 保留特定的文件
+!Understanding Analysis 习题草稿.md
+!Understanding Analysis 习题解答.md
+!README.md
+!style.less
+
+# 保留 .gitignore 文件自身
+!.gitignore

@@ -4730,7 +4730,7 @@ $$
 
 (b) 如图。（华东师范大学, 数学分析 第五版（上册）, 第六章 §2, 图 6-5）
 
-![[alt text](image-1.png)](https://img-cdn.lusyoe.com/images/HuangTianye/2026/01/18/tpso00u6so.png)
+![alt text](https://img-cdn.lusyoe.com/images/HuangTianye/2026/01/18/tpso00u6so.png)
 
 <br/>
 

@@ -251,7 +251,29 @@ $$
 > [!question] 习题 6.2.10
 > 设 $f$ 在整个 $\mathbb{R}$ 上一致连续，并通过 $f_n(x) = f(x + 1/n)$ 定义一个函数序列。证明 $f_n \to f$ 一致收敛。给出一个例子说明如果 $f$ 仅在 $\mathbb{R}$ 上连续而不一致连续，该命题不成立。
 
+若 $f$ 在 $\mathbb{R}$ 上一致连续，则对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，使得对 $\forall\ x,y\in \mathbb{R}$，当 $|x-y|<\delta$ 时，$\left|f(x)-f(y)\right|<\varepsilon$。
 
+所以对上述 $\delta>0$，$\exists\ N\in \mathbb{N^+}$，对 $\forall\ n>N$，$\displaystyle\frac{1}{n}<\delta$，所以有 $\left|f\left(x+\displaystyle\frac{1}{n}\right)-f(x)\right|<\varepsilon$。
+
+所以 $f_n \to f$ 在 $\mathbb{R}$ 上一致收敛。
+
+不一致连续的情况下，即使两个自变量靠得很近，函数值也不一定接近。
+
+例如 $f(x)=x^2$ 时，$f\left(x+\displaystyle\frac{1}{n}\right)-f(x)=\displaystyle\frac{2x}{n}+\displaystyle\frac{1}{n^2}$，其中的 $\displaystyle\frac{2x}{n}$ 项就不单单是 $n$ 能控制的了。
+
+<a id="17">一致连续与一致收敛的等价命题</a>
+
+其实这个命题反过来也是成立的。叙述如下：
+
+$f$ 在 $\mathbb{R}$ 上一致连续 $\Leftrightarrow$ 对任意 $a_n\to 0$，$f(x+a_n)\to f(x)$ 在 $\mathbb{R}$ 上一致收敛。
+
+$\Rightarrow$ 同上，利用 $a_n\to 0$，找出 $a_n<\delta$ 的 $N$。
+
+$\Leftarrow$ 假设 $f$ 在 $\mathbb{R}$ 上不一致连续，则 $\exists\ \varepsilon_0>0$，对 $\forall\ n\in \mathbb{N^+}$，$\exists\ a_n<\displaystyle\frac{1}{n}$ 使得 $\left|f(x+a_n)-f(x)\right|\geq \varepsilon_0$。
+
+此时 $\left\{a_n\right\}\to 0$，则由一致收敛，$\exists\ N\in \mathbb{N^+}$ 使得 $\left|f(x+a_N)-f(x)\right|<\varepsilon_0$，这与前面的不等式矛盾。
+
+ 综上，$f$ 在 $\mathbb{R}$ 上一致连续。
 
 <br/>
 
@@ -260,7 +282,22 @@ $$
 > (a) 证明 $(f_n + g_n)$ 是一致收敛的函数序列。
 > (b) 给出一个例子说明乘积 $(f_n g_n)$ 可能不一致收敛。
 > (c) 证明如果存在一个 $M > 0$ 使得对于所有 $n \in \mathbb{N}$，$|f_n| \le M$ 和 $|g_n| \le M$ 成立，则 $(f_n g_n)$ 确实一致收敛。
->
+
+(a) 因为 $\left\{f_n\right\}$，$\left\{g_n\right\}$ 均是一致收敛函数序列，所以对 $\forall\ \varepsilon>0$，$\exists\ N_1,N_2\in \mathbb{N^+}$，使得对 $\forall\ n>N_1$，$\left|f_n(x)-f(x)\right|<\displaystyle\frac{\varepsilon}{2}$；对 $\forall\ n>N_2$ 和 $\forall\ x$，$\left|g_n(x)-g(x)\right|<\displaystyle\frac{\varepsilon}{2}$。
+
+记 $N=\max\left\{N_1,N_2\right\}$，则对 $\forall\ n>N$，
+
+$$
+\begin{align*}
+    \left|\left(f_n(x)+g_n(x\right))-\left(f(x)+g(x)\right)\right|&=\left|\left(f_n(x)-f(x)\right)+\left(g_n(x)-g(x)\right)\right|\\&\leq \left|f_n(x)-f(x)\right|+\left|g_n(x)-g(x)\right|<\varepsilon
+\end{align*}
+$$
+
+所以 $\left\{f_n+g_n\right\}$ 是一致收敛的函数序列。
+
+(b) 令 $f_n(x)=g_n(x)=x+\displaystyle\frac{1}{n}$，则它们各自收敛到 $x$，但无法收敛至 $x^2$。
+
+(c)
 
 <br/>
 

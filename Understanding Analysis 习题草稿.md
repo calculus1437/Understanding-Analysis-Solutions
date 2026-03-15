@@ -297,7 +297,25 @@ $$
 
 (b) 令 $f_n(x)=g_n(x)=x+\displaystyle\frac{1}{n}$，则它们各自收敛到 $x$，但无法收敛至 $x^2$。
 
-(c)
+(c) 因为对 $\forall\ n\in \mathbb{N^+}$，$\left|f_n\right|\leq M$，$\left|g_n\right|\leq M$，所以 $\left|f(x)\right|=\displaystyle\lim_{n\to \infty}\left|f_n(x)\right|\leq M$，同理 $\left|g(x)\right|\leq M$。
+
+确立了 $f,g$ 的有界性后，就可以用数列极限类似的证明方式：
+
+$$
+\begin{align*}
+    \left|f_n(x)g_n(x)-f(x)g(x)\right|&=\left|\left(f_n(x)-f(x)\right)g_n(x)+\left(g_n(x)-g(x)\right)f(x)\right|\\ &\leq \left|f_n(x)-f(x)\right|\left|g_n(x)\right|+\left|g_n(x)-g(x)\right|\left|f(x)\right|
+\end{align*}
+$$
+
+又因为 $\left\{f_n\right\}$，$\left\{g_n\right\}$ 的一致收敛性，所以对 $\forall\ \varepsilon>0$，$\exists\ N_1,N_2\in \mathbb{N^+}$，使得对 $\forall\ n>N_1$，$\left|f_n(x)-f(x)\right|<\displaystyle\frac{\varepsilon}{2M}$；对 $\forall\ n>N_2$，$\left|g_n(x)-g(x)\right|<\displaystyle\frac{\varepsilon}{2M}$。
+
+取 $N=\max\left\{N_1,N_2\right\}$，则对 $\forall\ n>N$，由上式可以得到
+
+$$
+\left|f_n(x)g_n(x)-f(x)g(x)\right|<\varepsilon
+$$
+
+这就证明了 $\left\{f_ng_n\right\}$ 是一致收敛序列。
 
 <br/>
 
@@ -306,7 +324,22 @@ $$
 >
 > (a) 设 $g_n = f - f_n$ 并将前面的假设转化为关于序列 $(g_n)$ 的陈述。
 > (b) 设 $\epsilon > 0$ 为任意值，并定义 $K_n = \{x \in K : g_n(x) \ge \epsilon\}$。论证 $K_1 \supseteq K_2 \supseteq K_3 \supseteq \cdots$ 是一个紧集的嵌套序列，并利用这一观察来完成论证。
->
+
+(a) 设 $g_n(x)=f(x)-f_n(x)$，因为 $f_n(x)$ 是递增的，所以 $g_n(x)$ 是递减的。
+
+可知对 $\forall\ x\in K$，$\displaystyle\lim_{n\to \infty}g_n(x)=0$。记 $g(x)=\displaystyle\lim_{n\to \infty}g_n(x)=0$。
+
+(b) 因为对 $\forall\ x\in K$，$\forall\ p,q \in \mathbb{N^+}$ 且 $p<q$ 有 $f_p(x)\leq f_q(x)$，所以 $g_p(x)\geq g_q(x)$。若 $g_q(x)\geq \varepsilon$，则 $g_p(x)\geq \varepsilon$，所以 $K_p \supseteq K_q$。
+
+**这里我漏掉了一个关键的步骤，它利用了 $f_n，f$ 的连续性**，那就是证明 $K_n$ 是紧集。
+
+因为 $f_n$ 和 $f$ 在 $K$ 上连续，所以 $g_n$ 在 $K$ 上连续。设 $\left\{x_m\right\}\subseteq K_n$，则 $\left\{x_m\right\}\subseteq K$。因为 $K$ 是紧集，所以 $\left\{x_m\right\}$ 有一个收敛子列 $\left\{x_{m_k}\right\}\to x_0$，其中 $x_0\in K$。
+
+因为对 $\forall\ k\in \mathbb{N^+}$，$g_n(x_{m_k})\geq \varepsilon$，由 $g_n$ 的连续性，$g_n(x_0)\geq \varepsilon$。所以 $x_0\in K_n$，这就证明了 $K_n$ 是紧集。
+
+紧集嵌套序列给我们的灵感是一个定理：若对 $\forall\ n\in \mathbb{N^+}$，$K_n$ 均不为空，则 $\displaystyle\bigcap_{n=1}^{\infty} K_n$ 同样不空。也就是说，$\exists\ x_0\in \displaystyle\bigcap_{n=1}^{\infty} K_n$。由 $K_n$ 的定义，对 $\forall\ n\in \mathbb{N^+}$，$g_n(x_0)\geq \varepsilon$，这与 $\displaystyle\lim_{n\to \infty}g(x_0)=0$ 是矛盾的。
+
+所以 $\exists\ N\in \mathbb{N^+}$，使得 $K_N$ 为空集。也就是说，对 $\forall\ n>N$ 和 $\forall\ x\in K$，$g_n(x)=f(x)-f_n(x)<\varepsilon$。这就证明了 $\left\{f_n(x)\right\}\to f(x)$ 是一致收敛的。
 
 <br/>
 
@@ -322,7 +355,86 @@ $$
 > 如果我们继续这个过程，证明生成的序列 $(f_n)$ 在 $[0,1]$ 上一致收敛。
 >
 > (c) 设 $f = \lim f_n$。证明 $f$ 是 $[0,1]$ 上的一个连续、递增函数，且满足 $f(0) = 0$ 和 $f(1) = 1$，对于开集 $[0,1] \setminus C$ 中的所有 $x$，满足 $f'(x) = 0$。回想一下，Cantor 集 $C$ 的“长度”为 0。然而，$f$ 在“长度为 1”的集合上保持不变的同时，设法从 0 增加到 1。
->
+
+(a) ![f_0](https://calculus1437.github.io/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20203712.png){width=45%} ![f_1](https://calculus1437.github.io/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20204217.png){width=45%}
+
+(b) 直接求解出最后 $f(x)$ 的形态是困难的。所以在这里我们考虑用 Cauchy 准则，即分析 $\left|f_m(x)-f_n(x)\right|$ 的大小来进行证明。
+
+![](https://calculus1437.github.io/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20213311.png)
+
+这是 $f_2(x)$ 的图像。
+
+观察可得，这个迭代函数是以 $f_1$ 的形状为基本模块，在每个非定值的区间里用缩放过的该模块来进行替换。所以有几个基本猜测：
+
+(1) 如果 $f_m(x)$ 在某个区间上是定值，则对任意 $n>m$，$f_n(x)$ 在那个区间上也是定值。
+
+(2) 模块在每次迭代中都会被横向压缩成原来的 $1/3$，纵向压缩成原来的 $1/2$。
+
+这些猜测有什么用呢？一方面，在定值的区间上，$\left|f_m(x)-f_n(x)\right|$ 可以保持始终为 $0$；另一方面，在非定值的区间上，由于模块被放缩得越来越小，$f_m$ 和 $f_n$ 的取值也就可能越来越接近。
+
+例如，$f_0(x)$ 和$f_1(x)$ 的差值在这个模块的“尖角”处（定值与非定值区间交点处）取得最大值，则 $f_1(x)$ 与 $f_2(x)$ 也会在放缩后的“尖角”处取得最大值，但因此时模块被放缩成原来的 $\displaystyle\frac{1}{2}$，所以差值也就会变成迭代前的 $\displaystyle\frac{1}{2}$ 了。
+
+这些猜测直接对任意 $m,n$ 进行证明还不知如何下手，就先从相邻迭代处开始分析。
+
+$$
+f_n(x)=\begin{cases}
+    \displaystyle\frac{1}{2}f_{n-1}(3x),\quad &\text{if }0\leq x\leq \displaystyle\frac{1}{3}\\
+    f_{n-1}(x),\quad &\text{if }\displaystyle\frac{1}{3}<x<\displaystyle\frac{2}{3}\\
+    \displaystyle\frac{1}{2}f_{n-1}(3x-2)+\displaystyle\frac{1}{2},\quad &\text{if }\displaystyle\frac{2}{3}\leq x\leq 1
+\end{cases}
+$$
+
+所以
+
+$$
+\begin{align*}
+    f_{n+1}(x)-f_n(x)
+    &=\begin{cases}
+    \displaystyle\frac{1}{2}f_n(3x)-f_n(x),\quad &\text{if }0\leq x\leq \displaystyle\frac{1}{3}\\
+    0,\quad &\text{if }\displaystyle\frac{1}{3}<x<\displaystyle\frac{2}{3}\\
+    \displaystyle\frac{1}{2}f_n(3x-2)+\displaystyle\frac{1}{2}-f_n(x),\quad &\text{if }\displaystyle\frac{2}{3}\leq x\leq 1
+\end{cases}\\\\
+&=\begin{cases}
+    \displaystyle\frac{1}{2}(f_n(3x)-f_{n-1}(3x)),\quad &\text{if } 0\leq x\leq \displaystyle\frac{1}{3}\\
+    0,\quad &\text{if } \displaystyle\frac{1}{3}<x<\displaystyle\frac{2}{3}\\
+    \displaystyle\frac{1}{2}(f_n(3x-2)-f_{n-1}(3x-2)),\quad &\text{if } \displaystyle\frac{2}{3}\leq x\leq 1
+\end{cases}
+\end{align*}
+$$
+
+又因为 $\displaystyle\frac{1}{2}(f_n(3x)-f_{n-1}(3x))$ 在 $[0,\displaystyle\frac{1}{3}]$ 上实际上与 $\displaystyle\frac{1}{2}(f_n(x)-f_{n-1}(x))$ 在 $[0,1]$ 上的值域相同，所以不妨设 $g_n(x)=\max|f_{n+1}(x)-f_n(x)|$，则有 $g_n(x)=\displaystyle\frac{1}{2}g_{n-1}(x)=\cdots=\displaystyle\frac{1}{2^n}g_0(x)=\displaystyle\frac{1}{2^n}\max\left|f_1(x)-f_0(x)\right|=\displaystyle\frac{1}{2^n6}$。
+
+借助绝对值不等式，我们就能估计 $\left|f_m(x)-f_n(x)\right|$ 的值了。
+
+对 $\forall\ \varepsilon>0$，取 $N>\displaystyle\frac{1}{3\varepsilon}+1$，则对 $\forall\ m,n>N$，有
+
+$$
+\begin{align*}
+    \left|f_m(x)-f_n(x)\right|&\leq \displaystyle\sum_{i=m}^{n-1}\left|f_i(x)-f_{i+1}(x)\right|\leq \displaystyle\sum_{i=m}^{n-1}g_i(x)\\
+    &=\displaystyle\sum_{i=m}^{n-1}\displaystyle\frac{1}{2^i6}=\displaystyle\frac{1}{2^m6}\displaystyle\sum_{i=1}^{n-m}\displaystyle\frac{1}{2^i}\\
+    &<\displaystyle\frac{1}{2^m6}\displaystyle\sum_{i=1}^{\infty}\displaystyle\frac{1}{2^i}\\
+    &=\displaystyle\frac{1}{2^m3}<\displaystyle\frac{1}{3m}<\varepsilon
+\end{align*}
+$$
+
+综上，$\left\{f_n\right\}$ 是 $[0,1]$ 上的一致收敛函数序列。
+
+(c) 由前面习题所述结论，因为对 $\forall\ n\in \mathbb{N^+}$，$f_n$ 都是连续递增的，所以 $f$ 也是连续递增的。又因为 $f_n(0)=0$，$f_n(1)=1$，所以 $f(0)=0$，$f(1)=1$。
+
+现在解决定值区间的问题。因为
+
+$$
+    f_{n+1}(x)-f_n(x)
+=\begin{cases}
+    \displaystyle\frac{1}{2}(f_n(3x)-f_{n-1}(3x)),\quad &\text{if } 0\leq x\leq \displaystyle\frac{1}{3}\\
+    0,\quad &\text{if } \displaystyle\frac{1}{3}<x<\displaystyle\frac{2}{3}\\
+    \displaystyle\frac{1}{2}(f_n(3x-2)-f_{n-1}(3x-2)),\quad &\text{if } \displaystyle\frac{2}{3}\leq x\leq 1
+\end{cases}
+$$
+
+即 $f_{n+1}(x)-f_n(x)=0$，在 $\left(\displaystyle\frac{1}{3},\displaystyle\frac{2}{3}\right)$ 和 次一级迭代上是成立的，所以由迭代规律，$f_n(3x)-f_{n-1}(3x)=0$ 在 $\left(\displaystyle\frac{1}{9},\displaystyle\frac{2}{9}\right)$ 和它的次一级迭代成立，而 $f_n(3x-2)-f_{n-1}(3x-2)=0$ 的解则向右平移 $\displaystyle\frac{2}{3}$。
+
+第一层的定值区间，$\left(\displaystyle\frac{1}{3},\displaystyle\frac{2}{3}\right)$ 在 $[0,1]$ 上的补集是 $C_1$；第二层的定值区间在第一层的基础上切下了 $C_1$ 两个闭区间各自中间的 $\displaystyle\frac{1}{3}$，得到了 $C_2$；此后的操作与构造 $C$ 的操作完全一致。所以 $f(x)$ 的定值区间至少会包含 $[0,1]\setminus C$ 这一个开集。利用开集内任意一点始终被开区间包含的性质，依据导数的定义，就可以得到对 $\forall\ x\in [0,1]\setminus C$，$f'(x)=0$。
 
 <br/>
 

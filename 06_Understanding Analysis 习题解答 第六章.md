@@ -532,46 +532,117 @@ $$
 
 ## 习题 6.3 一致收敛与微分
 
-!!! question "练习 6.3.1"
+!!! question 练习 6.3.1
     考虑由 $g_n(x) = \dfrac{x^n}{n}$ 定义的函数序列。
     
     (a) 证明 $(g_n)$ 在 $[0, 1]$ 上一致收敛，并求 $g = \lim g_n$。证明 $g$ 是可微的，并计算所有 $x \in [0, 1]$ 的 $g'(x)$。
     (b) 现在，证明 $(g'_n)$ 在 $[0, 1]$ 上收敛。收敛是一致的吗？设 $h = \lim g'_n$ 并比较 $h$ 和 $g'$。它们是相同的吗？
 
+(a)  令 $N>\displaystyle\frac{2}{\varepsilon}$，则对 $\forall\ m,n>N$，$\forall\ x\in [0,1]$，有 $\left|g_m(x)-g_n(x)\right|=\left|\displaystyle\frac{x^m}{m}-\displaystyle\frac{x^n}{n}\right|\leq \left|\displaystyle\frac{x^m}{m}\right|+\left|\displaystyle\frac{x^n}{n}\right|\leq \displaystyle\frac{1}{m}+\displaystyle\frac{1}{n}<\displaystyle\frac{2}{N}<\varepsilon$，所以 $\left\{g_n\right\}$ 在 $[0,1]$ 上一致收敛。
+
+$g(x)=\displaystyle\lim_{n\to \infty}g_n(x)=\displaystyle\lim_{n\to \infty}\displaystyle\frac{x^n}{n}=0$。
+
+$g'(x)=0$。
+
+(b) 对 $\forall\ n\in \mathbb{N^+}$，由定义可求得 $g_n'(x)=x^{n-1}$。它不是一致收敛的， 得到的 $h(x)=\displaystyle\lim_{n\to \infty}g_n'(x)=\begin{cases}    0, \quad \text{if }x\in [0,1)\\    1, \quad \text{if }x=1\end{cases}$
+
+可得出 $h(x)$ 与 $g'(x)$ 并不相同的结论。
+
 <br/>
 
-!!! question "练习 6.3.2"
+!!! question 练习 6.3.2
     考虑函数序列 $h_n(x) = \sqrt{x^2 + \dfrac{1}{n}}$。
     
     (a) 计算 $(h_n)$ 的逐点极限，然后证明在 $\mathbb{R}$ 上的收敛是一致的。
     (b) 注意每个 $h_n$ 都是可微的。证明 $g(x) = \lim h'_n(x)$ 对所有 $x$ 都存在，并解释我们如何确定在零的任何邻域上的收敛**不**是一致的。
 
+(a) 对 $\forall\ x\in \mathbb{R}$，$\displaystyle\lim_{n\to \infty}h_n(x)=\displaystyle\lim_{n\to \infty}\sqrt{x^2+\displaystyle\frac{1}{n}}=|x|$。
+
+令 $N>\displaystyle\frac{1}{\varepsilon^2}$，则对 $\forall\ n>N$，$\forall\ x\in \mathbb{R}$ 均有 $\left|h_n(x)-\left|x\right|\right|=\left|\sqrt[]{x^2+\displaystyle\frac{1}{n}}-\sqrt[]{x^2}\right|=\displaystyle\frac{\displaystyle\frac{1}{n}}{\sqrt[]{x^2+\displaystyle\frac{1}{n}}+\sqrt[]{x^2}}\leq \displaystyle\frac{\displaystyle\frac{1}{n}}{\sqrt[]{\displaystyle\frac{1}{n}}}=\sqrt[]{\displaystyle\frac{1}{n}}<\varepsilon$。
+
+所以 $\left\{h_n(x)\right\}$ 在 $\mathbb{R}$ 上一致收敛。
+
+(b) $h_n'(x)=\displaystyle\frac{x}{\sqrt[]{x^2+\displaystyle\frac{1}{n}}}$。
+
+对 $\forall\ x\in \mathbb{R}$，$x=0$ 时，$\displaystyle\lim_{n\to \infty} h_n'(0)=h_n'(0)=0$。
+
+$x\neq 0$ 时，$\displaystyle\lim_{n\to \infty}h_n'(x)=\displaystyle\frac{x}{\sqrt[]{x^2}}=\begin{cases}  -1, \quad \text{if }x<0\\    1, \quad \text{if }x>0\end{cases}$
+
+综上，得到 $g(x)=\begin{cases}  -1, \quad \text{if }x<0\\  0,\quad \text{if }x=0\\  1, \quad \text{if }x>0\end{cases}$。
+
+因为对 $\forall\ n\in \mathbb{N^+}$，$h_n'(x)$ 在 $\mathbb{R}$ 上连续，但 $g(x)$ 在 $x=0$ 处不连续，所以在零的任何邻域上的收敛都不是一致的。
+
 <br/>
 
-!!! question "练习 6.3.3"
+!!! question 练习 6.3.3
     考虑函数序列 $f_n(x) = \dfrac{x}{1+nx^2}$。
     
     (a) 找出在 $\mathbb{R}$ 上每个 $f_n(x)$ 达到其最大值和最小值的点。利用这一点证明 $(f_n)$ 在 $\mathbb{R}$ 上一致收敛。极限函数是什么？
     (b) 令 $f = \lim f_n$。计算 $f'_n(x)$ 并找出使得 $f'(x) = \lim f'_n(x)$ 的所有 $x$ 值。
 
+(a) $f_n'(x)=\displaystyle\frac{1-nx^2}{\left(1+nx^2\right)^2}$，对 $\forall\ n\in \mathbb{N^+}$，$f_n(x)$ 在 $\left(-\infty,-\displaystyle\frac{1}{\sqrt[]{n}}\right),\left(\displaystyle\frac{1}{\sqrt[]{n}},+\infty\right)$ 递减，在 $\left(-\displaystyle\frac{1}{\sqrt[]{n}},\displaystyle\frac{1}{\sqrt[]{n}}\right)$ 递增，所以最小值为 $f_n\left(-\displaystyle\frac{1}{\sqrt[]{n}}\right)=-\displaystyle\frac{1}{2\sqrt{n}}$，最大值为 $f_n\left(\displaystyle\frac{1}{\sqrt[]{n}}\right)=\displaystyle\frac{1}{2\sqrt{n}}$。
+
+所以，令 $N>\displaystyle\frac{1}{\varepsilon^2}$，则对 $\forall\ m,n>N$，$\forall\ x\in \mathbb{R}$，$\left|f_m(x)-f_n(x)\right|\leq \displaystyle\frac{1}{2\sqrt{m}}+\displaystyle\frac{1}{2\sqrt{n}}<\varepsilon$。
+
+所以 $\left\{f_n\right\}$ 在 $\mathbb{R}$ 上一致收敛。
+
+计算得 $\displaystyle\lim_{n\to \infty}f_n(x)=0$。
+
+(b) 当 $x\neq 0$ 时，$\displaystyle\lim_{n\to \infty}f_n'(x)=0$；当 $x=0$ 时，$\displaystyle\lim_{n\to \infty}f_n'(0)=1$。
+
+所以 $f'(x)=\displaystyle\lim_{n\to \infty}f_n'(x)$ 的解集为 $\mathbb{R}\setminus\left\{0\right\}$。
+
 <br/>
 
-!!! question "练习 6.3.4"
+!!! question 练习 6.3.4
     令 $h_n(x) = \dfrac{\sin(nx)}{\sqrt{n}}$。证明 $h_n \to 0$ 在 $\mathbb{R}$ 上是一致的，但导数序列 $(h'_n)$ 对每个 $x \in \mathbb{R}$ 都是发散的。
 
+利用 $\sin(nx)$ 的有界性，同前几题的解法可得 $h_n \to 0$ 在 $\mathbb{R}$ 上是一致的。
+
+$h_n'(x)=\sqrt[]{n}\cos(nx)$。前面 $\sqrt[]{n}$ 可得无界性，现在要考虑 $\cos(nx)$ 的范围。
+
+若 $x=\displaystyle\frac{p\pi}{q}$，其中 $p,q\in \mathbb{Z}$ 且 $q>0$，令 $n=2kq$，$k\in \mathbb{N^+}$，则 $h'_{2kq}(x)=\sqrt[]{2kq}\cos(2kp\pi)=\sqrt[]{2kq}$ 发散，即证原序列也发散。
+
+若 $x\neq \displaystyle\frac{p\pi}{q}$，此时 $\cos(nx)$ 的值难以估计，我并没有想到。询问了 Gemini 3.1 Pro 后，它提供给我了关于序列本身的思路：
+
+假设对 $x_0\in \mathbb{R}$，$h_n'(x_0)=\sqrt[]{n}\cos(nx_0)$ 收敛，设 $\displaystyle\lim_{n\to \infty}\sqrt[]{n}\cos(nx_0)=L$，则由极限的四则运算性质可得 $\displaystyle\lim_{n\to \infty}\cos(nx_0)=\displaystyle\frac{\displaystyle\lim_{n\to \infty}\sqrt[]{n}\cos(nx_0)}{\displaystyle\lim_{n\to \infty}\sqrt[]{n}}=\displaystyle\frac{L}{\displaystyle\lim_{n\to \infty}\sqrt[]{n}}=0$。所以只需要证明 $\cos(nx_0)$ 不收敛到 $0$ 即可。
+
+由二倍角公式，$\cos(2nx_0)=2\cos^2(nx_0)-1$。如果极限为 $0$，两边取极限得到 $0=-1$，这显然是不可能的！所以 $\cos(nx_0)$ 不收敛到 $0$，从而 $h_n'(x_0)$ 发散。
+
+综上，$\left\{h_n'\right\}$ 对每个 $x \in \mathbb{R}$ 都是发散的。
+
 <br/>
 
-!!! question "练习 6.3.5"
+!!! question 练习 6.3.5
     令 $g_n(x) = \dfrac{nx+x^2}{2n}$，并设 $g(x) = \lim g_n(x)$。用两种方法证明 $g$ 是可微的：
     
     (a) 通过代数方法取 $n \to \infty$ 的极限来计算 $g(x)$，然后求 $g'(x)$。
     (b) 计算每个 $n \in \mathbb{N}$ 的 $g'_n(x)$，并证明导数序列 $(g'_n)$ 在每个区间 $[-M, M]$ 上一致收敛。使用定理 6.3.3 得出 $g'(x) = \lim g'_n(x)$。
     (c) 对序列 $f_n(x) = \dfrac{nx^2+1}{2n+x}$ 重复 (a) 和 (b) 部分。
 
+(a) $g(x)=\displaystyle\lim_{n\to \infty}g_n(x)=\displaystyle\lim_{n\to \infty}\displaystyle\frac{x+\displaystyle\frac{x^2}{n}}{2}=\displaystyle\frac{x}{2}$。
+
+$g'(x)=\displaystyle\frac{1}{2}$。
+
+(b) $g_n'(x)=\displaystyle\frac{n+2x}{2n}=\displaystyle\frac{1}{2}+\displaystyle\frac{x}{n}$。
+
+令 $N>\displaystyle\frac{2M}{\varepsilon}$，则对 $\forall\ m,n>N$，$\forall\ x\in [-M,M]$，有 $\left|g_m'(x)-g_n'(x)\right|\leq \left|x\right|\left(\displaystyle\frac{1}{m}+\displaystyle\frac{1}{n}\right)<M\cdot\displaystyle\frac{2}{N}<\varepsilon$。
+
+所以 $\left\{g_n'\right\}$ 在 $[-M,M]$ 上一致收敛。
+
+又因为 $\displaystyle\lim_{n\to \infty}g_n(0)=0=g(0)$，所以由定理 6.3.3（原函数序列可微且单点收敛，导数序列一致收敛），$g'(x)=\displaystyle\lim_{n\to \infty}g_n'(x)=\displaystyle\frac{1}{2}$。
+
+(c) $f(x)=\displaystyle\lim_{n\to \infty}f_n(x)=\displaystyle\frac{x^2}{2}$，$f'(x)=x$。
+
+$f_n'(x)=\displaystyle\frac{nx^2+\left(2n\right)^2x-1}{\left(2n+x\right)^2}=\displaystyle\frac{4x+\displaystyle\frac{x^2}{n}-\displaystyle\frac{1}{n^2}}{\left(2+\displaystyle\frac{x}{n}\right)^2}$。
+
+可以求得 $\displaystyle\lim_{n\to \infty}f_n'(x)=x$，且 $\left|f_n'(x)-x\right|=\left|\displaystyle\frac{\displaystyle\frac{3x^2}{n}+\displaystyle\frac{x^3+1}{n^2}}{\left(2+\displaystyle\frac{x}{n}\right)^2}\right|$。对任意 $\varepsilon>0$，令 $N>\max\left\{\displaystyle\frac{6M^2}{\varepsilon},\sqrt[]{\displaystyle\frac{2(M^3+1)}{\varepsilon}},M\right\}$，则对 $\forall\ n>N$，$x\in [-M,M]$，$\left|f_n'(x)-x\right|<\displaystyle\frac{3M^2}{n}+\displaystyle\frac{M^3+1}{n^2}<\varepsilon$。
+
+所以 $\left\{f_n'\right\}$ 在 $[-M,M]$ 上一致收敛，得到 $f'(x)=\displaystyle\lim_{n\to \infty}f_n'(x)=x$。
+ 
 <br/>
 
 ---
-<br/>
 
 ## 习题 6.4 函数级数
 

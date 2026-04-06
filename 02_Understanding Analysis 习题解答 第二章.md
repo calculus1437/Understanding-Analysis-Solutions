@@ -1532,7 +1532,7 @@ $$
 
 又 $\left|\displaystyle\sum_{k=2}^{n}d_k-s_{nn}\right|\leq \left|\displaystyle\sum_{k=2}^{2n}|d_k|-\displaystyle\sum_{k=2}^{n}|d_k|\right|<\varepsilon$，所以 $\displaystyle\lim_{n\to\infty}\left(\displaystyle\sum_{k=2}^{n}d_k-s_{nn}\right)=0$。
 
-所以 $\displaystyle\lim_{n\to\infty}\displaystyle\sum_{k=2}^{\infty}d_k=\displaystyle\lim_{n\to\infty}s_{nn}=S$。
+所以 $\displaystyle\sum_{k=2}^{\infty}d_k=\displaystyle\lim_{n\to\infty}s_{nn}=S$。
 
 <br/>
 

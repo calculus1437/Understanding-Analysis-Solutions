@@ -1,0 +1,51 @@
+
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: Source Han Serif SC VF Regular;
+}
+.markdown-preview.markdown-preview .admonition.question {
+    background-color: #e3f2fd; /* 浅天蓝背景 */
+    border-left-color: #2196f3; /* 深天蓝左边框 */
+    color: #000000; /* 黑色文字 */
+}
+.markdown-preview.markdown-preview .admonition.question .admonition-title {
+    background-color: #bbdefb; /* 标题栏稍微深一点的天蓝 */
+    color: #0d47a1;
+    border-bottom: 1px solid #90caf9;
+}
+@media print {
+    .markdown-preview.markdown-preview .admonition.question, 
+    .markdown-preview.markdown-preview .admonition.question .admonition-title {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #e3f2fd !important;
+    }
+    .markdown-preview.markdown-preview .admonition.question .admonition-title {
+        background-color: #bbdefb !important;
+    }
+}
+/* 限制公式和代码块的宽度并在内部出现滚动条，不破坏外层容器 */
+.markdown-preview.markdown-preview .admonition .katex-display,
+.markdown-preview.markdown-preview .admonition mjx-container[display="true"],
+.markdown-preview.markdown-preview .admonition pre {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+// 针对 KaTeX 的文本节点
+.katex .text {
+    font-size: 20px;
+  line-height: 1.6;
+  font-family: Source Han Serif SC VF Regular;
+}
+
+// 针对 MathJax 的文本节点（以防你换了渲染引擎）
+mjx-container mjx-mtext {
+    font-size: 20px;
+  line-height: 1.6;
+  font-family: Source Han Serif SC VF Regular;
+}

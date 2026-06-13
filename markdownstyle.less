@@ -5,7 +5,7 @@
 .markdown-preview.markdown-preview {
   font-size: 20px;
   line-height: 1.6;
-  font-family: Source Han Serif SC VF Regular;
+  font-family: Noto Serif SC Medium;
 }
 .markdown-preview.markdown-preview .admonition.question {
     background-color: #e3f2fd; /* 浅天蓝背景 */
@@ -36,4 +36,12 @@
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
+}
+
+// 针对 KaTeX 的文本节点
+.katex .text {
+    font-size: 20px;
+  line-height: 1.6;
+  font-family: Noto Serif SC;
+  font-weight: 500;
 }

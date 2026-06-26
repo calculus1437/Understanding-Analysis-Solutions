@@ -6,13 +6,13 @@
 !Understanding Analysis 习题解答.md
 !README.md
 !style.less
-!01_Understanding Analysis 习题解答 第一章.md
-!02_Understanding Analysis 习题解答 第二章.md
-!03_Understanding Analysis 习题解答 第三章.md
-!04_Understanding Analysis 习题解答 第四章.md
-!05_Understanding Analysis 习题解答 第五章.md
-!06_Understanding Analysis 习题解答 第六章.md
-!07_Understanding Analysis 习题解答 第七章.md
+!01_Understanding Analysis 习题解答 第一章 实数.md
+!02_Understanding Analysis 习题解答 第二章 数列与级数.md
+!03_Understanding Analysis 习题解答 第三章 R 的基本拓扑结构.md
+!04_Understanding Analysis 习题解答 第四章 函数极限与连续性.md
+!05_Understanding Analysis 习题解答 第五章 导数.md
+!06_Understanding Analysis 习题解答 第六章 函数序列与函数级数.md
+!07_Understanding Analysis 习题解答 第七章 黎曼积分.md
 !markdownstyle.less
 
 # 保留 .gitignore 文件自身

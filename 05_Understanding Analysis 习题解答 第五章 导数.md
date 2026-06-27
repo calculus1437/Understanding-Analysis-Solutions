@@ -436,7 +436,7 @@ $$
 
 (b) 如图。（华东师范大学, 数学分析 第五版（上册）, 第六章 §2, 图 6-5）
 
-![alt text](https://img-cdn.lusyoe.com/images/HuangTianye/2026/01/18/tpso00u6so.png)
+![](https://calculus1437-github-io.pages.dev/images/cb476d5d9e1044c0eedcb6d549b5926f.png)
 
 <br/>
 
@@ -588,7 +588,7 @@ $$
     在 $[-2, 3]$ 上绘制 $(1/2)h(2x)$ 的图形，并随着 $n$ 增大对这些函数进行定性描述。
     $$ h_n(x) = \frac{1}{2^n} h(2^n x) $$
 
-![](https://img-cdn.lusyoe.com/images/HuangTianye/2026/01/20/nj28ru24up.png)
+![](https://calculus1437-github-io.pages.dev/images/52f640b00847d19aa1f2ebee8f47de0f.png)
 
 如图所示。
 

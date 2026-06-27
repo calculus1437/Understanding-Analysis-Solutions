@@ -791,7 +791,7 @@ $$
 
 如果 $g_2(x)>0$，则 $f(0)>f\left(\displaystyle\frac{2}{5}\right)$，$f\left(\displaystyle\frac{3}{5}\right)>f(1)=f(0)$，函数不能是单调的。如果 $f$ 的趋势是 $0$ 减到 $\displaystyle\frac{2}{5}$ 增到 $\displaystyle\frac{3}{5}$ 减到 $1$，那可能有矛盾，因为 $f\left(\displaystyle\frac{1}{5}\right)>f\left(\displaystyle\frac{3}{5}\right)$，当然还有 $f\left(\displaystyle\frac{2}{5}\right)>f\left(\displaystyle\frac{4}{5}\right)$。所以这个连续函数的图像大致如下：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-01-11%20180459.png)
+![](https://calculus1437-github-io.pages.dev/images/82e29dfb911519341568e7445ab84d76.png)
 
 可以看到，因为 $\displaystyle\frac{2}{5}$ 长度的区间分割无法完全无重复覆盖整个定义域，所以这为中间锯齿状的波动提供了可能。
 

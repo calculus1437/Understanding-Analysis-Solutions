@@ -363,11 +363,11 @@ $$
     
     (c) 设 $f = \lim f_n$。证明 $f$ 是 $[0,1]$ 上的一个连续、递增函数，且满足 $f(0) = 0$ 和 $f(1) = 1$，对于开集 $[0,1] \setminus C$ 中的所有 $x$，满足 $f'(x) = 0$。回想一下，Cantor 集 $C$ 的“长度”为 0。然而，$f$ 在“长度为 1”的集合上保持不变的同时，设法从 0 增加到 1。
     
-(a) ![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20203712.png){width=45%} ![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20204217.png){width=45%}
+(a) ![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20203712.png){width=45%} ![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20204217.png){width=45%}
 
 (b) 直接求解出最后 $f(x)$ 的形态是困难的。所以在这里我们考虑用 Cauchy 准则，即分析 $\left|f_m(x)-f_n(x)\right|$ 的大小来进行证明。
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20213311.png)
+![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-03-15%20213311.png)
 这是 $f_2(x)$ 的图像。
 
 观察可得，这个迭代函数是以 $f_1$ 的形状为基本模块，在每个非定值的区间里用缩放过的该模块来进行替换。所以有几个基本猜测：
@@ -1104,7 +1104,7 @@ Abel-可求和 的和为 $\displaystyle\lim_{x\to 1^-}f(x)=\displaystyle\lim_{x\
 
 这能说明什么呢？一方面，由于 $d_0<c<1$，$f(x)$ 在 $(0,d_0)$ 上递减，在 $(d_0,1)$ 上先减后增；另一方面，由于 $f(d_0)=f(1)=0$，我们可以知道 $(0,d_0)$ 上 $f(x)>0\Rightarrow G(x)>x$，而 $(d_0,1)$ 上 $f(x)<0\Rightarrow G(x)<x$，示意图大致如下：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-02%20185743.png)
+![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-02%20185743.png)
 
 这给我们一个猜想：因为 $d_{r+1}=G(d_r)$，所以 $\left\{d_r\right\}$ 会在这逐步迭代中逐渐落向 $d_0$。但并不是所有在 $y=x$ 两侧的函数都满足这个性质，比如 $h(x)=\displaystyle\frac{1}{x}$。但由于这里 $\left\{d_r\right\}$ 本身是递增的，于是我们有一种很简单的办法可以得到这个结论：
 
@@ -1713,11 +1713,11 @@ $$
 
 (a) $p(x)=x^2$。图像如下所示：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-05-25%20221133.png)
+![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-05-25%20221133.png)
 
 (b) 四次多项式为 $q(x)=-\displaystyle\frac{4}{3}x^4+\displaystyle\frac{7}{3}x^2$，图像如下所示：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/geogebra-export.png)
+![](https://calculus1437-github-io.pages.dev/images/geogebra-export.png)
 
 <br/>
 
@@ -1931,7 +1931,7 @@ $$
     
     (d) 完成区间 $[-1, 1]$ 上的 WAT 的证明，并接着将其推广到一般的任意区间 $[a, b]$。
 
-(a) ![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-11%20093449.png)
+(a) ![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-11%20093449.png)
 
 (b) $h_a(x)=\displaystyle\frac{1}{2}\bigl(\left\lvert x-a \right\rvert+\left(x-a\right)\bigr)=\displaystyle\frac{1}{2}\left(x-a\right)+\displaystyle\frac{1}{2}\left\lvert x-a \right\rvert$，其中 $\displaystyle\frac{1}{2}\left(x-a\right)$ 是一个多项式，而 $\displaystyle\frac{1}{2}\left\lvert x-a \right\rvert$ 可以被一个多项式一致逼近，合起来就得到 $h_a(x)$ 也可以被多项式一致逼近。
 

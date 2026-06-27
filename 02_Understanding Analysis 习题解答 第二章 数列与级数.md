@@ -874,7 +874,7 @@ $\cdots$
 
 我们以 $a_k=\displaystyle\frac{1}{k}$ 为例，生成 $s_n$ 的一份点列图：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/c01bc1701b9e112af766290bad7fdfac.png)
+![](https://calculus1437-github-io.pages.dev/images/c01bc1701b9e112af766290bad7fdfac.png)
 
 可以看到，奇数项和偶数项各自单调，且摆动区间越来越小，这将为我们接下来的证明提供参考。
 
@@ -1179,7 +1179,7 @@ $a_1=1$，$a_2=\displaystyle\frac{1}{4}$ 时，让 $b_1=b_2=1$，接下来让 $a
 
 下为 $\{a_n\},\{b_n\}$ 的示意图，使用对数坐标轴让交替单调递减的性质更清晰可见：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/91f3e3c5dc2c12e956bc890dda7c7351.png)
+![](https://calculus1437-github-io.pages.dev/images/91f3e3c5dc2c12e956bc890dda7c7351.png)
 
 <br/>
 
@@ -1515,7 +1515,7 @@ $$
 
 绘制一个简单的图来说明这个范围包括的区域：
 
-![](https://cdn.jsdelivr.net/gh/calculus1437/calculus1437.github.io@main/images/e9d86e1e0b1644d921b76da5340c1c86.png)
+![](https://calculus1437-github-io.pages.dev/images/e9d86e1e0b1644d921b76da5340c1c86.png)
 
 （这里假设 $n=4$）
 

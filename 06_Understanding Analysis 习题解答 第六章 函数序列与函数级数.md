@@ -1608,9 +1608,9 @@ $$ |f(x) - p(x)| < \epsilon $$
     
     假设 WAT 成立，证明如果 $f$ 在 $[a, b]$ 上连续，那么存在一个多项式序列 $(p_n)$，使得 $p_n \rightarrow f$ 在 $[a, b]$ 上一致收敛。
 
-假设 WAT 成立的情况下，对 $\forall\ n \in \mathbb{N}$，存在多项式 $p_n$，使得 $\left|f(x)-p_n(x)\right|<\displaystyle\frac{1}{n}$。
+假设 WAT 成立的情况下，对 $\forall\ n \in \mathbb{N}$，存在多项式 $p_n$，使得 $|f(x)-p_n(x)|<\displaystyle\frac{1}{n}$。
 
-所以对 $\forall\ \varepsilon>0$，存在 $N>\displaystyle\frac{1}{\varepsilon}$，对 $\forall\ n>N$，$\forall\ x$ 在定义域内均有 $\left|f(x)-p_n(x)\right|<\displaystyle\frac{1}{n}<\varepsilon$。所以 $p_n\to f$ 在 $[a,b]$ 上一致收敛。
+所以对 $\forall\ \varepsilon>0$，存在 $N>\displaystyle\frac{1}{\varepsilon}$，对 $\forall\ n>N$，$\forall\ x$ 在定义域内均有 $|f(x)-p_n(x)|<\displaystyle\frac{1}{n}<\varepsilon$。所以 $p_n\to f$ 在 $[a,b]$ 上一致收敛。
 
 <br/>
 
@@ -1649,11 +1649,11 @@ $$ |f(x) - \phi(x)| < \varepsilon $$
     
     定理 6.7.3 证明的策略是首先在 $f$ 的图像上选择适当数量的点，然后证明对这些点进行折线插值能达到目的。
 
-依题意，$f$ 在 $[a,b]$ 上一致连续。所以对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，使得对 $\forall\ \left|x-y\right|\leq \delta$（这里取等方便后续讨论） 有 $\left|f(x)-f(y)\right|<\varepsilon$。
+依题意，$f$ 在 $[a,b]$ 上一致连续。所以对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，使得对 $\forall\ |x-y|\leq \delta$（这里取等方便后续讨论） 有 $|f(x)-f(y)|<\varepsilon$。
 
 一致连续给我们的灵感是，只要区间划分得足够小，那么一整个区间的函数值都变化不大，这给我们创造与之相近的折线函数提供了契机。
 
-所以在 $[a,b]$ 上作分割 $a=x_0<x_1<\cdots<x_n=b$ 使得对 $\forall\ i\in \left\{1,2,\ldots,n\right\}$，$x_i-x_{i-1}=\delta$，因此 $\forall\ x,y\in [x_{i-1},x_i]$ 均有 $\left|f(x)-f(y)\right|<\varepsilon$。
+所以在 $[a,b]$ 上作分割 $a=x_0<x_1<\cdots<x_n=b$ 使得对 $\forall\ i\in \left\{1,2,\ldots,n\right\}$，$x_i-x_{i-1}=\delta$，因此 $\forall\ x,y\in [x_{i-1},x_i]$ 均有 $|f(x)-f(y)|<\varepsilon$。
 
 现在我们将注意力放在任意的一个区间上，对 $\forall\ i\in \left\{1,2,\ldots,n\right\}$，令 $\phi(x)$ 为连接区间 $[x_{i-1},x_i]$ 两端点的线段即
 
@@ -1663,18 +1663,18 @@ $$\phi(x)=\displaystyle\frac{f(x_{i})-f(x_{i-1})}{x_i-x_{i-1}}(x-x_{i-1})+f(x_{i
 
 $$
 \begin{align*}
-    &\mathrel{\phantom{=}}\left|\phi(x)-f(x)\right|=\left|\displaystyle\frac{f(x_{i})-f(x_{i-1})}{x_i-x_{i-1}}(x-x_{i-1})+f(x_{i-1})-f(x)\right|\\
-    &=\displaystyle\frac{1}{x_i-x_{i-1}}\Bigl\lvert \bigl(f(x_i)-f(x_{i-1})\bigr)\left(x-x_{i-1}\right)+\bigl(f(x_{i-1})-f(x)\bigr)\left(x_i-x_{i-1}\right)\Bigr\rvert\\
-    &=\displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl\lvert \bigl(f(x_i)-f(x_{i-1})\bigr)\left(x-x_{i-1}\right)+\bigl(f(x_{i-1})-f(x)\bigr)\left(x_i-x\right)+\bigl(f(x_{i-1})-f(x)\bigr)\left(x-x_{i-1}\right)\Bigr\rvert\\
-    &=\displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl\lvert \bigl(f(x_{i})-f(x)\bigr)(x-x_{i-1})-\bigl(f(x)-f(x_{i-1})\bigr)(x_i-x)\Bigr\rvert\\
-    &\leq \displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl(\bigl|f(x_{i})-f(x)\bigr|\left(x-x_{i-1}\right)+\bigl|f(x)-f(x_{i-1})\bigr|\left(x_i-x\right)\Bigr)\\
-    &<\displaystyle\frac{1}{x_{i}-x_{i-1}}\bigl(\varepsilon\left(x-x_{i-1}\right)+\varepsilon\left(x_i-x\right)\bigr)=\varepsilon
+    &\mathrel{\phantom{=}}|\phi(x)-f(x)|=\left|\displaystyle\frac{f(x_{i})-f(x_{i-1})}{x_i-x_{i-1}}(x-x_{i-1})+f(x_{i-1})-f(x)\right|\\
+    &=\displaystyle\frac{1}{x_i-x_{i-1}}\Bigl| \bigl(f(x_i)-f(x_{i-1})\bigr)(x-x_{i-1})+\bigl(f(x_{i-1})-f(x)\bigr)(x_i-x_{i-1})\Bigr|\\
+    &=\displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl| \bigl(f(x_i)-f(x_{i-1})\bigr)(x-x_{i-1})+\bigl(f(x_{i-1})-f(x)\bigr)(x_i-x)+\bigl(f(x_{i-1})-f(x)\bigr)(x-x_{i-1})\Bigr|\\
+    &=\displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl| \bigl(f(x_{i})-f(x)\bigr)(x-x_{i-1})-\bigl(f(x)-f(x_{i-1})\bigr)(x_i-x)\Bigr|\\
+    &\leq \displaystyle\frac{1}{x_{i}-x_{i-1}}\Bigl(|f(x_{i})-f(x)|(x-x_{i-1})+|f(x)-f(x_{i-1})|(x_i-x)\Bigr)\\
+    &<\displaystyle\frac{1}{x_{i}-x_{i-1}}\bigl(\varepsilon (x-x_{i-1})+\varepsilon (x_i-x)\bigr)=\varepsilon
 \end{align*}
 $$
 
-所以在每个区间上都同理取这样的线段，组成 $[a,b]$ 上的函数 $\phi(x)$。对 $\forall\ x\in [a,b]$，$\exists\ i\in \left\{1,2,\cdots,n\right\}$ 使得 $x\in [x_{i-1},x_{i}]$。则对这个区间上的 $\phi(x)$ 有 $\left\lvert f(x)-\phi(x) \right\rvert<\varepsilon$。
+所以在每个区间上都同理取这样的线段，组成 $[a,b]$ 上的函数 $\phi(x)$。对 $\forall\ x\in [a,b]$，$\exists\ i\in \left\{1,2,\cdots,n\right\}$ 使得 $x\in [x_{i-1},x_{i}]$。则对这个区间上的 $\phi(x)$ 有 $|f(x)-\phi(x)|<\varepsilon$。
 
-综上，对 $\forall\ \varepsilon>0$，存在这样的 $\phi(x)$ 使得 $\left|f(x)-\phi(x)\right|<\varepsilon$ 对所有 $x\in [a,b]$ 成立。
+综上，对 $\forall\ \varepsilon>0$，存在这样的 $\phi(x)$ 使得 $|f(x)-\phi(x)|<\varepsilon$ 对所有 $x\in [a,b]$ 成立。
 
 <mark>附录</mark>
 
@@ -1684,13 +1684,13 @@ $$
 \phi(x)=\lambda\phi(x_{i})+(1-\lambda)\phi(x_{i-1})=\lambda f(x_i)+(1-\lambda)f(x_{i-1})
 $$
 
-这样看是不是清晰多了？令 $f(x)=\lambda f(x)+\left(1-\lambda\right)f(x)$，写成同比例的形式，正好能对应起来计算：
+这样看是不是清晰多了？令 $f(x)=\lambda f(x)+(1-\lambda)f(x)$，写成同比例的形式，正好能对应起来计算：
 
 $$
 \begin{align*}
-    \mathrel{\phantom{=}}\left\lvert \phi(x)-f(x) \right\rvert=&\bigl\lvert \lambda f(x_i)+(1-\lambda)f(x_{i-1})-\lambda f(x)-\left(1-\lambda\right)f(x) \bigr\rvert\\
-    =&\Bigl\lvert \lambda\bigl(f(x_i)-f(x)\bigr)+(1-\lambda)\bigl(f(x_{i-1})-f(x)\bigr) \Bigr\rvert\\
-    \leq&\lambda\bigl|f(x_i)-f(x)\bigr|+(1-\lambda)\bigl|f(x_{i-1})-f(x)\bigr|\\
+    \mathrel{\phantom{=}}|\phi(x)-f(x)|=&\bigl| \lambda f(x_i)+(1-\lambda)f(x_{i-1})-\lambda f(x)-(1-\lambda)f(x) \bigr|\\
+    =&\Bigl| \lambda\bigl(f(x_i)-f(x)\bigr)+(1-\lambda)\bigl(f(x_{i-1})-f(x)\bigr) \Bigr|\\
+    \leq&\lambda|f(x_i)-f(x)|+(1-\lambda)|f(x_{i-1})-f(x)|\\
     <&\lambda\varepsilon+(1-\lambda)\varepsilon=\varepsilon
 \end{align*}
 $$
@@ -1748,14 +1748,14 @@ $$
 我们在此利用一个常见的泰勒展开式来进行求解：
 
 $$
-\left(1+x\right)^\alpha=1+\displaystyle\sum_{n=1}^{\infty} \frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n
+(1+x)^\alpha=1+\displaystyle\sum_{n=1}^{\infty} \frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n
 $$
 
 令 $\alpha=\displaystyle\frac{1}{2}$，再将 $x$ 替换为 $-x$，就能得到我们满意的结果：
 
 $$
 \begin{align*}
-    f(x)=\left(1-x\right)^{\frac{1}{2}}=&1+\displaystyle\sum_{n=1}^{\infty} \frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n+1\right)}{n!}(-x)^n\\&=1+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{\left(-1\right)^n1\left(1-2\right)\cdots\bigl(1-2\left(n-1\right)\bigr)}{\left(2n\right)!!}x^n\\&=1+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{-1\cdot 3\cdot 5\cdots \bigl(2n-3\bigr)}{2\cdot 4\cdot 6\cdots 2n}x^n
+    f(x)=(1-x)^{\frac{1}{2}}=&1+\displaystyle\sum_{n=1}^{\infty} \frac{\frac{1}{2}(\frac{1}{2}-1)\cdots(\frac{1}{2}-n+1)}{n!}(-x)^n\\&=1+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{(-1)^n 1(1-2)\cdots(1-2(n-1))}{(2n)!!}x^n\\&=1+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{-1\cdot 3\cdot 5\cdots (2n-3)}{2\cdot 4\cdot 6\cdots 2n}x^n
 \end{align*}
 $$
 
@@ -1791,17 +1791,17 @@ $$ = \left( \frac{-1 \cdot 3 \cdot 5\cdots (2N - 1)}{2 \cdot 4 \cdot 6\cdots (2N
 
 $$
 \begin{align*}
-    E_N(x)&=\displaystyle\frac{f^{(N+1)}(c)}{N!}(x - c)^N x=\left(\displaystyle\frac{-1\cdot 3\cdot 5\cdots \left(2N-1\right)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}\right)\left(1-c\right)^{-(N+\frac{1}{2})}\left(x-c\right)^Nx\\&=\left(\displaystyle\frac{-1\cdot 3\cdot 5\cdots \left(2N-1\right)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}\right)\left(\displaystyle\frac{x-c}{1-c}\right)^N\left(\displaystyle\frac{x}{\sqrt{1-c}}\right)
+    E_N(x)&=\displaystyle\frac{f^{(N+1)}(c)}{N!}(x - c)^N x=\left(\displaystyle\frac{-1\cdot 3\cdot 5\cdots (2N-1)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}\right)(1-c)^{-(N+\frac{1}{2})}(x-c)^Nx\\&=\left(\displaystyle\frac{-1\cdot 3\cdot 5\cdots (2N-1)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}\right)\left(\displaystyle\frac{x-c}{1-c}\right)^N\left(\displaystyle\frac{x}{\sqrt{1-c}}\right)
 \end{align*}
 $$
 
-(b) 上述表达式中，$\displaystyle\frac{-1\cdot 3\cdot 5\cdots \left(2N-1\right)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}$ 和 $\displaystyle\frac{x}{\sqrt{1-c}}$ 都是有界量，所以证明收敛的关键在 $\left(\displaystyle\frac{x-c}{1-c}\right)^N$。
+(b) 上述表达式中，$\displaystyle\frac{-1\cdot 3\cdot 5\cdots (2N-1)}{2\cdot 4\cdot 6\cdots 2N \cdot 2}$ 和 $\displaystyle\frac{x}{\sqrt{1-c}}$ 都是有界量，所以证明收敛的关键在 $\left(\displaystyle\frac{x-c}{1-c}\right)^N$。
 
 $\displaystyle\frac{x-c}{1-c}=1-\displaystyle\frac{1-x}{1-c}$。将 $c$ 看作变量，利用此判断单调性。
 
 $x=0$ 时自然收敛。$0<x<1$ 时，$\displaystyle\frac{x-c}{1-c}>0$ 递减，所以在 $c=0$ 时为最大值 $x$。此时 $\left(\displaystyle\frac{x-c}{1-c}\right)^N<x^N$，故有 $\displaystyle\lim_{N\to \infty}\left(\displaystyle\frac{x-c}{1-c}\right)^N=0\Rightarrow\displaystyle\lim_{N\to \infty}E_N(x)=0$。
 
-$-1<x<0$ 时，$\displaystyle\frac{x-c}{1-c}<0$ 递减，所以在 $c=0$ 时绝对值取最大值 $\left\lvert x \right\rvert$，此时由于 $\left\lvert x \right\rvert<1$，同上也可得 $\displaystyle\lim_{N\to \infty}E_N(x)=0$。
+$-1<x<0$ 时，$\displaystyle\frac{x-c}{1-c}<0$ 递减，所以在 $c=0$ 时绝对值取最大值 $|x|$，此时由于 $|x|<1$，同上也可得 $\displaystyle\lim_{N\to \infty}E_N(x)=0$。
 
 综上，公式 (1) 对所有 $x\in (-1,1)$ 都成立。
 
@@ -1835,7 +1835,7 @@ $$
 
 $$
 \begin{align*}
-    c_n=\displaystyle\frac{\displaystyle\prod_{i=1}^{n}\left(2i-1\right)}{\displaystyle\prod_{i=1}^{n}2i}<\displaystyle\frac{\displaystyle\prod_{i=1}^{n}\left(2i-1\right)}{\displaystyle\prod_{i=1}^{n}\left(2i-1\right)\sqrt{2n+1}}=\displaystyle\frac{1}{\sqrt{2n+1}}
+    c_n=\displaystyle\frac{\displaystyle\prod_{i=1}^{n}(2i-1)}{\displaystyle\prod_{i=1}^{n}2i}<\displaystyle\frac{\displaystyle\prod_{i=1}^{n}(2i-1)}{\displaystyle\prod_{i=1}^{n}(2i-1)\sqrt{2n+1}}=\displaystyle\frac{1}{\sqrt{2n+1}}
 \end{align*}
 $$
 
@@ -1843,7 +1843,7 @@ $$
 
 (b) $a_n=\displaystyle\frac{-1\cdot 3\cdot 5\cdots (2n-3)}{2\cdot 4\cdot 6 \cdots 2n}=-\displaystyle\frac{c_n}{2n-1}$。$(n\geq 1)$
 
-所以 $\left\lvert a_n \right\rvert<\displaystyle\frac{1}{(2n-1)\sqrt{2n+1}}<\displaystyle\frac{1}{(2n-1)^{3/2}}$。由比较判别法，$\displaystyle\sum_{n=0}^{\infty}\left\lvert a_n \right\rvert< a_0+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{1}{(2n-1)^{3/2}}$ 收敛，所以 $\displaystyle\sum_{n=0}^{\infty}a_n$ 绝对收敛。
+所以 $|a_n|<\displaystyle\frac{1}{(2n-1)\sqrt{2n+1}}<\displaystyle\frac{1}{(2n-1)^{3/2}}$。由比较判别法，$\displaystyle\sum_{n=0}^{\infty}|a_n|< a_0+\displaystyle\sum_{n=1}^{\infty}\displaystyle\frac{1}{(2n-1)^{3/2}}$ 收敛，所以 $\displaystyle\sum_{n=0}^{\infty}a_n$ 绝对收敛。
 
 (c) 对于 $x=1$，$\displaystyle\sum_{n=0}^{\infty}a_nx^n=\displaystyle\sum_{n=0}^{\infty}a_n$ 绝对收敛，因此泰勒展开式在 $[-1,1]$ 上一致收敛，即连续。
 
@@ -1867,36 +1867,36 @@ $$
 
 (a) 将 $1-x$ 中的 $x$ 换成 $1-x^2$，得到相应的泰勒展开式：
 
-$\sqrt{x^2}=\displaystyle\sum_{n=0}^{\infty}a_n\left(1-x^2\right)^n$。
+$\sqrt{x^2}=\displaystyle\sum_{n=0}^{\infty}a_n(1-x^2)^n$。
 
 因为 $x\in [-1,1]$ 时，$1-x^2\in [0,1]$，而 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 在 $[0,1]$ 上一致收敛，所以这个新级数在 $[-1,1]$ 上同样一致收敛。
 
 这样就说明了上述等号的合理性，且对 $\forall\ \varepsilon>0$，$\exists\ N>0$，对 $\forall\ k>N$，$\forall\ x\in [-1,1]$，有
 
 $$
-\left\lvert \displaystyle\sum_{n=0}^{\infty}a_n\left(1-x^2\right)^n-\displaystyle\sum_{n=0}^{k}a_n\left(1-x^2\right)^n \right\rvert<\varepsilon
+\left| \displaystyle\sum_{n=0}^{\infty}a_n(1-x^2)^n-\displaystyle\sum_{n=0}^{k}a_n(1-x^2)^n \right|<\varepsilon
 $$
 
-于是取多项式 $q(x)=\displaystyle\sum_{n=0}^{N+1}a_n\left(1-x^2\right)^n$，再由上述等式，即得
+于是取多项式 $q(x)=\displaystyle\sum_{n=0}^{N+1}a_n(1-x^2)^n$，再由上述等式，即得
 
 $$
-\bigl\lvert \left\lvert x \right\rvert-q(x) \bigr\rvert<\varepsilon
+\bigl| |x|-q(x) \bigr|<\varepsilon
 $$
 
-(b) 任意区间上的 $\left\lvert x \right\rvert$ 与 $[-1,1]$ 上的形状其实大差不差。我们只要在包含 $[a,b]$ 的对称区间上逼近就能同时逼近此区间。
+(b) 任意区间上的 $|x|$ 与 $[-1,1]$ 上的形状其实大差不差。我们只要在包含 $[a,b]$ 的对称区间上逼近就能同时逼近此区间。
 
-令 $c=\max\left\{\left\lvert a \right\rvert,\left\lvert b \right\rvert\right\}$，则 $c>0$，所以 $[a,b]\subseteq [-c,c]$，我们准备在 $[-c,c]$ 上进行逼近。
+令 $c=\max\{|a|,|b|\}$，则 $c>0$，所以 $[a,b]\subseteq [-c,c]$，我们准备在 $[-c,c]$ 上进行逼近。
 
-$x\in [-c,c]$ 时，$\displaystyle\frac{x}{c}\in [-1,1]$，所以 $\displaystyle\sum_{n=0}^{\infty}a_n\left(1-\left(\displaystyle\frac{x}{c}\right)^2\right)^n$ 在 $[-c,c]$ 上一致收敛。又因为 $\left\lvert \displaystyle\frac{x}{c} \right\rvert=\displaystyle\frac{\left\lvert x \right\rvert}{c}=\displaystyle\sum_{n=0}^{\infty}a_n\left(1-\left(\displaystyle\frac{x}{c}\right)^2\right)^n$，所以同 (a)，对 $\forall\ \varepsilon>0$，存在多项式 $q\left(\displaystyle\frac{x}{c}\right)$ 使得
+$x\in [-c,c]$ 时，$\displaystyle\frac{x}{c}\in [-1,1]$，所以 $\displaystyle\sum_{n=0}^{\infty}a_n\left(1-\left(\displaystyle\frac{x}{c}\right)^2\right)^n$ 在 $[-c,c]$ 上一致收敛。又因为 $\left| \displaystyle\frac{x}{c} \right|=\displaystyle\frac{|x|}{c}=\displaystyle\sum_{n=0}^{\infty}a_n\left(1-\left(\displaystyle\frac{x}{c}\right)^2\right)^n$，所以同 (a)，对 $\forall\ \varepsilon>0$，存在多项式 $q\left(\displaystyle\frac{x}{c}\right)$ 使得
 
 $$
-\left\lvert \displaystyle\frac{\left\lvert x \right\rvert}{c}-q\left(\displaystyle\frac{x}{c}\right) \right\rvert<\displaystyle\frac{\varepsilon}{c}
+\left| \displaystyle\frac{|x|}{c}-q\left(\displaystyle\frac{x}{c}\right) \right|<\displaystyle\frac{\varepsilon}{c}
 $$
 
 再整理一下就能得到对应多项式 $cq\left(\displaystyle\frac{x}{c}\right)$:
 
 $$
-\left\lvert \left\lvert x \right\rvert-cq\left(\displaystyle\frac{x}{c}\right) \right\rvert<\varepsilon
+\left| |x|-cq\left(\displaystyle\frac{x}{c}\right) \right|<\varepsilon
 $$
 
 ---
@@ -1933,7 +1933,7 @@ $$
 
 (a) ![](https://calculus1437-github-io.pages.dev/images/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-06-11%20093449.png)
 
-(b) $h_a(x)=\displaystyle\frac{1}{2}\bigl(\left\lvert x-a \right\rvert+\left(x-a\right)\bigr)=\displaystyle\frac{1}{2}\left(x-a\right)+\displaystyle\frac{1}{2}\left\lvert x-a \right\rvert$，其中 $\displaystyle\frac{1}{2}\left(x-a\right)$ 是一个多项式，而 $\displaystyle\frac{1}{2}\left\lvert x-a \right\rvert$ 可以被一个多项式一致逼近，合起来就得到 $h_a(x)$ 也可以被多项式一致逼近。
+(b) $h_a(x)=\displaystyle\frac{1}{2}\bigl(|x-a|+(x-a)\bigr)=\displaystyle\frac{1}{2}(x-a)+\displaystyle\frac{1}{2}|x-a|$，其中 $\displaystyle\frac{1}{2}(x-a)$ 是一个多项式，而 $\displaystyle\frac{1}{2}|x-a|$ 可以被一个多项式一致逼近，合起来就得到 $h_a(x)$ 也可以被多项式一致逼近。
 
 (c) 在某个区间 $[a_{i-1},a_i]$ 上，根据 $h_{a_k}(x)$ 的定义，可以求得
 
@@ -1943,21 +1943,21 @@ $$
 
 这样，所有的区间都只被该区间与之前下标的 $h_{a_k}(x)$ 所影响，于是我们可以从左往右逐区间构造对应的 $h_{a_k}(x)$ 以满足要求。
 
-首先，对于 $x\in [a_0,a_1]$，$\phi(x)=\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}(x-a_0)+\phi(a_0)$，而 $h_{a_0}(x)=\displaystyle\frac{1}{2}\left(\left\lvert x-a_0 \right\rvert+\left(x-a_0\right)\right)=x-a_0$，是 $[a_0,a_1]$ 上的线性函数，我们给它调个角度就可以达到 $\phi(x)$ 的要求了。具体来说就是取斜率：令 $b_0=\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}$，那么就有
+首先，对于 $x\in [a_0,a_1]$，$\phi(x)=\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}(x-a_0)+\phi(a_0)$，而 $h_{a_0}(x)=\displaystyle\frac{1}{2}\bigl(|x-a_0|+(x-a_0)\bigr)=x-a_0$，是 $[a_0,a_1]$ 上的线性函数，我们给它调个角度就可以达到 $\phi(x)$ 的要求了。具体来说就是取斜率：令 $b_0=\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}$，那么就有
 
 $$
 \phi(x)=\phi(-1)+b_0h_{a_0}(x)\quad \bigl(x\in [a_0,a_1]\bigr)
 $$
 
-接下来，对于 $x\in [a_1,a_2]$，$\phi(x)=\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}(x-a_1)+\phi(a_1)$，而 $h_{a_1}(x)=\displaystyle\frac{1}{2}\left(\left\lvert x-a_1 \right\rvert+\left(x-a_1\right)\right)=x-a_1$，跟上面一样。这时候 $h_{a_1}(x)$ 仍然是作为一个调斜率的工具，用来调整前面区间 $h_{a_0}(x)$ 带来的影响。
+接下来，对于 $x\in [a_1,a_2]$，$\phi(x)=\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}(x-a_1)+\phi(a_1)$，而 $h_{a_1}(x)=\displaystyle\frac{1}{2}\bigl(|x-a_1|+(x-a_1)\bigr)=x-a_1$，跟上面一样。这时候 $h_{a_1}(x)$ 仍然是作为一个调斜率的工具，用来调整前面区间 $h_{a_0}(x)$ 带来的影响。
 
 $$
 \begin{align*}
-    \phi(x)&=\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}\left(x-a_1\right)+\phi(a_1)\\
-    &=\phi(a_0)+\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}\left(x-a_1\right)+\phi(a_1)-\phi(a_0)\\
-    &=\phi(-1)+b_0h_{a_0}(x)-\left(\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}\left(x-a_0\right)-\bigl(\phi(a_1)-\phi(a_0)\bigr)\right)+\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}\left(x-a_1\right)\\
-    &=\phi(-1)+b_0h_{a_0}(x)+\left(\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}-\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}\right)\left(x-a_1\right)\\
-    &=\phi(-1)+b_0h_{a_0}(x)+\left(\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}-b_0\right)\left(x-a_1\right)
+    \phi(x)&=\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}(x-a_1)+\phi(a_1)\\
+    &=\phi(a_0)+\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}(x-a_1)+\phi(a_1)-\phi(a_0)\\
+    &=\phi(-1)+b_0h_{a_0}(x)-\left(\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}(x-a_0)-(\phi(a_1)-\phi(a_0))\right)+\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}(x-a_1)\\
+    &=\phi(-1)+b_0h_{a_0}(x)+\left(\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}-\displaystyle\frac{\phi(a_1)-\phi(a_0)}{a_1-a_0}\right)(x-a_1)\\
+    &=\phi(-1)+b_0h_{a_0}(x)+\left(\displaystyle\frac{\phi(a_2)-\phi(a_1)}{a_2-a_1}-b_0\right)(x-a_1)
 \end{align*}
 $$
 
@@ -2001,11 +2001,11 @@ $$
 
 (d) 由前面的论述，每个 $h_{a_i}(x)$ 均能被多项式一致逼近，所以它们的线性和再加上个常数，即上面 $\phi(x)$ 的形式，当然能被多项式一致逼近。
 
-所以对任意连续函数 $f:[-1,1]\to \mathbb{R}$，对任意 $\varepsilon>0$，存在一个折线函数 $\phi$ 使得对 $\forall\ x\in [-1,1]$，$\bigl\lvert f(x)-\phi(x) \bigr\rvert<\displaystyle\frac{\varepsilon}{2}$。
+所以对任意连续函数 $f:[-1,1]\to \mathbb{R}$，对任意 $\varepsilon>0$，存在一个折线函数 $\phi$ 使得对 $\forall\ x\in [-1,1]$，$|f(x)-\phi(x)|<\displaystyle\frac{\varepsilon}{2}$。
 
-而对上述的 $\varepsilon$，又存在一个多项式 $p(x)$，使得对上述 $\phi(x)$，对 $\forall\ x\in [-1,1]$，有 $\bigl\lvert \phi(x)-p(x) \bigr\rvert<\displaystyle\frac{\varepsilon}{2}$。
+而对上述的 $\varepsilon$，又存在一个多项式 $p(x)$，使得对上述 $\phi(x)$，对 $\forall\ x\in [-1,1]$，有 $|\phi(x)-p(x)|<\displaystyle\frac{\varepsilon}{2}$。
 
-所以对 $\forall\ x\in [-1,1]$，$\bigl\lvert f(x)-p(x) \bigr\rvert\leq \bigl\lvert f(x)-\phi(x) \bigr\rvert+\bigl\lvert \phi(x)-p(x) \bigr\rvert<\varepsilon$。我们证明了 $[-1,1]$ 上的 WAT。
+所以对 $\forall\ x\in [-1,1]$，$|f(x)-p(x)|\leq |f(x)-\phi(x)|+|\phi(x)-p(x)|<\varepsilon$。我们证明了 $[-1,1]$ 上的 WAT。
 
 要将结论推广到 $[a,b]$，我们需要补充 $\phi(x)$ 在此区间上的多项式逼近性。幸运的是，我们已经证明了 $[a,b]$ 上的绝对值函数也能被多项式一致逼近，这样同上，我们就能得到结论了。
 
@@ -2021,25 +2021,25 @@ $$
 
 令 $f(x)=\sin\left(\displaystyle\frac{1}{x}\right)$，$x \in (0,1)$。它在 $0$ 的邻域上震荡极其剧烈，而多项式在此处表现出非常稳定的特性，由此我们给出证明。
 
-假设对某个 $0<\varepsilon<\displaystyle\frac{1}{10^9}$，存在一个多项式 $p(x)$ 使得 $\bigl\lvert f(x)-p(x) \bigr\rvert<\varepsilon$ 对 $\forall\ x\in (0,1)$ 成立，现在考察 $0$ 处邻域：
+假设对某个 $0<\varepsilon<\displaystyle\frac{1}{10^9}$，存在一个多项式 $p(x)$ 使得 $|f(x)-p(x)|<\varepsilon$ 对 $\forall\ x\in (0,1)$ 成立，现在考察 $0$ 处邻域：
 
-对上述的 $\varepsilon$，存在 $\delta>0$ 使得对 $\forall\ x\in (0,\delta)$，$\bigl\lvert p(x)-p(0) \bigr\rvert<\varepsilon$，与上式联立即得 $\bigl\lvert f(x)-p(0) \bigr\rvert<2\varepsilon$。
+对上述的 $\varepsilon$，存在 $\delta>0$ 使得对 $\forall\ x\in (0,\delta)$，$|p(x)-p(0)|<\varepsilon$，与上式联立即得 $|f(x)-p(0)|<2\varepsilon$。
 
-现在，由于 $\exists\ x_1,x_2\in (0,\delta)$，使得 $f(x_1)=1$，$f(x_2)=-1$，那么 $\bigl\lvert f(x_1)-p(0) \bigr\rvert<2\varepsilon$，$\bigl\lvert f(x_2)-p(0) \bigr\rvert<2\varepsilon$，再联立得 $\bigl\lvert f(x_1)-f(x_2) \bigr\rvert<4\varepsilon$，矛盾。
+现在，由于 $\exists\ x_1,x_2\in (0,\delta)$，使得 $f(x_1)=1$，$f(x_2)=-1$，那么 $|f(x_1)-p(0)|<2\varepsilon$，$|f(x_2)-p(0)|<2\varepsilon$，再联立得 $|f(x_1)-f(x_2)|<4\varepsilon$，矛盾。
 
 所以 WAT 在开区间上不成立。
 
-<mark>我们还可以从另一个角度考虑。</mark>假设 $f(x)$ 满足 WAT ，则存在一个多项式序列 $\left\{p_n\right\}$ 一致收敛于 $f(x)$。因为任意的多项式在 $[a,b]$ 上均一致连续，所以 $p_n$ 在 $(a,b)$ 上也一致连续。现在的关键就是，如果能证明一致连续的序列一致收敛到的函数一定也是一致连续的，就能直接证明 $(a,b)$ 上连续但不一致连续的函数不满足 WAT 了。
+<mark>我们还可以从另一个角度考虑。</mark>假设 $f(x)$ 满足 WAT ，则存在一个多项式序列 $\{p_n\}$ 一致收敛于 $f(x)$。因为任意的多项式在 $[a,b]$ 上均一致连续，所以 $p_n$ 在 $(a,b)$ 上也一致连续。现在的关键就是，如果能证明一致连续的序列一致收敛到的函数一定也是一致连续的，就能直接证明 $(a,b)$ 上连续但不一致连续的函数不满足 WAT 了。
 
-由一致收敛，对 $\forall\ \varepsilon>0$，$\exists\ N\in \mathbb{N^+}$，使得 $\bigl\lvert p_N(x)-f(x) \bigr\rvert<\displaystyle\frac{\varepsilon}{3}$，对 $\forall\ x\in (a,b)$ 成立。
+由一致收敛，对 $\forall\ \varepsilon>0$，$\exists\ N\in \mathbb{N^+}$，使得 $|p_N(x)-f(x)|<\displaystyle\frac{\varepsilon}{3}$，对 $\forall\ x\in (a,b)$ 成立。
 
-由一致连续，对 $\exists\ \delta>0$，使得对 $\forall\ \left\lvert x-y \right\rvert<\delta$，$\bigl\lvert p_N(x)-p_N(y) \bigr\rvert<\displaystyle\frac{\varepsilon}{3}$。
+由一致连续，对 $\exists\ \delta>0$，使得对 $\forall\ |x-y|<\delta$，$|p_N(x)-p_N(y)|<\displaystyle\frac{\varepsilon}{3}$。
 
-现在，我们有 $\bigl\lvert p_N(x)-f(x) \bigr\rvert<\displaystyle\frac{\varepsilon}{3}$，$\bigl\lvert p_N(y)-f(y) \bigr\rvert<\displaystyle\frac{\varepsilon}{3}$ 和 $\bigl\lvert p_N(x)-p_N(y) \bigr\rvert<\displaystyle\frac{\varepsilon}{3}$，三者联合便得到 $\bigl\lvert f(x)-f(y) \bigr\rvert<\varepsilon$，所以 $f$ 在 $(a,b)$ 上一致连续。
+现在，我们有 $|p_N(x)-f(x)|<\displaystyle\frac{\varepsilon}{3}$，$|p_N(y)-f(y)|<\displaystyle\frac{\varepsilon}{3}$ 和 $|p_N(x)-p_N(y)|<\displaystyle\frac{\varepsilon}{3}$，三者联合便得到 $|f(x)-f(y)|<\varepsilon$，所以 $f$ 在 $(a,b)$ 上一致连续。
 
-<mark>当然这里还有一个速证，</mark>若 $\left\{p_n\right\}$ 在 $(a,b)$ 上一致收敛，如果能证得 $\left\{p_n\right\}$ 在 $[a,b]$ 上也一致收敛的话，那么它将收敛到一个闭区间上连续的函数 $F$，而 $F$ 和 $f$ 在 $(a,b)$ 上是相同的，由 $F$ 一致连续就能推及 $f$ 一致连续了。下面给出证明：
+<mark>当然这里还有一个速证，</mark>若 $\{p_n\}$ 在 $(a,b)$ 上一致收敛，如果能证得 $\{p_n\}$ 在 $[a,b]$ 上也一致收敛的话，那么它将收敛到一个闭区间上连续的函数 $F$，而 $F$ 和 $f$ 在 $(a,b)$ 上是相同的，由 $F$ 一致连续就能推及 $f$ 一致连续了。下面给出证明：
 
-若 $\left\{p_n\right\}$ 在 $(a,b)$ 上一致收敛，则对 $\forall\ \varepsilon>0$，$\exists\ N\in \mathbb{N^+}$，对 $\forall\ m,n>N$，$\forall\ x\in (a,b)$，均有 $\bigl\lvert p_m(x)-p_n(x) \bigr\rvert<\varepsilon$。由连续性可得在 $x\in \left\{a,b\right\}$ 处也有 $\bigl\lvert p_m(x)-p_n(x) \bigr\rvert\leq \varepsilon$，这就得到 $\left\{p_n\right\}$ 在 $[a,b]$ 上同样一致收敛于 $F$，且 $F=f$（$x\in (a,b)$），然后 $F$ 在 $[a,b]$ 上连续 $\Rightarrow$ $F$ 在 $[a,b]$ 上一致连续 $\Rightarrow$ $F$ 在 $(a,b)$ 上一致连续 $\Rightarrow$ $f$ 在 $(a,b)$ 上一致连续。
+若 $\{p_n\}$ 在 $(a,b)$ 上一致收敛，则对 $\forall\ \varepsilon>0$，$\exists\ N\in \mathbb{N^+}$，对 $\forall\ m,n>N$，$\forall\ x\in (a,b)$，均有 $|p_m(x)-p_n(x)|<\varepsilon$。由连续性可得在 $x\in \{a,b\}$ 处也有 $|p_m(x)-p_n(x)|\leq \varepsilon$，这就得到 $\{p_n\}$ 在 $[a,b]$ 上同样一致收敛于 $F$，且 $F=f$（$x\in (a,b)$），然后 $F$ 在 $[a,b]$ 上连续 $\Rightarrow$ $F$ 在 $[a,b]$ 上一致连续 $\Rightarrow$ $F$ 在 $(a,b)$ 上一致连续 $\Rightarrow$ $f$ 在 $(a,b)$ 上一致连续。
 
 (b) 有大量的多项式在 $[a,+\infty)$ 上本来就是不一致连续的，所以从一致连续的角度恐怕无法证明。不过与上述相对的是，多项式在 $x$ 很大的时候表现得非常不稳定，具体来言是值总会趋向正负无穷，而有极大量的函数是有界的。只要证明出前者，就很容易能找到反例了。
 
@@ -2067,7 +2067,7 @@ $$
 
 (3) 最后再进行拼合，在这些基础上构造一个能满足四则运算组合的可数集 $\mathcal{C}$。
 
-(1) 对 $[a,b]$ 上任意的连续函数 $f$：对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，对 $\forall\ \left\lvert x-y \right\rvert<\delta$ 有 $\bigl\lvert f(x)-f(y) \bigr\rvert<\varepsilon$。
+(1) 对 $[a,b]$ 上任意的连续函数 $f$：对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，对 $\forall\ |x-y|<\delta$ 有 $|f(x)-f(y)|<\varepsilon$。
 
 现在，取 $(a,b)$ 中有限个有理数点与 $a,b$ 两端点 $a=p_0<p_1<p_2<\cdots<p_n=b$ 对 $[a,b]$ 进行区间分割，使得对 $\forall\ i\in [0,n-1]$，有 $p_{i+1}-p_i<\delta$。现在，令 $\phi(x)$ 为每个子区间上 $f$ 两端点连接而成的线段所拼合而成的 $[a,b]$ 上的折线函数，即
 
@@ -2075,7 +2075,7 @@ $$
 \phi(x)=\displaystyle\frac{f(p_{i+1})-f(p_i)}{p_{i+1}-p_i}(x-p_i)+f(p_i)\quad \bigl(x\in [p_i,p_{i+1}]\bigr)
 $$
 
-则由题 [$6.7.2$](#6.7.2) 论述，对 $\forall\ x\in [a,b]$，$\bigl\lvert \phi(x)-f(x) \bigr\rvert<\varepsilon$。再由题 [$6.7.8$](#6.7.8)，$\exists\ b_{p_0}, b_{p_1}, \ldots, b_{p_n}\in \mathbb{R}$ 使得
+则由题 [$6.7.2$](#6.7.2) 论述，对 $\forall\ x\in [a,b]$，$|\phi(x)-f(x)|<\varepsilon$。再由题 [$6.7.8$](#6.7.8)，$\exists\ b_{p_0}, b_{p_1}, \ldots, b_{p_n}\in \mathbb{R}$ 使得
 
 $$
 \phi(x)=\phi(p_0)+\displaystyle\sum_{i=0}^{n-1}b_{p_i}h_{p_i}(x)\quad \bigl(x\in [a,b]\bigr)
@@ -2083,10 +2083,10 @@ $$
 
 这样 $\phi(x)$ 就化为了 $\mathcal{D}$ 中函数的线性组合了。（当然，我们多了一个常数，这将在多项式中补齐）
 
-(2) 由 [$6.7.8$](#6.7.8)，对 $\forall\ h_{p_i}(x)\in \mathcal{D}$，均存在一个一致收敛于它的多项式序列 $\left\{p_{i_n}\right\}$。我们的任务是提取出它的一个可数子列，一种方法是提出这样的 $\left\{p_{i_{k}}\right\}$：
+(2) 由 [$6.7.8$](#6.7.8)，对 $\forall\ h_{p_i}(x)\in \mathcal{D}$，均存在一个一致收敛于它的多项式序列 $\{p_{i_n}\}$。我们的任务是提取出它的一个可数子列，一种方法是提出这样的 $\{p_{i_{k}}\}$：
 
 $$
-\bigl\lvert h_{p_{i}}(x)-p_{i_{k}}(x) \bigr\rvert<\displaystyle\frac{1}{k} \quad \bigl(x\in [a,b]\bigr)
+|h_{p_{i}}(x)-p_{i_{k}}(x)|<\displaystyle\frac{1}{k} \quad \bigl(x\in [a,b]\bigr)
 $$
 
 这样每一个 $h_{p_{i}}$ 都对应着一个拟合它的可数多项式序列。$\mathcal{D}$ 本身也是可数的。而我们知道 $\mathbb{N}^2$ 是可数集，于是这些多项式的集合 $\mathcal{B}$ 也是可数集。
@@ -2101,7 +2101,7 @@ $$
 
 I. 有理数集 $\mathbb{Q}$，它是特殊的多项式；
 
-II. 每一个 $h_{p_i}$ 所对应的多项式逼近子列 $\left\{p_{i_k}\right\}$；
+II. 每一个 $h_{p_i}$ 所对应的多项式逼近子列 $\{p_{i_k}\}$；
 
 III. 所有 $p_{i_{k}}$ 间的任意有限线性组合，其中系数均为有理数。
 
@@ -2117,31 +2117,31 @@ III. 所有 $p_{i_{k}}$ 间的任意有限线性组合，其中系数均为有�
 
 这道问题用定积分会比较好做，这里给出一种用中值定理代替，但本质相同的解法。
 
-由 $f'$ 在 $[a,b]$ 上连续，存在多项式 $q(x)$ 使得 $\bigl\lvert f'(x)-q(x) \bigr\rvert<\varepsilon$。
+由 $f'$ 在 $[a,b]$ 上连续，存在多项式 $q(x)$ 使得 $|f'(x)-q(x)|<\varepsilon$。
 
 直观上看，两个导数相差很小的函数，它们本身的变化趋势也相差不大，所以现在的目标是，在 $q(x)$ 众多的原函数中，找一个合适一些的。
 
-$q(x)$ 原函数的存在性可以通过逐项导数来证明。所以，设多项式 $Q(x)$ 满足 $Q'(x)=q(x)$，则上式可化为 $\bigl\lvert f'(x)-Q'(x) \bigr\rvert<\varepsilon$。
+$q(x)$ 原函数的存在性可以通过逐项导数来证明。所以，设多项式 $Q(x)$ 满足 $Q'(x)=q(x)$，则上式可化为 $|f'(x)-Q'(x)|<\varepsilon$。
 
 接下来的思路是使用中值定理将它们与原函数联系起来（当然最关键的还是增量分析）。一种控制中值定理中 $\xi$ 方式是将 $f(x)-Q(x)$ 当作一个整体，这样就有
 
 $$
-\bigl(f(x)-Q(x)\bigr)-\bigl(f(a)-Q(a)\bigr)=\left(x-a\right)\bigl(f'(\xi)-Q'(\xi)\bigr)\quad \bigl(\xi\in (a,x)\bigr)
+\bigl(f(x)-Q(x)\bigr)-\bigl(f(a)-Q(a)\bigr)=(x-a)\bigl(f'(\xi)-Q'(\xi)\bigr)\quad \bigl(\xi\in (a,x)\bigr)
 $$
 
 所以
 
 $$
-\Bigl\lvert \bigl(f(x)-Q(x)\bigr)-\bigl(f(a)-Q(a)\bigr) \Bigr\rvert<|x-a|\varepsilon\leq (b-a)\varepsilon
+\bigl| (f(x)-Q(x)) - (f(a)-Q(a)) \bigr|<|x-a|\varepsilon\leq (b-a)\varepsilon
 $$
 
 令 $p(x)=Q(x)+f(a)-Q(a)$，则 $p(x)$ 也是多项式，且 $p'(x)=Q'(x)=q(x)$，所以就有
 
 $$
-\bigl\lvert f(x)-p(x) \bigr\rvert<\left(b-a\right)\varepsilon\quad \text{并且} \quad \bigl\lvert f'(x)-p'(x) \bigr\rvert<\varepsilon \tag{1}
+|f(x)-p(x)|<(b-a)\varepsilon\quad \text{并且} \quad |f'(x)-p'(x)|<\varepsilon \tag{1}
 $$
 
-对 $\forall\ \varepsilon>0$，取 $\varepsilon_{1}>0$ 满足 $\max\left\{\left(b-a\right)\varepsilon_{1},\varepsilon_{1}\right\}<\varepsilon$，将 $\varepsilon_{1}$ 用于上述推导得到 $(1)$ 式，即得结论
+对 $\forall\ \varepsilon>0$，取 $\varepsilon_{1}>0$ 满足 $\max\{(b-a)\varepsilon_{1},\varepsilon_{1}\}<\varepsilon$，将 $\varepsilon_{1}$ 用于上述推导得到 $(1)$ 式，即得结论
 
 $$ 
 |f(x) - p(x)| < \varepsilon \quad \text{并且} \quad |f'(x) - p'(x)| < \varepsilon 

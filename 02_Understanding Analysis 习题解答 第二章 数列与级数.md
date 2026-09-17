@@ -1328,12 +1328,31 @@ $$
 
 ## 习题 2.8 双重求和与无穷级数的乘积
 
-$2.8$ 节的习题旨在探索级数乘积的求和条件，我会在对应习题的后面简要说明它对应的探索步骤。
+给定一个双索引的实数数组 $\left\{  {{a}_{ij} : i,j \in  \mathbb{N}}\right\}$ ，我们在第2.1节节中发现，定义 $\mathop{\sum }\limits_{{i,j = 1}}^{\infty }{a}_{ij}$ 是危险的、容易出现歧义的。先对一个变量求和，然后再对另一个变量求和的求和法称为迭代求和。在我们的具体例子中，先对行求和然后再对这些行和求和，与先计算每列的和并将这些列和相加，产生的结果是不同的。
+
+简而言之，
+
+$$
+\mathop{\sum }\limits_{{j = 1}}^{\infty }\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij} \neq  \mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij}
+$$
+
+还有其他方法可以合理地定义 $\mathop{\sum }\limits_{{i,j = 1}}^{\infty }{a}_{ij}$ 。一个自然的想法是通过在数组中越来越大的“矩形”内将有限数量的项相加来计算一种部分和；也就是说，对于 $m,n \in  \mathbb{N}$ ，设定
+
+$$
+{s}_{mn} = \mathop{\sum }\limits_{{i = 1}}^{m}\mathop{\sum }\limits_{{j = 1}}^{n}{a}_{ij}
+$$
+
+这里求和的顺序无关紧要，因为求和是有限的。我们讨论中特别感兴趣的是 ${s}_{nn}$ (“正方形”上的和)，它们构成了一个由 $n$ 索引的合法序列，因此可以应用我们的定理和定义。例如，如果序列 $\left( {s}_{nn}\right)$ 收敛，我们可能希望定义
+
+$$
+\mathop{\sum }\limits_{{i,j = 1}}^{\infty }{a}_{ij} = \mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn}
+$$
+
+<br/>
 
 !!! question "练习 2.8.1"
-    使用第2.1节中的特定数组 \(\left( {a}_{ij}\right)\) ，计算 \(\mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn}\) 。这个值与已经计算的两个迭代和值相比如何？
-    
-    如何定义双重求和的问题与第2.7节末尾讨论的重排主题之间存在深刻的相似性。两者都涉及到无限设置中加法的交换性。对于重排，解决方案是增加了绝对收敛的假设，同样的方法适用于双重求和也就不足为奇了。在绝对收敛的假设下，讨论的每种计算双重和值的方法都会得到相同的结果。
+
+    使用第2.1节中的特定数组 $\left( {a}_{ij}\right)$ ，计算 $\mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn}$ 。这个值与已经计算的两个迭代和值相比如何？
 
 $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\displaystyle\frac{1}{2^{n-1}}\right)=-2+\displaystyle\frac{1}{2^{n-1}}$
 
@@ -1341,9 +1360,14 @@ $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\disp
 
 <br/>
 
+<hr>
+
+如何定义双重求和的问题与第2.7节末尾讨论的重排主题之间存在深刻的相似性。两者都涉及到无限设置中加法的交换性。对于重排，解决方案是增加了绝对收敛的假设，同样的方法适用于双重求和也就不足为奇了。在绝对收敛的假设下，讨论的每种计算双重和值的方法都会得到相同的结果。
+
+<br/>
+
 !!! question "练习 2.8.2"
-    （双重级数绝对收敛 $\Rightarrow$ 本身收敛）
-    
+
     证明如果迭代级数
     
     $$
@@ -1357,7 +1381,6 @@ $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\disp
     $$
     
     收敛。
-
 
 下为二维数列 $\{a_{ij}\}$ 的无限方形数表，其中把每一行的和记为 $c_{i}$：
 
@@ -1389,13 +1412,35 @@ $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\disp
 
 <br/>
 
+<hr>
+
+设 $\left\{  {{a}_{ij} : i,j \in  N}\right\}$ 为一个双索引的实数数组。如果
+
+$$
+\mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }\left| {a}_{ij}\right|
+$$
+
+收敛，则 $\mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij}$ 和 $\mathop{\sum }\limits_{{j = 1}}^{\infty }\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}$ 都收敛到相同的值。此外，
+
+$$
+\mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn} = \mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij} = \mathop{\sum }\limits_{{j = 1}}^{\infty }\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}
+$$
+
+其中 ${s}_{nn} = \mathop{\sum }\limits_{{i = 1}}^{n}\mathop{\sum }\limits_{{j = 1}}^{n}{a}_{ij}$
+
+与我们在方程~式(eq:2.3)中定义“矩形部分和” ${s}_{mn}$ 的方式相同，定义
+
+$$
+{t}_{mn} = \mathop{\sum }\limits_{{i = 1}}^{m}\mathop{\sum }\limits_{{j = 1}}^{n}\left| {a}_{ij}\right| .
+$$
+
+<br/>
+
 !!! question "练习 2.8.3"
-    （考察 $n\times n$  区域求和的收敛性）
-    
+
     (a) 证明集合 $\left\{  {{t}_{mn} : m,n \in  \mathbb{N}}\right\}$ 有上界，并利用这一事实得出结论:序列 $\left( {t}_{nn}\right)$ 收敛。
     
     (b) 现在，利用 $\left( {t}_{nn}\right)$ 是Cauchy列这一事实，论证 $\left( {s}_{nn}\right)$ 也是Cauchy列，因此收敛。
-
 
 (a) 使用 $2.8.2.$ 中一样的条件，则 $\displaystyle\sum_{i=1}^{\infty}b_i$ 是有界的，即存在 $M>0$，使得对任意的 $m\in \mathbb{N^+}$，都有 $\displaystyle\sum_{i=1}^{m}b_i \leq M$。
 
@@ -1413,9 +1458,36 @@ $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\disp
 
 <br/>
 
+<hr>
+
+我们现在可以设
+
+$$
+S = \mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn}
+$$
+
+为了证明该定理，我们必须证明这两个迭代和收敛到相同的极限。我们将首先证明
+
+$$
+S = \mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij}
+$$
+
+因为 $\left\{  {{t}_{mn} : m,n \in  \mathbb{N}}\right\}$ 有上界，我们可以设
+
+$$
+B = \sup \left\{  {{t}_{mn} : m,n \in  \mathbb{N}}\right\}  .
+$$
+
+设 $\varepsilon  > 0$ 为任意值。因为 $B$ 是该集合的最小上界，我们知道存在一个特定的 ${t}_{{m}_{0}{n}_{0}}$ 满足
+
+$$
+B - \frac{\varepsilon }{2} < {t}_{{m}_{0}{n}_{0}} \leq  B
+$$
+
+<br/>
+
 !!! question "练习 2.8.4"
-    （说明 $m\times n$ 区域求和的有界性）
-    
+
     (a) 论证存在一个 ${N}_{1} \in  \mathbb{N}$ ，使得 $m,n \geq  {N}_{1}$ 蕴含 $B - \frac{\varepsilon }{2} < {t}_{mn} \leq  B$ 。
     
     (b) 现在，证明存在一个 $N$ ，使得
@@ -1425,7 +1497,6 @@ $s_{nn}=-1\left(1+\displaystyle\frac{1}{2}+\displaystyle\frac{1}{4}+\cdots+\disp
     $$
     
     对于所有 $m,n \geq  N$ 。
-
 
 (a) 取 $N_1>\max\{m_0,n_0\}$，由 $|a_{ij}|$ 的非负性可得 $\forall\ m,n>N_1$，$B-\displaystyle\frac{\varepsilon}{2}<t_{m_0n_0}\leq t_{mn}\leq B$。
 
@@ -1449,9 +1520,20 @@ $$
 
 <br/>
 
+<hr>
+
+暂时将 $m \in  \mathbb{N}$ 视为固定，并将 ${s}_{mn}$ 写为
+
+$$
+{s}_{mn} = \mathop{\sum }\limits_{{j = 1}}^{n}{a}_{1j} + \mathop{\sum }\limits_{{j = 1}}^{n}{a}_{2j} + \cdots  + \mathop{\sum }\limits_{{j = 1}}^{n}{a}_{mj}.
+$$
+
+我们的假设保证对于每个固定的行 $i$ ，级数 $\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij}$ 绝对收敛到某个实数 ${r}_{i}$ 。
+
+<br/>
+
 !!! question "练习 2.8.5"
-    （利用上题估计出的界限，横纵求两次极限得出结论）
-    
+
     (a) 使用代数极限定理(定理 2.3.3)和序极限定理(定理 2.3.4)来证明对于所有 $m \geq  N$
     
     $$
@@ -1459,7 +1541,6 @@ $$
     $$
     
     得出结论，迭代和 $\mathop{\sum }\limits_{{i = 1}}^{\infty }\mathop{\sum }\limits_{{j = 1}}^{\infty }{a}_{ij}$ 收敛于 $S$ 。
-
 
 因为 $|s_{mn}-S|<\varepsilon$，所以由序极限定理，对 $\forall\ m>N$，
 
@@ -1481,11 +1562,8 @@ $$
 <br/>
 
 !!! question "练习 2.8.6"
-    （运用前面所有的结论，纵横求两次极限，得到横纵求和与纵横求和结果相同的结论）
-    
-    通过证明另一个迭代和 $\mathop{\sum }\limits_{{j = 1}}^{\infty }\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}$ 也收敛于 $S$ 来完成证明。
-    注意，一旦确定对于每个固定列 $j$ ，和 $\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}$ 收敛于某个实数 ${c}_{i}$ ，就可以使用相同的论证。
 
+    通过证明另一个迭代和 $\mathop{\sum }\limits_{{j = 1}}^{\infty }\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}$ 也收敛于 $S$ 来完成证明。注意，一旦确定对于每个固定列 $j$ ，和 $\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{ij}$ 收敛于某个实数 ${c}_{i}$ ，就可以使用相同的论证。
 
 仿照上题，首先对 $\forall\ n>N$，$\displaystyle\lim_{m\to\infty}|s_{mn}-S|\leq \varepsilon$；
 
@@ -1497,13 +1575,29 @@ $$
 
 <br/>
 
+<hr>
+
+计算双重求和的最后一种常见方法是沿着 $i + j$ 等于常数的对角线求和。给定一个双重索引数组 $\left\{  {a}_{ij}\right.$ : $i,j \in  N\}$ ，令
+
+$$
+{d}_{2} = {a}_{11},\;{d}_{3} = {a}_{12} + {a}_{21},\;{d}_{4} = {a}_{13} + {a}_{22} + {a}_{31},
+$$
+
+并设
+
+$$
+{d}_{k} = {a}_{1,k - 1} + {a}_{2,k - 2} + \cdots  + {a}_{k - 1,1}.
+$$
+
+那么， $\mathop{\sum }\limits_{{k = 2}}^{\infty }{d}_{k}$ 代表了另一种对数组中每个 ${a}_{ij}$ 求和的合理方法。
+
+<br/>
+
 !!! question "练习 2.8.7"
-    （这一题为下面叙述级数之积求和做铺垫）
-    
+
     (a) 假设定理 2.8.1 的假设——以及结论——成立，证明 $\mathop{\sum }\limits_{{k = 2}}^{\infty }{d}_{k}$ 绝对收敛。
     
     (b) 模仿定理 2.8.1 证明中的策略，证明 $\mathop{\sum }\limits_{{k = 2}}^{\infty }{d}_{k}$ 收敛于 $S = \mathop{\lim }\limits_{{n \rightarrow  \infty }}{s}_{nn}$ 。
-
 
 (a) 由绝对值不等式，$0\leq \displaystyle\sum_{k=2}^{n+1}|d_k|\leq t_{nn}$。
 
@@ -1535,7 +1629,32 @@ $$
 
 <br/>
 
+<hr>
+
+### 级数的乘积
+
+在级数的代数极限定理(定理~定理2.7.1)中，明显缺少关于两个收敛级数乘积的任何陈述。正式进行此类乘积的代数运算的一种方法是写成
+
+$$
+\begin{aligned}
+\left( {\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{i}}\right) \left( {\mathop{\sum }\limits_{{j = 1}}^{\infty }{b}_{j}}\right)  = &\left( {{a}_{1} + {a}_{2} + {a}_{3} + \cdots }\right) \left( {{b}_{1} + {b}_{2} + {b}_{3} + \cdots }\right)\\
+= &{a}_{1}{b}_{1} + \left( {{a}_{1}{b}_{2} + {a}_{2}{b}_{1}}\right)  + \left( {{a}_{3}{b}_{1} + {a}_{2}{b}_{2} + {a}_{1}{b}_{3}}\right)  + \cdots\\
+= & \mathop{\sum }\limits_{{k = 2}}^{\infty }{d}_{k}
+\end{aligned}
+$$
+
+其中
+
+$$
+{d}_{k} = {a}_{1}{b}_{k - 1} + {a}_{2}{b}_{k - 2} + \cdots  + {a}_{k - 1}{b}_{1}.
+$$
+
+这种特殊形式的乘积，在练习2.8.7中早些时候已经考察过，被称为两个级数的Cauchy乘积。尽管以这种形式书写乘积在代数上有些自然之处，但很可能通过一种或另一种迭代求和更容易计算该和的值。那么，问题仍然在于，Cauchy积的值——如果存在的话——与这些双重和的其他值有何关系。如果被乘的两个级数绝对收敛，那么不难证明可以以最方便的方式计算该和。
+
+<br/>
+
 !!! question "练习 2.8.8"
+
     假设 $\mathop{\sum }\limits_{{i = 1}}^{\infty }{a}_{i}$ 绝对收敛于 $A$ ，且 $\mathop{\sum }\limits_{{j = 1}}^{\infty }{b}_{j}$ 绝对收敛于 $B$ 。
     
     (a) 证明该集合
@@ -1553,7 +1672,6 @@ $$
     $$
     
     其中，如前所述， ${d}_{k} = {a}_{1}{b}_{k - 1} + {a}_{2}{b}_{k - 2} + \cdots  + {a}_{k - 1}{b}_{1}$ 。
-
 
 （这一题其实可以把 $a_ib_j$ 看作 $c_{ij}$，这样所有的结论可以通过双重求和的性质给出）
 
@@ -1587,5 +1705,31 @@ $\displaystyle\lim_{n\to\infty}s_{nn}=\displaystyle\lim_{n\to\infty}\left(\displ
 $$
     \displaystyle\sum_{i=1}^{\infty}\displaystyle\sum_{j=1}^{\infty}a_ib_j=\displaystyle\sum_{j=1}^{\infty}\displaystyle\sum_{i=1}^{\infty}a_ib_j=\displaystyle\sum_{k=2}^{\infty}d_k=AB
 $$
+
+<br/>
+
+---
+
+## 习题 2.9 结语
+
+定理2.7.10和~定理2.8.1清楚地表明，绝对收敛在处理级数时是一个极其理想的特性。另一方面，条件收敛级数的情况则异常复杂。在重排的情况下，它们不仅不再保证收敛到相同的极限，事实上，如果 $\mathop{\sum }\limits_{{n = 1}}^{\infty }{a}_{n}$ 条件收敛，那么 $\forall r \in  \mathbb{R}$ ，都存在一个 $\mathop{\sum }\limits_{{n = 1}}^{\infty }{a}_{n}$ 的重排，使其收敛到 $r$ 。为了理解这一点，让我们再次看看交错调和级数
+
+$$
+\mathop{\sum }\limits_{{n = 1}}^{\infty }\frac{{\left( -1\right) }^{n + 1}}{n}.
+$$
+
+单独取出的负项构成级数 $\mathop{\sum }\limits_{{n = 1}}^{\infty }\left( {-1}\right) /{2n}$ 。该级数的部分和恰好是 $- 1/2$ 调和级数的部分和，因此(以一半的速度)趋向负无穷。类似的论证表明，正项的和 $\mathop{\sum }\limits_{{n = 1}}^{\infty }1/\left( {{2n} - 1}\right)$ 也发散到正无穷。不难证明，对于条件收敛级数，这种情况总是成立(练习 2.7.3)。现在，设 $r$ 为某个给定的极限，为了便于论证，我们假设它是正数。思路是取足够多的正项，使得第一个部分和大于 $r$ 。然后我们加上负项，直到部分和小于 $r$ ，此时我们再切换回正项。正项和负项的和都没有上界这一事实使得这个过程可以无限持续下去。而这些项本身趋向于零这一事实足以保证，以这种方式构造的部分和，在围绕这个目标值振荡时，确实收敛到 $r$ 。
+
+或许总结这种情况的最佳方式是，绝对收敛的假设本质上允许我们将无限和视为有限和来处理。这一评估同样适用于双重和，尽管其中存在一些细微之处需要处理。在乘积的情况下，我们在练习2.8.8中展示了两个绝对收敛的无限级数的Cauchy乘积收敛于这两个因子的乘积，但实际上，如果两个原始级数中只有一个绝对收敛，同样的结论也成立。在练习2.8.8的记号下，如果 $\sum {a}_{n}$ 绝对收敛于 $A$ ，并且如果 $\sum {b}_{n}$ (可能条件收敛)收敛于 $B$ ，那么Cauchy乘积 $\sum {d}_{k} = {AB}$ 。另一方面，如果 $\sum {a}_{n}$ 和 $\sum {b}_{n}$ 都是条件收敛的，那么Cauchy乘积可能会发散。 $\sum {\left( -1\right) }^{n}/\sqrt{n}$ 的平方提供了这种现象的一个例子。当然，也有可能找到条件收敛的 $\sum {a}_{n} = A$ 和条件收敛的 $\sum {b}_{n} = B$ ，它们的Cauchy乘积 $\sum {d}_{k}$ 收敛。如果是这种情况，那么收敛值是正确的，即 $\sum {d}_{k} = {AB}$ 。这一事实的证明将在第6章中提供，届时我们将研究幂级数。这就是其中的联系。幂级数的形式为 ${a}_{0} + {a}_{1}x + {a}_{2}{x}^{2} + \cdots$ 。如果我们将两个幂级数像多项式一样相乘，那么当我们归并 $x$ 的相同幂次时，结果是
+
+$$
+\begin{aligned}
+&\left( {{a}_{0} + {a}_{1}x + {a}_{2}{x}^{2} + \cdots }\right) \left( {{b}_{0} + {b}_{1}x + {b}_{2}{x}^{2} + \cdots }\right)\\
+= & {a}_{0}{b}_{0} + \left( {{a}_{0}{b}_{1} + {a}_{1}{b}_{0}}\right) x + \left( {{a}_{0}{b}_{2} + {a}_{1}{b}_{1} + {a}_{2}{b}_{0}}\right) {x}^{2} + \cdots\\
+= & {d}_{0} + {d}_{1}x + {d}_{2}{x}^{2} + \cdots ,
+\end{aligned}
+$$
+
+这是 $\sum {a}_{n}{x}^{n}$ 和 $\sum {b}_{n}{x}^{n}$ 的Cauchy乘积(索引从 $n = 0$ 开始，而不是 $n = 1$ )。后面我们会得到一个关于幂级数良好行为的结果，基于此结果我们可以证明：收敛的Cauchy乘积会求和到正确的值。在另一个方向上，练习2.8.8将有助于建立一个关于两个幂级数乘积的定理。
 
 ---

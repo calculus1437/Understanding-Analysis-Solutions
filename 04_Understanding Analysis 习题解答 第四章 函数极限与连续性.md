@@ -835,13 +835,16 @@ $$
 
 ## 习题 4.6 不连续点集
 
-这一节习题在探讨一个函数的不连续点集满足什么样的性质。我们的结论是：单调函数的不连续点集必须由有限或可数个跳跃间断点组成；任意函数的不连续点集都可以表示成闭集的可数并集。
+给定一个函数 $f : \mathbb{R} \rightarrow  \mathbb{R}$ ，定义 ${D}_{f} \subseteq  \mathbb{R}$ 为函数 $f$ 不连续的点集。在第4.1节中，我们看到Dirichlet函数 $g\left( x\right)$ 有 ${D}_{g} = \mathbb{R}$ 。Dirichlet函数的修改 $h\left( x\right)$ 有 ${D}_{h} = \mathbb{R} \smallsetminus  \{ 0\}$ ，$0$ 是唯一的连续点。最后，对于Thomae函数 $t\left( x\right)$ ，我们看到 ${D}_{t} = \mathbb{Q}$ 。
+
+<br/>
 
 !!! question "练习 4.6.1"
+
     使用这些函数的修改，构造一个函数 $f : \mathbb{R} \rightarrow  \mathbb{R}$ ，使得
-
+    
     (a) ${D}_{f} = \mathbb{Z}$ .
-
+    
     (b) ${D}_{f} = \{ x : 0 < x \leq  1\}$ .
 
 (a) 在整数上构造间断点。
@@ -865,8 +868,63 @@ $$
 
 <br/>
 
+<hr>
+
+我们在引言部分以一个关于 ${D}_{f}$ 是否可以取任意实数子集形式的问题作为结尾。事实证明，情况并非如此。在 $\mathbb{R}$ 上定义的实值函数的间断点集具有特定的拓扑结构，这种结构并非 $\mathbb{R}$ 的每个子集都具备。具体来说，无论 $f$ 如何选择， ${D}_{f}$ 总可以表示为闭集的可数并。当 $f$ 是单调函数时，这些闭集可以取为单点集。
+
+### 单调函数
+
+对于任意 $f$ 分类 ${D}_{f}$ 较为复杂。然而对于单调函数类，描述 ${D}_{f}$ 却相当直接。这是很有趣的事实。
+
+称函数 $f : A \rightarrow  \mathbb{R}$ 在 $A$ 上单调递增，如果 $x < y\Rightarrow f\left( x\right)  \leq  f\left( y\right)$ ；在 $A$ 上单调递减，如果 $x < y\Rightarrow f\left( x\right)  \geq  f\left( y\right)$ 。单调函数是指要么递增要么递减的函数。
+
+函数 $f$ 在点 $c$ 处的连续性意味着 $\mathop{\lim }\limits_{{x \rightarrow  c}}f\left( x\right)  = f\left( c\right)$ 。一种特定的制造不连续性发生的方式是，使得 $c$ 处的右极限与 $c$ 处的左极限不同。与所有新术语一样，我们需要精确地定义“从左”和“从右”的含义。
+
+给定集合 $A$ 的极限点 $c$ 和函数 $f : A \rightarrow  \mathbb{R}$ ，称 $f(x)$ 在 $c$ 处的右极限为 $L$，若 $\forall \varepsilon  > 0$ ， $\exists \delta  > 0$ ，使得每当 $0 < x - c < \delta$ 时， $\left| {f\left( x\right)  - L}\right|  < \varepsilon$ 成立。记作
+$$
+\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)  = L
+$$
+
+等价地，用序列表示。如果对于所有满足 ${x}_{n} > c$ 和 $\lim \left( {x}_{n}\right)  = c$ 的序列 $\left( {x}_{n}\right)$ ， $\lim f\left( {x}_{n}\right)  = L$ 成立，则 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)  = L$ 成立。
+
+同理：
+
+给定集合 $A$ 的极限点 $c$ 和函数 $f : A \rightarrow \mathbb{R}$，称 $f(x)$ 在 $c$ 处的左极限为 $L$，若 $\forall \varepsilon > 0$，$\exists \delta > 0$，使得每当 $0 < c - x < \delta$ 时，$\left| f(x) - L \right| < \varepsilon$ 成立。记作  
+$$
+\mathop{\lim }\limits_{{x \rightarrow {c}^{-}}} f(x) = L.
+$$
+
+等价地，用序列表示。如果对于所有满足 ${x}_{n} < c$ 和 $\lim \left( {x}_{n} \right) = c$ 的序列 $\left( {x}_{n} \right)$，$\lim f\left( {x}_{n} \right) = L$ 成立，则 $\mathop{\lim }\limits_{{x \rightarrow {c}^{-}}} f(x) = L$ 成立。
+
+给定 $f : A\rightarrow  \mathbb{R}$ 和 $A$ 的极限点 $c$，$\mathop{\lim }\limits_{{x \rightarrow  c}}f\left( x\right)  = L$ 当且仅当
+
+$$
+\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)  = L\;\text{ and }\;\mathop{\lim }\limits_{{x \rightarrow  {c}^{-}}}f\left( x\right)  = L.
+$$  
+
+必要性：设 $\lim_{x \to c} f(x) = L$，则对任意 $\varepsilon > 0$，存在 $\delta > 0$，使得当 $x \in A$ 且 $0 < |x - c| < \delta$ 时，$|f(x) - L| < \varepsilon$。特别地：当 $c < x < c + \delta$ 时，右极限 $|f(x) - L| < \varepsilon$，故 $\lim_{x \to c^+} f(x) = L$；当 $c - \delta < x < c$ 时，左极限 $|f(x) - L| < \varepsilon$，故 $\lim_{x \to c^-} f(x) = L$。
+
+充分性：设 $\lim_{x \to c^+} f(x) = L$ 且 $\lim_{x \to c^-} f(x) = L$。对任意 $\varepsilon > 0$：存在 $\delta_1 > 0$，使得当 $x \in A$ 且 $c < x < c + \delta_1$ 时，$|f(x) - L| < \varepsilon$；存在 $\delta_2 > 0$，使得当 $x \in A$ 且 $c - \delta_2 < x < c$ 时，$|f(x) - L| < \varepsilon$。
+
+取 $\delta = \min\{\delta_1, \delta_2\}$，则当 $x \in A$ 且 $0 < |x - c| < \delta$ 时，无论 $x > c$ 或 $x < c$，均有 $|f(x) - L| < \varepsilon$，故 $\lim_{x \to c} f(x) = L$。
+
+因此，原极限存在的充要条件是左右极限均存在且等于 $L$。
+
+一般来说，不连续性可以分为三类:
+
+如果 $\mathop{\lim }\limits_{{x \rightarrow  c}}f\left( x\right)$ 存在但其值与 $f\left( c\right)$ 不同，则在 $c$ 处的不连续性称为可去的。
+
+如果 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)  \neq  \mathop{\lim }\limits_{{x \rightarrow  {c}^{ - }}}f\left( x\right)$ ，则 $f$ 在 $c$ 处有一个跳跃不连续性。
+
+如果由于其他原因 $\mathop{\lim }\limits_{{x \rightarrow  c}}f\left( x\right)$ 不存在，那么在 $c$ 处的不连续性称为本质不连续性。
+
+我们现在已经准备好描述任意单调函数 $f$ 的集合 ${D}_{f}$ 的特征。
+
+<br/>
+
 !!! question "练习 4.6.4"
-    设 $f : \mathbb{R} \rightarrow  \mathbb{R}$ 为递增函数。证明 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)$ 和 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ - }}}f\left( x\right)$ 必须在每个点 $c \in  \mathbb{R}$ 处存在。论证单调函数唯一可能具有的不连续性类型是跳跃不连续性。
+
+    设 $f : \mathbb{R} \rightarrow  \mathbb{R}$ 为递增函数。证明 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ + }}}f\left( x\right)$ 和 $\mathop{\lim }\limits_{{x \rightarrow  {c}^{ - }}}f\left( x\right)$ 必须在每个点 $c \in  R$ 处存在。论证单调函数唯一可能具有的不连续性类型是跳跃不连续性。
 
 对任意的 $c\in \mathbb{R}$，令 $E=\left\{f(x):x>c\right\}$，则由 $f$ 单调递增，对 $\forall\ f(x)\in E$，$f(x)\geq f(c)$。这说明 $E$ 非空有下界。由完备性公理，$\inf E$ 存在，记为 $L$，下证 $L=\displaystyle\lim_{x\to c^+}f(x)$。
 
@@ -877,13 +935,27 @@ $$
 <br/>
 
 !!! question "练习 4.6.5"
+
     构造一个单调函数 $f$ 的跳跃间断点集与 $\mathbb{Q}$ 的一个子集之间的双射。得出结论:单调函数 $f$ 的 ${D}_{f}$ 必须是有限的或可数的，但不能是不可数的。
 
 由 $f$ 的单调性，对任意一个间断点 $c$，都有 $\displaystyle\lim_{x\to c^-}f(x)<\displaystyle\lim_{x\to c^+}f(x)$，所以可以找到一个有理数 $c_1\in (\displaystyle\lim_{x\to c^-}f(x),\displaystyle\lim_{x\to c^+}f(x))$。 又因为单调性，所以对 $\forall\ x< c$，$f(x)\leq \displaystyle\lim_{x\to c^-}f(x)<c_1$，$x>c$ 的情况同理。所以这样就可以构建从 $c$ 到 $c_1$ 一一对应的映射即双射。因为有理数集是可数的，所以 $D_f$ 必然是有限的或可数的。
 
 <br/>
 
+<hr>
+
+### 任意函数的 ${D}_{f}$
+
+回想一下，无限个闭集的交集是闭的，但对于并集，我们必须限制为有限个闭集的并集，以确保并集是闭的。对于开集，情况则相反。任意个开集的并集是开的，但只有有限个开集的交集才必然是开的。
+
+一个可以写成可数个闭集并集的集合属于 ${F}_{\sigma }$ 类。(此定义也出现在第3.5节中。)
+
+到目前为止，我们已经构造了不连续点集为 $\mathbb{R}$ (Dirichlet函数)、 $\mathbb{R} \smallsetminus  \{ 0\}$ (修正Dirichlet函数)、 $\mathbb{Q}$ (Thomae函数)、 $\mathbb{Z}$ 和 $(0,1\rbrack$ (习题4.6.1)的函数。
+
+<br/>
+
 !!! question "练习 4.6.6"
+
     证明在每种情况下，我们得到一个 ${F}_{\sigma }$ 集作为每个函数的不连续点集。
 
 $\mathbb{R}$ 本身是一个闭集，所以它是一个 ${F}_{\sigma }$ 集。
@@ -898,7 +970,24 @@ $\mathbb{Z}$ 是全体整数的并集，自然也是 $F_\sigma$ 集。
 
 <br/>
 
+<hr>
+
+即将进行的论证依赖于一个称为 $\alpha$ -连续性的概念。
+
+设 $f$ 定义在 $\mathbb{R}$ 上，且令 $\alpha  > 0$ 。函数 $f$ 在 $x \in  \mathbb{R}$ 处是 $\alpha$ -连续的，如果存在一个 $\delta  > 0$ ，使得对于所有 $y,z \in  \left( {x - \delta ,x + \delta }\right)$ ，都有 $\left| {f\left( y\right)  - f\left( z\right) }\right|  < \alpha$ 。
+
+关于这个定义，最重要的是要注意在 $\alpha  > 0$ 前面没有“对于所有”。正如我们将要探讨的，添加这个量词会使这个定义等同于我们对连续性的定义。从某种意义上说， $\alpha$ -连续性是对函数在特定点附近变化的度量。如果存在一个以 $c$ 为中心的区间，在该区间内函数的变化从未超过值 $\alpha  > 0$ ，则函数在点 $c$ 处是 $\alpha$ -连续的。
+
+给定 $\mathbb{R}$ 上的函数 $f$ ，定义 ${D}_{\alpha }$ 为函数 $f$ 不满足 $\alpha$ -连续的点集。换句话说，
+
+$$
+{D}_{\alpha } = \{ x \in  \mathbb{R} : f \text{ 在 } x \text{ 处不 } \alpha\text{-连续} \} .
+$$
+
+<br/>
+
 !!! question "练习 4.6.7"
+
     证明对于固定的 $\alpha  > 0$ ，集合 ${D}_{\alpha }$ 是闭集。
 
 我们需要证明 $D_\alpha$ 的任何极限点 $x_0$ 都在该集合内。
@@ -919,7 +1008,22 @@ $\mathbb{Z}$ 是全体整数的并集，自然也是 $F_\sigma$ 集。
 
 <br/>
 
-!!! question "练习 4.6.8" <a id="4.6.8"></a>
+<hr>
+
+舞台已搭好。是时候刻画任意函数 $f$ 在 $\mathbb{R}$ 上的不连续点集了。
+
+设 $f : \mathbb{R} \rightarrow  \mathbb{R}$ 为任意函数。则 ${D}_{f}$ 是一个 ${F}_{\sigma }$ 集。
+
+回忆
+
+$$
+{D}_{f} = \{ x \in  \mathbb{R} : f \text{ is not continuous at } x\} .
+$$
+
+<br/>
+
+!!! question "练习 4.6.8"
+
     如果 ${\alpha }_{1} < {\alpha }_{2}$ ，证明 ${D}_{{\alpha }_{2}} \subseteq  {D}_{{\alpha }_{1}}$ 。
 
 对 $\forall\ x\in D_{\alpha_2}$，对任意 $\delta>0$，$\exists\ y,z\in V_\delta(x)$ 使得 $\left|f(y)-f(z)\right|\geq \alpha_2>\alpha_1$，所以 $x\in D_{\alpha_1}$。所以${D}_{{\alpha }_{2}} \subseteq  {D}_{{\alpha }_{1}}$ 。
@@ -927,6 +1031,7 @@ $\mathbb{Z}$ 是全体整数的并集，自然也是 $F_\sigma$ 集。
 <br/>
 
 !!! question "练习 4.6.9"
+
     设 $\alpha  > 0$ 给定。证明如果 $f$ 在 $x$ 处连续，则它在 $x$ 处也是 $\alpha$ -连续的。解释由此如何得出 ${D}_{\alpha } \subseteq  {D}_{f}$ 。
 
 若 $f$ 在 $x$ 处连续，则对 $\forall\ \varepsilon>0$，$\exists\ \delta>0$，使得对 $\forall\ y\in V_\delta(x)$，$\left|f(y)-f(x)\right|<\varepsilon$。现在取 $\varepsilon=\displaystyle\frac{\alpha}{2}$，则对 $\forall\ y,z\in V_\delta(x)$，都有
@@ -942,23 +1047,43 @@ $$
 <br/>
 
 !!! question "练习 4.6.10"
-    证明如果 $f$ 在 $x$ 处不连续，则 $f$ 对于某个 $\alpha  > 0$ 不是 $\alpha$ -连续的。现在解释为什么这保证了
 
+    证明如果 $f$ 在 $x$ 处不连续，则 $f$ 对于某个 $\alpha  > 0$ 不是 $\alpha$ -连续的。现在解释为什么这保证了
+    
     $$
     {D}_{f} = \mathop{\bigcup }\limits_{{n = 1}}^{\infty }{D}_{\frac{1}{n}}
     $$
-
-    因为每个 ${D}_{\frac{1}{n}}$ 都是闭集，证明完成。
 
 若 $f$ 在 $x$ 处不连续，则 $\exists\ \varepsilon_0>0$，对 $\forall\ \delta>0$ 都 $\exists\ y\in V_\delta(x)$ 使得 $\left|f(y)-f(x)\right|\geq \varepsilon_0$。
 
 因为 $x\in V_\delta(x)$，所以取 $\alpha=\varepsilon_0$ 就得到 $f$ 在 $x$ 处不 $\alpha$ - 连续。
 
-现在对 $\forall\ x\in D_f$，$f$ 在 $x$ 处不连续，所以 $\exists\ \alpha>0$ 使得 $f$ 在 $x$ 处不 $\alpha$ - 连续。又存在 $n\in \mathbb{N^+}$，使得 $\displaystyle\frac{1}{n}<\alpha$，则由练习 [4.6.8](#4.6.8) 可知 $x\in D_{\frac{1}{n}}$。所以 $x\in \displaystyle\bigcup_{n=1}^\infty D_{\frac{1}{n}}$。
+现在对 $\forall\ x\in D_f$，$f$ 在 $x$ 处不连续，所以 $\exists\ \alpha>0$ 使得 $f$ 在 $x$ 处不 $\alpha$ - 连续。又存在 $n\in \mathbb{N^+}$，使得 $\displaystyle\frac{1}{n}<\alpha$，则由练习 4.6.8 可知 $x\in D_{\frac{1}{n}}$。所以 $x\in \displaystyle\bigcup_{n=1}^\infty D_{\frac{1}{n}}$。
 
 又因为每个不 $\alpha$ - 连续点都是不连续点，所以对 $\forall\ x\in \displaystyle\bigcup_{n=1}^\infty D_{\frac{1}{n}}$，也有 $x\in D_f$。
 
 所以 $D_f=\displaystyle\bigcup_{n=1}^\infty D_{\frac{1}{n}}$。因为 $D_{\frac{1}{n}}$ 都是闭集，所以 $D_f$ 是一个 ${F}_{\sigma }$ 集。
 
+<br/>
+
 ---
 
+## 习题 4.7 结语
+
+定理4.6.6只有在能够证明并非 $\mathbb{R}$ 的每个子集都属于 ${F}_{\sigma }$ 集时才有意义。这需要一些努力，并且作为练习包含在关于 Baire 定理的第3.5节中。Baire 定理指出，如果 $\mathbb{R}$ 被写成闭集的可数并集，那么这些闭集中至少有一个必须包含一个非空开区间。现在 $\mathbb{Q}$ 是单点集的可数并集，我们可以将每个点视为一个显然不包含任何区间的闭集。如果无理数集 $\mathbb{R}\setminus\mathbb{Q}$ 是闭集的可数并集，那么这些闭集中没有一个可以包含任何开区间，否则它们将包含一些有理数。但这与Baire定理相矛盾。因此， $\mathbb{R}\setminus\mathbb{Q}$ 不是闭集的可数并集，从而它也不是 ${F}_{\sigma }$ 集。因此，我们可以得出结论，不存在在每一个有理点连续且在每一个无理点间断的函数 $f$ 。这应与之前讨论的Thomae函数进行比较。
+
+相反的问题也很有趣。给定一个任意的 ${F}_{\sigma }$ 集合，W.H. Young 在1903年证明了总可以构造一个函数，使其不连续点恰好位于该集合上。他的构造涉及我们之前见过的相同的Dirichlet型定义，但显然更为复杂。相比之下，描述单调情况下的相应函数并不太困难。设
+
+$$
+D = \left\{  {{x}_{1},{x}_{2},{x}_{3},{x}_{4},\ldots }\right\}
+$$
+
+为任意可数的实数集合。为了构造一个不连续点恰好位于 $D$ 上的单调函数，直观上为每个点 ${x}_{n} \in  D$ 附加一个 $1/{2}^{n}$ 的“权重”。现在，定义
+
+$$
+f\left( x\right)  = \mathop{\sum }\limits_{{n : {x}_{n} < x}}\frac{1}{{2}^{n}}
+$$
+
+其中对于每个 $x \in  \mathbb{R}$ ，求和应涵盖所有对应于 $x$ 左侧点的权重。(如果 $D$ 中没有点在 $x$ 的左侧，则设置 $f\left( x\right)  = 0$ 。)任何关于求和顺序的担忧都可以通过观察到收敛是绝对的来缓解。不难证明，所得函数 $f$ 是单调的，并且在 $D$ 中的每个点 ${x}_{n}$ 处具有大小为 $1/{2}^{n}$ 的跳跃间断，如预期(练习6.4.8)。
+
+---
